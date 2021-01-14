@@ -69,7 +69,7 @@ export default class Visualization extends Component {
                             </div>
                             <div align="center">
                             <div style={{"width": "350px", "height": "350px"}}>
-                                <PieChart/>
+                                <LineChart/>
                                 </div>
                             </div>
                         </td> 
