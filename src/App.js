@@ -75,7 +75,7 @@ function App() {
                       activeLinkFromLocation
                       />
                   </Col>
-                  <Col md="9" >
+                  <Col   >
 
                     <Switch>
                       <Route exact path="/" component = {Landing} />

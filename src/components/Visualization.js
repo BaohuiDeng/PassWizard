@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Footer from './Footer'
 import { Row,Card, CardTitle, CardText,Col } from 'reactstrap';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
+import Header from './/Header';
 
 import {Link, withRouter ,Switch} from 'react-router-dom';
 
@@ -26,7 +27,53 @@ export default class Visualization extends Component {
         return (
                 <div className="container">
                     {/* <Row className="justify-content-sm-start mt-3 "> */}
-                    <table>
+                    <Header/>
+
+                            <div class="container mt-5 mb-3">
+                            <h3>DataSet Description</h3>
+                            </div>
+                            <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card" style={{"height":"350px","width":"470px"}}>
+                        
+                    <div class="card-body">
+                    <div style={{"width": "400px", "height": "400px"}}>
+                                    <BarChart/>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card" style={{"height":"350px","width":"470px"}}>
+                   
+                    <div class="card-body">
+                    <div style={{"width": "400px", "height": "400px"}}>
+                                    <PieChart/>
+                                </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mt-2">
+                    <div class="card" style={{"height":"350px","width":"470px"}}>
+                    
+                    <div class="card-body">
+                    <div style={{"width": "400px", "height": "400px"}}>
+                                    <LineChart/>
+                                </div>                    </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mt-2">
+                    <div class="card" style={{"height":"350px","width":"470px"}}>
+                    
+                    <div class="card-body">
+                    <div style={{"width": "400px", "height": "400px"}}>
+                                    <BarChart/>
+                                </div>                    </div>
+                    </div>
+                </div>
+                </div>
+                
+                    {/* <table>
                 <tbody>
                     <tr>
                         <td>
@@ -75,7 +122,7 @@ export default class Visualization extends Component {
                         </td> 
                     </tr>
                 </tbody>
-            </table>
+            </table> */}
                     {/* </Row> */}
                     <br></br>
                     <Footer />

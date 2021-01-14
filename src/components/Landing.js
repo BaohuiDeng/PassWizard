@@ -4,6 +4,7 @@ import { Row,Card, CardTitle, CardText,Col } from 'reactstrap';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 
 import {Link, withRouter ,Switch} from 'react-router-dom';
+import Header from './/Header';
 
 
 import globe from '../assets/images/globe.png';
@@ -23,33 +24,38 @@ export default class Landing extends Component {
     render() {
         return (
             <Route>
-                <div className="container">
+                <div className="container " >
+                <Header/>
 
-                    
+                    {/* <div className="container-fluid mb-3">
+
+                    </div> */}
                     <Row className="justify-content-sm-start mt-3 ">
+                  
+
                         <Col md="3">
                             <Link to="/Dataset">
-                                <Card body inverse id="DatasetBox" style={{ height:'200px',textAlign:'center',backgroundColor:'rgba(204, 204, 204, 0.411)',borderColor:'rgb(24, 103, 167)', paddingTop: '40px' }}>
-                                    <CardText><img src={data} alt="phone" style={{'border': 'none','height': '60px'}}/></CardText>
-                                    <CardTitle tag="h6">Dataset</CardTitle>
+                                <Card body inverse id="DatasetBox" style={{ height:'200px',textAlign:'center',backgroundColor:'white', paddingTop: '40px' }}>
+                                    <CardText><img src={data} alt="phone" style={{'border': 'none','height': '60px','background-color':'#B06660'}}/></CardText>
+                                    <CardTitle tag="h6" style={{"color":"#B06660"}}>Dataset</CardTitle>
                                     {/* <Button>Button</Button> */}
                                 </Card>
                             </Link>
                         </Col> 
                         <Col md="3">
                             <Link to="/Visualization">
-                                <Card body inverse  id="VisualizationBox" style={{ height:'200px',backgroundColor:'rgba(204, 204, 204, 0.411)' ,borderColor:'rgb(49, 143, 20)',textAlign:'center', paddingTop: '40px'}}>
-                                    <CardText><img src={barchart} alt="phone" style={{'border': 'none','height': '60px'}}/></CardText>
-                                    <CardTitle tag="h6">Visualization</CardTitle>
+                                <Card body inverse  id="VisualizationBox" style={{ height:'200px',backgroundColor:'white' ,textAlign:'center', paddingTop: '40px'}}>
+                                    <CardText><img src={barchart} alt="phone" style={{'border': 'none','height': '60px','background-color':'#6A7D8E'}}/></CardText>
+                                    <CardTitle tag="h6" style={{"color":"#6A7D8E"}}>Visualization</CardTitle>
                                     {/* <Button color="secondary">Button</Button> */}
                                 </Card>
                             </Link>
                         </Col> 
                         <Col md="3">
                             <Link to="/Performance">
-                                <Card body inverse  id="PerformanceBox" style={{ height:'200px',backgroundColor:'rgba(204, 204, 204, 0.411)', borderColor:'rgb(228, 118, 118)', textAlign:'center', paddingTop: '40px'}}>
-                                    <CardText><img src={performance} alt="phone" style={{'border': 'none','height': '60px'}}/></CardText>
-                                    <CardTitle tag="h6">Performance</CardTitle>
+                                <Card body inverse  id="PerformanceBox" style={{ height:'200px',backgroundColor:'white', textAlign:'center', paddingTop: '40px'}}>
+                                    <CardText><img src={performance} alt="phone" style={{'border': 'none','height': '60px','background-color':'#AB9C73'}}/></CardText>
+                                    <CardTitle tag="h6" style={{"color":"#AB9C73"}}>Performance</CardTitle>
 
                                     {/* <Button color="secondary">Button</Button> */}
                                 </Card>
@@ -62,18 +68,18 @@ export default class Landing extends Component {
                     <Row className="justify-content-sm-start mt-4 ">
                         <Col md="3">
                             <a href="https://www.uni-due.de/soco/" target="_blank">
-                                <Card body inverse id="socoBox" style={{ height:'200px',textAlign:'center',backgroundColor:'rgba(204, 204, 204, 0.411)',borderColor:'rgb(214, 167, 35)', paddingTop: '40px'}}>
-                                    <CardText><img src={globe} alt="phone" style={{'border': 'none','height': '60px'}}/></CardText>
-                                    <CardTitle tag="h6">Social Computing Group</CardTitle>
+                                <Card body inverse id="socoBox" style={{ height:'200px',textAlign:'center',backgroundColor:'white', paddingTop: '40px'}}>
+                                    <CardText><img src={globe} alt="phone" style={{'border': 'none','height': '60px','background-color':'#587992'}}/></CardText>
+                                    <CardTitle tag="h6" style={{"color":"#587992"}}>Social Computing Group</CardTitle>
                                     {/* <Button color="secondary">Button</Button> */}
                                 </Card>
                             </a>
                         </Col> 
                         <Col md="3">
                             <Link to="/AboutUs">
-                                <Card body inverse  id="AboutUsBox"  style={{ height:'200px',textAlign:'center',backgroundColor:'rgba(204, 204, 204, 0.411)' , borderColor:'rgb(20, 135, 143)', paddingTop: '40px'}}>
-                                <CardText><img src={members} alt="phone" style={{'border': 'none','height': '60px'}}/></CardText>
-                                    <CardTitle tag="h6">About us</CardTitle>
+                                <Card body inverse  id="AboutUsBox"  style={{ height:'200px',textAlign:'center',backgroundColor:'white' , paddingTop: '40px'}}>
+                                <CardText><img src={members} alt="phone" style={{'border': 'none','height': '60px','background-color':'#74A181'}}/></CardText>
+                                    <CardTitle tag="h6" style={{"color":"#74A18E"}}>About us</CardTitle>
 
                                     {/* <Button color="secondary">Button</Button> */}
                                 </Card>
@@ -84,9 +90,9 @@ export default class Landing extends Component {
                     <Row className="justify-content-sm-start mt-4 ">
                         <Col md="3">
                             <Link to="/ContactUs">
-                                <Card body inverse  id="ContactUsBox"  style={{ height:'200px',textAlign:'center',backgroundColor:'rgba(204, 204, 204, 0.411)',borderColor:'rgb(167, 24, 24)', paddingTop: '40px'}}>
-                                <CardText><img src={email} alt="phone" style={{'border': 'none','height': '60px'}}/></CardText>
-                                    <CardTitle tag="h6">Contact us</CardTitle>
+                                <Card body inverse  id="ContactUsBox"  style={{ height:'200px',textAlign:'center',backgroundColor:'white', paddingTop: '40px'}}>
+                                <CardText><img src={email} alt="phone" style={{'border': 'none','height': '60px','background-color':'#CA8F42'}}/></CardText>
+                                    <CardTitle tag="h6" style={{"color":"#CA8F42"}}>Contact us</CardTitle>
 
                                     {/* <Button color="secondary">Button</Button> */}
                                 </Card>

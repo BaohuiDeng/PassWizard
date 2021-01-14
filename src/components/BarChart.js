@@ -48,6 +48,11 @@ const BarChart = ()=>{
               },
             ],
           },
+          title:{
+            display:true,
+            text:"hallo there kdmlaf",
+            position:'top'
+          },
           legend: {
             labels: {
               fontSize: 15,

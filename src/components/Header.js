@@ -1,18 +1,89 @@
 import React, { Component } from 'react';
 import { Row,Col,Container} from 'reactstrap';
-
 import logo from '../assets/images/Blacklogo.png';
-
+import goal from '../assets/images/goal.png'
 export default class Header extends Component {
     render() {
         return (
 
           <Container fluid>
-            <Row>
-                <Col md="6" style={{'border': 'none','background-color': 'whitesmoke','left': '0', 'text-align': 'center', height:'60px'}}>
-                  {/* some header txt */}
-                </Col>
-            </Row>
+<nav class="navbar navbar-expand-lg navbar-light" style={{"height":"100px"}}>
+  <div class="container-fluid justify-content-between">
+    <div class="d-flex">
+    
+
+      
+       
+    </div>
+
+    <ul class="navbar-nav flex-row d-none d-md-flex">
+      <li class="nav-item me-3 me-lg-1 active">
+      
+    
+      </li>
+
+      <li class="nav-item me-3 me-lg-1">
+   
+      </li>
+
+      <li class="nav-item me-3 me-lg-1">
+      
+      </li>
+
+      <li class="nav-item me-3 me-lg-1">
+      
+      </li>
+
+      <li class="nav-item me-3 me-lg-1">
+      <img
+          src={logo}
+          height="40"
+          alt=""
+          loading="lazy"
+          style={{"margin-top": "2px"}}
+        />
+      </li>
+    </ul>
+
+    <ul class="navbar-nav flex-row">
+      <li class="nav-item me-3 me-lg-1">
+        <a class="nav-link d-sm-flex align-items-sm-center" href="#">
+        <img
+          src={goal}
+          height="30"
+          alt=""
+          loading="lazy"
+          style={{"margin-top": "2px;"}}
+        />
+          <strong class="d-none d-sm-block ms-1">
+            
+            Last Project</strong>
+        </a>
+      </li>
+      <li class="nav-item me-3 me-lg-1">
+        <a class="nav-link" href="#">
+          <span>        <i class="fa fa-github " aria-hidden="true" style={{"font-size":"25px"}}></i>
+</span>
+        </a>
+      </li>
+      <li class="nav-item  me-3 me-lg-1">
+      <a class="nav-link" href="#">
+          <span>        <i class="fa fa-linkedin " aria-hidden="true" style={{"font-size":"25px"}}></i>
+</span>
+        </a>
+      </li>
+      <li class="nav-item  me-3 me-lg-1">
+      <a class="nav-link" href="#">
+          <span> 
+            <i class="fa fa-xing " aria-hidden="true" style={{"font-size":"25px"}}></i>
+</span>
+        </a>
+      </li>
+   
+     
+    </ul>
+  </div>
+</nav>
           </Container>
           
 
