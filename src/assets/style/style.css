@@ -59,3 +59,17 @@ code {
   justify-content: center !important;
   background-color: #a3865b;
 }
+
+.btn{
+  background-color:  rgb(43, 43, 43);
+  border:0;
+  color:wheat;
+
+}
+
+.btn:hover{
+  background-color:#34666F;
+}
+.jumbotron{
+  background-color: #EDF4EA;
+}

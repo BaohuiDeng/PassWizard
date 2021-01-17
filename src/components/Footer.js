@@ -76,7 +76,6 @@ export default class Footer extends Component {
               <div className="footer-copyright text-center  py-3">© 2021 Copyright:
                   <a href="" style={{color: '#5c7d92'}}> LAPro </a>
               </div>
-
               </footer> */}
           </div>
 

@@ -29,9 +29,17 @@ export default class Visualization extends Component {
                     {/* <Row className="justify-content-sm-start mt-3 "> */}
                     <Header/>
 
-                            <div class="container mt-5 mb-3">
-                            <h3>DataSet Description</h3>
-                            </div>
+                    <div class="container my-5">
+                        <div class="">
+
+                    <div class="card-body">
+                        <p class="card-text">
+                        <h3 >You can find some charts here. Let's have a look for better perspective</h3>
+                       </p>
+                        </div>
+                    </div>
+                </div>
+
                             <div class="row">
                     <div class="col-sm-6">
                         <div class="card" style={{"height":"350px","width":"470px"}}>
