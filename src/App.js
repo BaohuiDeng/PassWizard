@@ -39,7 +39,7 @@ const menu = [
           to: '/Dataset',
         },
         {
-          icon: 'bolt',
+          icon: '',
           label: 'Visualizaion',
           to: '/Visualization',
         },
@@ -51,7 +51,7 @@ const menu = [
       to: '/Performance',
     },
     {
-      icon: 'external-link',
+      icon: '',
       label: 'Social Computing Group',
       externalLink: true,
       to: 'https://www.uni-due.de/soco/',
@@ -63,7 +63,6 @@ function App() {
   return (
     
     <div className="App">
-      {/* <Header /> */}
       <Router>
       
 
