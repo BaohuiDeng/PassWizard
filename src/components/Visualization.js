@@ -16,6 +16,7 @@ import performance from '../assets/images/performance.png';
 import BarChart from './BarChart'
 import PieChart from './PieChart'
 import LineChart from './LineChart'
+import BarChartSecond from './BarChartSecond'
 
 
 
@@ -76,7 +77,7 @@ export default class Visualization extends Component {
                     
                     <div class="card-body">
                     <div style={{"width": "400px", "height": "400px"}}>
-                                    <BarChart/>
+                                    <BarChartSecond/>
                                 </div>                    </div>
                     </div>
                 </div>
