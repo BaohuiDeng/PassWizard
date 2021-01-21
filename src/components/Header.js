@@ -35,13 +35,7 @@ export default class Header extends Component {
       </li>
 
       <li class="nav-item me-3 me-lg-1">
-      <img
-          src={logo}
-          height="40"
-          alt=""
-          loading="lazy"
-          style={{"margin-top": "2px"}}
-        />
+     
       </li>
     </ul>
 
