@@ -6,7 +6,6 @@ import {Link, withRouter ,Switch} from 'react-router-dom';
 
 import MetisMenu from 'react-metismenu';
 
-import Header from './components/Header';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import Dataset from './components/Dataset';
@@ -14,6 +13,10 @@ import Performance from './components/Performance';
 import Visualization from './components/Visualization';
 import Landing from './components/Landing';
 import NotFound from './components/NotFound';
+import FirstPrediction from './components/FirstPrediction';
+import SecondPrediction from './components/SecondPrediction';
+import ThirdPrediction from './components/ThirdPrediction';
+
 
 import logo from './assets/images/whitelogo.png';
 
@@ -78,6 +81,9 @@ function App() {
 
                     <Switch>
                       <Route exact path="/" component = {Landing} />
+                      <Route exact path="/FirstPrediction" component = {FirstPrediction} />
+                      <Route exact path="/SecondPrediction" component = {SecondPrediction} />
+                      <Route exact path="/ThirdPrediction" component = {ThirdPrediction} />
                       <Route exact path="/Dataset" component = {Dataset} />
                       <Route exact path="/Visualization" component = {Visualization} />
                       <Route exact path="/Performance" component = {Performance} />
