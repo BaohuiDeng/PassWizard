@@ -1,5 +1,11 @@
 import React from 'react'
 import {Pie} from 'react-chartjs-2'
+
+
+function zoom(){
+  alert('hallo chart is click')
+}
+
 const PieChart = ()=>{
     return <div> 
          <Pie
@@ -53,7 +59,9 @@ const PieChart = ()=>{
               fontSize: 15,
             },
           },
+          //onClick:alertBox,
         }}
+
       />
     </div>
 }

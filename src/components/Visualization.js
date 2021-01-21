@@ -56,7 +56,8 @@ export default class Visualization extends Component {
                    
                     <div class="card-body">
                     <div style={{"width": "400px", "height": "400px"}}>
-                                    <PieChart/>
+                    <h5 onclick="zoom()">Zoom</h5>
+                        <PieChart onclick="zoom()"/>
                                 </div>
                     </div>
                     </div>
@@ -81,56 +82,7 @@ export default class Visualization extends Component {
                 </div>
                 </div>
                 
-                    {/* <table>
-                <tbody>
-                    <tr>
-                        <td>
-                            <div align="center">
-                                <h6>Passing Percentage based on IMD-Band</h6>
-                            </div>
-                            <div align="center">
-                            <div style={{"width": "350px", "height": "350px"}}>
-                                    <BarChart/>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div align="center">
-                                <h6>Grade distribution regarding Gender</h6>
-                            </div>
-                            <div align="center">
-                            <div style={{"width": "350px", "height": "350px"}}>
-                                <PieChart/>
-                                </div>
-                            </div>
-                        </td> 
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>
-                            <div align="center">
-                                <h6>Passing Percentage based on IMD-Band</h6>
-                            </div>
-                            <div align="center">
-                            <div style={{"width": "350px", "height": "350px"}}>
-                                    <LineChart/>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div align="center">
-                                <h6>Grade distribution regarding Gender</h6>
-                            </div>
-                            <div align="center">
-                            <div style={{"width": "350px", "height": "350px"}}>
-                                <LineChart/>
-                                </div>
-                            </div>
-                        </td> 
-                    </tr>
-                </tbody>
-            </table> */}
+           
                     {/* </Row> */}
                     <br></br>
                     <Footer />
