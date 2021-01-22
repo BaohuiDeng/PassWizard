@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { Row,Col,Container} from 'reactstrap';
-
+import ReactDOM from 'react-dom';
+import Button from '@material-ui/core/Button';
+import Icon from '@material-ui/core/Icon';
+import { makeStyles } from '@material-ui/core/styles';
+import SendIcon from '@material-ui/icons/Send';
 import Header from '../components/Header';
 import Footer from './Footer';
 import BarChart from './BarChart'
@@ -8,10 +12,15 @@ import PieChart from './PieChart'
 import LineChart from './LineChart'
 import BarChartSecond from './BarChartSecond'
 import predict from '../assets/images/predict.jpeg';
+import AddToQueueIcon from '@material-ui/icons/AddToQueue';
+import HorizontalLinearStepper from './Stepper'
 
 
 export default class FirstPrediction extends Component {
+
+
     render() {
+
         return (
 
           <Container>
@@ -24,6 +33,9 @@ export default class FirstPrediction extends Component {
                            
                         </div>
                         </div>
+                        <div className="container mt-4">
+            <HorizontalLinearStepper  number="2"/>
+            </div>
 
             <h3 className="mt-5">Fill in the form to get your result!</h3>
 
@@ -69,8 +81,13 @@ export default class FirstPrediction extends Component {
   </div>
   <hr className="my-4"/>
                 <p className="lead">
-                  <a className="btn btn-primary btn-lg" href="#" role="button">Predict Your Result</a>
+                  {/* <a className="btn btn-primary btn-lg" href="#" role="button">Predict Your Result</a> */}
                 </p>
+                <Button size="large" variant="outlined" color="primary">
+                <span  className="mr-2">Predict Your Result</span> <AddToQueueIcon></AddToQueueIcon>
+
+</Button>
+
 </form> 
                </div>
             </Col>

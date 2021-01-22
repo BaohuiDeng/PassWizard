@@ -12,16 +12,14 @@ import firststep from '../assets/images/firststep.png';
 import secondstep from '../assets/images/secondstep.png';
 import thirdstep from '../assets/images/thirdstep.png';
 import ReactTooltip from 'react-tooltip';
-
-
-
-
+import HorizontalLinearStepper from './Stepper'
 
 
 
 
 export default class Performance extends Component {
     render() {
+       
         return (
                 <div className="container">
                     <Row className="justify-content-sm-start mt-3 ">
@@ -66,13 +64,16 @@ export default class Performance extends Component {
                    
                                      
               </Row>
+
+      
+
           <Row className="justify-content-sm-center mt-5 ">
             <div>
               <h1 className="mb-3" data-tip="You can choose three options below to predict your result!" >WHICH STATAGE ARE YOU AT?</h1>
               <ReactTooltip className='extraClass' effect="solid" width="180px" height="100px" />
-
-              
-
+            </div>
+            <div className="container">
+            <HorizontalLinearStepper number="1"/>
             </div>
           </Row>
             <Row className="justify-content-sm-center mt-3 ">

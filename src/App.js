@@ -19,6 +19,8 @@ import logo from './assets/images/whitelogo.png';
 import FirstPrediction from './components/FirstPrediction';
 import SecondPrediction from './components/SecondPrediction';
 import ThirdPrediction from './components/ThirdPrediction';
+import AssessmentIcon from '@material-ui/icons/Assessment';
+
 
 
 const menu = [
@@ -50,7 +52,7 @@ const menu = [
     },
     {
       icon: '',
-      label: 'Prediction',
+      label: 'Prediction' ,
       to: '/Performance',
     },
     {

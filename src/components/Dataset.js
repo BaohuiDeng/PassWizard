@@ -3,18 +3,17 @@ import Footer from './Footer'
 import { Row,Card, CardTitle, CardText,Col } from 'reactstrap';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import dataViz from '../assets/images/dataViz.png';
-
 import {Link, withRouter ,Switch} from 'react-router-dom';
 import datamind from '../assets/images/DataMind.jpeg';
 import Header from './/Header';
-
+import PermDataSettingIcon from '@material-ui/icons/PermDataSetting';
 import globe from '../assets/images/globe.png';
 import email from '../assets/images/email.png';
 import members from '../assets/images/members.png';
 import barchart from '../assets/images/Barchart.png';
 import data from '../assets/images/data.png';
 import performance from '../assets/images/performance.png';
-
+import AssessmentIcon from '@material-ui/icons/Assessment';
 
 
 
@@ -41,13 +40,13 @@ export default class Dataset extends Component {
  
                         <div className="container" style={{}}>
                             <div class="container mt-5 mb-3">
-                            <h3>DataSet Description</h3>
+                            <h3> DataSet Description</h3>
                             </div>
                             {/* <div class="row"> */}
                     <div class="container my-5">
                         <div class="card border-info">
                         <div class="card-header font-weight-bold h5" style={{"color":"#34666F"}}>
-                        Multivariate dataset                    </div>
+                        <PermDataSettingIcon></PermDataSettingIcon>Multivariate dataset                    </div>
                     <div class="card-body">
                         <p class="card-text">
                         <li>There are 46,412 number of records</li>
@@ -60,7 +59,7 @@ export default class Dataset extends Component {
                 <div class="container mt-5">
                     <div class="card border-info">
                     <div class="card-header font-weight-bold h5"style={{"color":"#34666F"}} >
-                    Attributes of dataset                    </div>
+                   <AssessmentIcon></AssessmentIcon> Attributes of dataset                    </div>
                     <div class="card-body">
  
                         <p class="card-text">
@@ -93,7 +92,7 @@ export default class Dataset extends Component {
                  <Link to="/Visualization" style={{ textDecoration: 'none' }}>
                           <Card body inverse id="DatasetBox"  style={{ height:'200px',textAlign:'center',backgroundColor:'white', paddingTop: '40px' }}>
                               <CardText><img src={dataViz} alt="Performance" style={{'border': 'none','height': '100px'}}></img></CardText>
-                              <CardTitle tag="h5"  style={{"color":"#ffba39","font-weight":"bold"}}>Click <b>to</b> see the visualization!</CardTitle>
+                              <CardTitle tag="h5"  style={{"color":"#ffba39","font-weight":"bold"}}>Click <b>to</b> see the visualization! </CardTitle>
                           </Card>
                       </Link>
                       </div>
