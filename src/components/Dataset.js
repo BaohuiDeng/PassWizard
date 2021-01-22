@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Footer from './Footer'
 import { Row,Card, CardTitle, CardText,Col } from 'reactstrap';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
+import dataViz from '../assets/images/dataViz.png';
 
 import {Link, withRouter ,Switch} from 'react-router-dom';
 import datamind from '../assets/images/DataMind.jpeg';
@@ -79,16 +80,23 @@ export default class Dataset extends Component {
                     </div>
                 </div>
              
-                <div class="container my-5">
-                        <div class="card">
+                {/* <div class="container my-5" style={{"background-color":"#a5826a"}} >
 
-                    <div class="card-body">
-                        <p class="card-text">
-                        <a href="/Visualization" type="button" class="btn btn-large btn-block ">Click here to see the visualization!</a>
-                       </p>
-                        </div>
+                    <div class="card-body" >
+                        <a href="/Visualization" type="button" class="text-decoration-none">
+                            <h3 class="font-weight-bold" style={{"color":"white"}}>Click here to see the visualization!</h3>
+                            </a>
+                       
                     </div>
-                </div>
+                </div> */}
+                <div class="mt-4">
+                 <Link to="/Visualization" style={{ textDecoration: 'none' }}>
+                          <Card body inverse id="DatasetBox"  style={{ height:'200px',textAlign:'center',backgroundColor:'white', paddingTop: '40px' }}>
+                              <CardText><img src={dataViz} alt="Performance" style={{'border': 'none','height': '100px'}}></img></CardText>
+                              <CardTitle tag="h5"  style={{"color":"#ffba39","font-weight":"bold"}}>Click <b>to</b> see the visualization!</CardTitle>
+                          </Card>
+                      </Link>
+                      </div>
 
                 </div>
                 {/* </div> */}

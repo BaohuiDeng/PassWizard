@@ -19,6 +19,7 @@
     "react-metismenu": "^1.4.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "react-tooltip": "^4.2.13",
     "reactstrap": "^8.8.1",
     "web-vitals": "^0.2.4"
   },

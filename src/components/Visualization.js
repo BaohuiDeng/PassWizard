@@ -3,6 +3,7 @@ import Footer from './Footer'
 import { Row,Card, CardTitle, CardText,Col } from 'reactstrap';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Header from './/Header';
+import {Modal, ModalHeader,ModalBody} from 'reactstrap';
 
 import {Link, withRouter ,Switch} from 'react-router-dom';
 
@@ -22,8 +23,24 @@ import BarChartSecond from './BarChartSecond'
 
 
 
-
 export default class Visualization extends Component {
+   
+//     constructor(props) {
+
+//         super(props)
+//         this.state = {
+//             modalIsOpen:false,
+
+//         }
+//         this.toggleModal.bind(this)
+//     }
+
+//     toggleModal(){
+//         this.setState({
+//         modalIsOpen:!this.state.modalIsOpen,
+    
+//   })
+//   }
     render() {
         return (
                 <div className="container">
@@ -57,8 +74,7 @@ export default class Visualization extends Component {
                    
                     <div class="card-body">
                     <div style={{"width": "400px", "height": "400px"}}>
-                    <h5 onclick="zoom()">Zoom</h5>
-                        <PieChart onclick="zoom()"/>
+                        <PieChart />
                                 </div>
                     </div>
                     </div>
@@ -87,6 +103,8 @@ export default class Visualization extends Component {
                     {/* </Row> */}
                     <br></br>
                     <Footer />
+
+                   
                 </div>
         )
     }

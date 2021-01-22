@@ -73,9 +73,10 @@ export default  class BarChart extends Component {
           // console.log(this.state.Barchartdata)
 
 
-      }).catch(()=>{
-        alert('Error retrieving data!!');
-    })
+      })
+    //   .catch(()=>{
+    //     alert('Error retrieving data!!');
+    // })
     }
 
 

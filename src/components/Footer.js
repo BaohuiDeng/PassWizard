@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 export default class Footer extends Component {
     render() {
         return (
-          <div className='container-fluid border-top border-secondary mt-4 mb-4' style={{"background-color":"rgb(43, 43, 43,0.5)"
+          <div className='container-fluid border-top border-secondary mt-4 mb-4' style={{"background-color":"#313137","color":"whitesmoke"
         }}>
           
           
@@ -22,19 +22,19 @@ export default class Footer extends Component {
 
         <ul class="list-unstyled mb-0">
           <li>
-            <a href="https://flaskpro-advwebtech.herokuapp.com/" class="text-dark">Our Last Project</a>
+            <a href="https://flaskpro-advwebtech.herokuapp.com/" class="text-white">Our Last Project</a>
           </li>
           <li>
-            <a href="#!" class="text-dark">About Us</a>
+            <a href="#!" class="text-white">About Us</a>
           </li>
           <li>
-            <a href="#!" class="text-dark">Careers</a>
+            <a href="#!" class="text-white">Careers</a>
           </li>
           <li>
-            <a href="#!" class="text-dark">Capabilities</a>
+            <a href="#!" class="text-white">Capabilities</a>
           </li>
           <li>
-            <a href="#!" class="text-dark">The Social Computing Group</a>
+            <a href="#!" class="text-white">The Social Computing Group</a>
           </li>
         </ul>
       </div>
@@ -51,16 +51,16 @@ export default class Footer extends Component {
 
         <ul class="list-unstyled">
           <li>
-            <a href="#!" class="text-dark">Baohui</a>
+            <a href="#!" class="text-white">Baohui</a>
           </li>
           <li>
-            <a href="#!" class="text-dark">Tannaz</a>
+            <a href="#!" class="text-white">Tannaz</a>
           </li>
           <li>
-            <a href="#!" class="text-dark">Amr</a>
+            <a href="#!" class="text-white">Amr</a>
           </li>
           <li>
-            <a href="#!" class="text-dark">Hesam</a>
+            <a href="#!" class="text-white">Hesam</a>
           </li>
         </ul>
       </div>
@@ -69,7 +69,7 @@ export default class Footer extends Component {
 
   <div class="text-center p-3" style={{"background-color": "rgba(0, 0, 0, 0.2)"}}>
     © 2021 Copyright:
-    <a class="text-dark" href="https://mdbootstrap.com/">LAPro</a>
+    <a class="text-white" href="https://mdbootstrap.com/">LAPro</a>
   </div>
 </footer>
             {/* <footer className="page-footer font-small  ">

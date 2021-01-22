@@ -11,6 +11,7 @@ import data from '../assets/images/data.png';
 import firststep from '../assets/images/firststep.png';
 import secondstep from '../assets/images/secondstep.png';
 import thirdstep from '../assets/images/thirdstep.png';
+import ReactTooltip from 'react-tooltip';
 
 
 
@@ -26,21 +27,21 @@ export default class Performance extends Component {
                     <Row className="justify-content-sm-start mt-3 ">
                 <Header/>
 
-                    <div className="card  text-white">
+                    <div className="card  text-white" >
                       <img src={machinelearning} className="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
                       <div className="card-img-overlay">
                           <h1 className="card-title text-center font-weight-bold" style={{"font-size":"49px"}} >Machine Learning</h1>
                           
                       </div>
                     </div> 
-                        
-                    <div className="container mt-5">
+                      <div  className="container" style={{"background-color":"#f5f5f1"}}>
+                    <div className="container mt-5"  >
                     <p align="justify">Online education has become very popular and plays a positive impact on learning. Organizations have to consider many factors to make the learning process effective. If these are identified correctly, better results can be obtained. Virtual Learning Environment (VLE) provided by Open University has several factors which effect the student's performance. The purpose of this project is to identify the features that affect the student performance. If these are identified correctly, better results can be obtained. Both students and faculties can be well informed about the progress based on the analysis which provides an opportunity to excel.</p>
 
                     </div>
-                        
-                    <div className="col-sm-6">
-                      <div className="card">
+                      <div   className="d-flex mb-3">
+                    <div className="col-sm-6" >
+                      <div className="card border-info" style={{"background-color":"#f5f5f1"}}>
                         <div className="card-body">
                           <h5 className="card-title font-weight-bold" style={{"color":"#34666F"}}>Data Preprocessing</h5>
                           <p className="card-text justify">
@@ -51,8 +52,8 @@ export default class Performance extends Component {
                       </div>
                     </div>
 
-                    <div className="col-sm-6">
-                      <div className="card">
+                    <div className="col-sm-6 mt-2 mb-2">
+                      <div className="card border-info" style={{"background-color":"#f5f5f1"}}>
                         <div className="card-body">
                           <h5 className="card-title font-weight-bold" style={{"color":"#34666F"}}>Predictive Models</h5>
                           <p className="card-text justify">
@@ -60,60 +61,20 @@ export default class Performance extends Component {
                         </div>
                       </div>         
                     </div>
-                  
-                    {/* <div className="card jumbotron border-info mt-5  "> */}
-
-                {/* <h1 className="display-4">Hello, world!</h1> */}
-
-                {/* <form>
-  <div className="form-row">
-    <div className="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" className="form-control" id="inputEmail4" placeholder="Email"/>
-    </div>
-    <div className="form-group col-md-6">
-      <label for="inputPassword4">Password</label>
-      <input type="password" className="form-control" id="inputPassword4" placeholder="Password" />
-    </div>
-  </div>
-  <div className="form-group">
-    <label for="inputAddress">Address</label>
-    <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" />
-  </div>
-  <div className="form-group">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"/>
-  </div>
-  <div className="form-row">
-    <div className="form-group col-md-6">
-      <label for="inputCity">City</label>
-      <input type="text" className="form-control" id="inputCity"/>
-    </div>
-    <div className="form-group col-md-4">
-      <label for="inputState">State</label>
-      <select id="inputState" className="form-control">
-        <option selected>Choose...</option>
-        <option>...</option>
-      </select>
-    </div>
-    <div className="form-group col-md-2">
-      <label for="inputZip">Zip</label>
-      <input type="text" className="form-control" id="inputZip"/>
-    </div>
-  </div>
-  <hr className="my-4"/>
-                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                <p className="lead">
-                  <a className="btn btn-primary btn-lg" href="#" role="button">Predict Your Result</a>
-                </p>
-</form> */}
-
-
-               
-              {/* </div> */}
+                    </div>
+                    </div>
+                   
                                      
               </Row>
+          <Row className="justify-content-sm-center mt-5 ">
+            <div>
+              <h1 className="mb-3" data-tip="You can choose three options below to predict your result!" >WHICH STATAGE ARE YOU AT?</h1>
+              <ReactTooltip className='extraClass' effect="solid" width="180px" height="100px" />
 
+              
+
+            </div>
+          </Row>
             <Row className="justify-content-sm-center mt-3 ">
               <Col md="4" >
                       <Link to="/FirstPrediction">
