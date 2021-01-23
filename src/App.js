@@ -20,7 +20,7 @@ import FirstPrediction from './components/FirstPrediction';
 import SecondPrediction from './components/SecondPrediction';
 import ThirdPrediction from './components/ThirdPrediction';
 import AssessmentIcon from '@material-ui/icons/Assessment';
-
+import Result from './components/Result'
 
 
 const menu = [
@@ -91,6 +91,7 @@ function App() {
                       <Route exact path="/FirstPrediction" component = {FirstPrediction} />
                       <Route exact path="/SecondPrediction" component = {SecondPrediction} />
                       <Route exact path="/ThirdPrediction" component = {ThirdPrediction} />
+                      <Route exact path="/PredictionResult" component = {Result} />
 
                       <Route   component= {NotFound} />
                     </Switch>

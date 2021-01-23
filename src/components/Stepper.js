@@ -36,13 +36,11 @@ function getStepContent(step) {
   }
 }
 
-function child(props){
-    return props
-}
+
 
 export default function HorizontalLinearStepper() {
   const classes = useStyles();
-  const [activeStep, setActiveStep] = React.useState(child);
+  const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
   const steps = getSteps();
 

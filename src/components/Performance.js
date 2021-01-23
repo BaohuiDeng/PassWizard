@@ -19,7 +19,6 @@ import HorizontalLinearStepper from './Stepper'
 
 export default class Performance extends Component {
     render() {
-       
         return (
                 <div className="container">
                     <Row className="justify-content-sm-start mt-3 ">
@@ -73,7 +72,7 @@ export default class Performance extends Component {
               <ReactTooltip className='extraClass' effect="solid" width="180px" height="100px" />
             </div>
             <div className="container">
-            <HorizontalLinearStepper number="1"/>
+            <HorizontalLinearStepper />
             </div>
           </Row>
             <Row className="justify-content-sm-center mt-3 ">

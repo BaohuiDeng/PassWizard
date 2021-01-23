@@ -13,11 +13,28 @@ import LineChart from './LineChart'
 import BarChartSecond from './BarChartSecond'
 import predict from '../assets/images/predict.jpeg';
 import AddToQueueIcon from '@material-ui/icons/AddToQueue';
-import HorizontalLinearStepper from './Stepper'
+import HorizontalLinearStepper1 from './Stepper2'
 
 
 export default class FirstPrediction extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    };
+
+    // This binding is necessary to make `this` work in the callback
+    this.predict = this.predict.bind(this);
+  }
+
+
+  predict() {
+    window.location='/PredictionResult'
+    console.log("you predict!")
+    this.setState(state => ({
+    }));
+  }
 
     render() {
 
@@ -29,12 +46,12 @@ export default class FirstPrediction extends Component {
             <div class="card  ">
                         <img src={predict} class="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
                         <div class="card-img-overlay">
-                            <h1 className="card-title text-center font-weight-bold" style={{"font-size":"49px"}} >Start Prediction!</h1>
+                            <h1 className="card-title text-center font-weight-bold text-white" style={{"font-size":"49px"}} >Start Prediction!</h1>
                            
                         </div>
                         </div>
                         <div className="container mt-4">
-            <HorizontalLinearStepper  number="2"/>
+            <HorizontalLinearStepper1  />
             </div>
 
             <h3 className="mt-5">Fill in the form to get your result!</h3>
@@ -83,7 +100,7 @@ export default class FirstPrediction extends Component {
                 <p className="lead">
                   {/* <a className="btn btn-primary btn-lg" href="#" role="button">Predict Your Result</a> */}
                 </p>
-                <Button size="large" variant="outlined" color="primary">
+                <Button onClick={this.predict} size="large" variant="outlined" color="primary">
                 <span  className="mr-2">Predict Your Result</span> <AddToQueueIcon></AddToQueueIcon>
 
 </Button>

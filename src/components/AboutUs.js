@@ -4,12 +4,11 @@ import { Row,Card, CardTitle, CardText,Col } from 'reactstrap';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Header from './/Header';
 import member from '../assets/images/MMembers.png';
-import aboutus from '../assets/images/aboutus.png';
-import teamwork from '../assets/images/teamwork.jpeg';
-
+import teamwork from '../assets/images/aboutus.jpg';
+import GroupIcon from '@material-ui/icons/Group';
 import {Link, withRouter ,Switch} from 'react-router-dom';
-
-
+import HomeWorkIcon from '@material-ui/icons/HomeWork';
+import LocationCityIcon from '@material-ui/icons/LocationCity';
 import globe from '../assets/images/globe.png';
 import email from '../assets/images/email.png';
 import members from '../assets/images/members.png';
@@ -31,7 +30,7 @@ export default class AboutUs extends Component {
             <Header/>
            
             <div class="card  text-white">
-                        <img src={teamwork} class="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%","opacity":"0.9"}}></img>
+                        <img src={teamwork} class="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
                         <div class="card-img-overlay">
                             <h1 className="card-title text-center font-weight-bold" style={{"font-size":"49px","color":"black"}} >Our Team</h1>
                            
@@ -55,15 +54,18 @@ export default class AboutUs extends Component {
                        
             <div class="d-flex container justify-content-center1" style={{"height":"150px"}}>
                     <div class=" mx-5 mt-3">
-                    <img src={aboutus} height="65px"/>
+                      <GroupIcon style={{ fontSize: 65 }}></GroupIcon>
+                    {/* <img src={aboutus} height="65px"/> */}
                     <p class="ptitle">WHO WE ARE</p>
                         </div>  
                     <div class=" mx-5 mt-3">
-                    <img src={member} height="65px"/>
+                      <LocationCityIcon  className="primary"style={{ fontSize: 65 }}></LocationCityIcon>
+                    {/* <img src={member} height="65px"/> */}
                     <p class="ptitle">WHERE WE AT</p>
                         </div>  
                     <div class="mx-5 mt-3">
-                    <img src={aboutus} height="65px"/>
+                      <HomeWorkIcon  style={{ fontSize: 65 }}></HomeWorkIcon>
+                    {/* <img src={aboutus} height="65px"/> */}
                     <p class="ptitle">HIRE US</p>
                         </div>  
             </div> 
