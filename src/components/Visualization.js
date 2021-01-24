@@ -50,61 +50,76 @@ export default class Visualization extends Component {
                     <div class="container my-5">
                         <div class="">
 
-                    <div class="card-body">
-                        <p class="card-text">
-                        <h3 >You can find some charts here. Let's have a look for better perspective</h3>
-                       </p>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <h3 >You can find some charts here. Let's have a look for better perspective</h3>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                            <div class="row">
-                    <div class="col-sm-6">
-                        <div class="card" style={{"height":"350px","width":"470px"}}>
-                        
-                    <div class="card-body">
-                    <div style={{"width": "400px", "height": "400px"}}>
-                                    <BarChart/>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card" >
+                                <div class="card-body">
+                                    <div >
+                                        <BarChart/>
+                                    </div>
                                 </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="card" style={{"height":"350px","width":"470px"}}>
-                   
-                    <div class="card-body">
-                    <div style={{"width": "400px", "height": "400px"}}>
-                        <PieChart />
+
+                    <div class="row">
+                        <div class="col-sm-6 mt-4">
+                            <div class="card">
+                        
+                                <div class="card-body">
+                                    <div >
+                                        <LineChart/>
+                                    </div>                    
                                 </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mt-4">
+                            <div class="card">
+                        
+                                <div class="card-body">
+                                    <div>
+                                        <BarChartSecond/>
+                                    </div>                   
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 mt-2">
-                    <div class="card" style={{"height":"350px","width":"470px"}}>
+
+                    <div class="row">
+                        <div class="col-sm-6 mt-4">
+                            <div class="card">
                     
-                    <div class="card-body">
-                    <div style={{"width": "400px", "height": "400px"}}>
-                                    <LineChart/>
-                                </div>                    </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 mt-2">
-                    <div class="card" style={{"height":"350px","width":"470px"}}>
+                                <div class="card-body">
+                                    <div>
+                                        <PieChart />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mt-4">
+                            <div class="card">
                     
-                    <div class="card-body">
-                    <div style={{"width": "400px", "height": "400px"}}>
-                                    <BarChartSecond/>
-                                </div>                    </div>
+                                <div class="card-body">
+                                    <div>
+                                        <LineChart />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                </div>
+               
                 
            
-                    {/* </Row> */}
                     <br></br>
                     <Footer />
-
-                   
                 </div>
         )
     }
