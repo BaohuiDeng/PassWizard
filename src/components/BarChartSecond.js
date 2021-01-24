@@ -32,6 +32,7 @@ export default  class BarChartSecond extends Component {
         let FirstGradeFemale = [];
         let FirstGradeMale = [];
         let BarchartData = [];
+        let GC1 = [];
 
 
 
@@ -46,19 +47,23 @@ export default  class BarChartSecond extends Component {
               if (this.state.allInfo[i].sex == "M") {
                 FirstGradeMale.push(this.state.allInfo[i].GG1 );
                 
-              }    
+              }   
+              //GC1.push(this.state.allInfo[i].GC1 );
+ 
   
             }
             // make average
                 const average = arr => arr.reduce( ( p, c ) => p + c, 0 ) / arr.length;
                 FirstGradeFemale = average( FirstGradeFemale );
                 FirstGradeMale = average( FirstGradeMale );
-                BarchartData.push(FirstGradeFemale,FirstGradeMale );
+
+                BarchartData.push(FirstGradeFemale,FirstGradeMale);
 
             // Set state
           this.setState({ BarchartData:BarchartData});
 
-          console.log(this.state.BarchartData)
+          //console.log(this.state.BarchartData)
+          console.log(this.state.allInfo["0"].school)
 
 
       }).catch(()=>{
@@ -77,14 +82,15 @@ export default  class BarChartSecond extends Component {
 
          <Bar
         data={{
-          labels: ['Male', 'Female'],
+          labels: ['Pass','Fail'],
           datasets: [
             {
-              label: 'Gender Vs AverageGrade',
+              label: 'Female',
               data: this.state.BarchartData,
               backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+
                 // 'rgba(255, 206, 86, 0.2)',
                 // 'rgba(75, 192, 192, 0.2)',
                 // 'rgba(153, 102, 255, 0.2)',
@@ -101,8 +107,8 @@ export default  class BarChartSecond extends Component {
               borderWidth: 1,
             },
             // {
-            //   label: 'Quantity',
-            //   data: [47, 52, 67, 58, 9, 50],
+            //   label: 'Male',
+            //   data: this.state.BarchartData,
             //   backgroundColor: 'orange',
             //   borderColor: 'red',
             // },
@@ -111,6 +117,12 @@ export default  class BarChartSecond extends Component {
         height={200}
         width={300}
         options={{
+          title:{
+          
+              display: true,
+              text: 'Grade distribution regarding gender'
+          
+          },
         //   maintainAspectRatio: false,
           scales: {
             yAxes: [

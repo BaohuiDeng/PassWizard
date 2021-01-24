@@ -20,12 +20,7 @@ export default  class BarChart extends Component {
         freetime:'',
         absences:'',
         Barchartdata:''
-
-
       }
-
-     
-
     }
 
     componentDidMount() {
@@ -35,7 +30,7 @@ export default  class BarChart extends Component {
         const data = res.data;
         this.setState({allInfo:data})
         
-        // console.log(this.state.allInfo["0"].school)
+         console.log(this.state.allInfo["0"].school)
 
         // Create a new array based on current state:
         let sex = [];
@@ -113,12 +108,12 @@ export default  class BarChart extends Component {
               ],
               borderWidth: 1,
             },
-            // {
-            //   label: 'Quantity',
-            //   data: [47, 52, 67, 58, 9, 50],
-            //   backgroundColor: 'orange',
-            //   borderColor: 'red',
-            // },
+            {
+              label: 'Quantity',
+              data:  this.state.Barchartdata,
+              backgroundColor: 'orange',
+              borderColor: 'red',
+            },
           ],
         }}
         height={200}

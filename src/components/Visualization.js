@@ -18,7 +18,7 @@ import BarChart from './BarChart'
 import PieChart from './PieChart'
 import LineChart from './LineChart'
 import BarChartSecond from './BarChartSecond'
-
+import dataVisualization from '../assets/images/dataVisualization.jpg'
 
 
 
@@ -46,7 +46,13 @@ export default class Visualization extends Component {
                 <div className="container">
                     {/* <Row className="justify-content-sm-start mt-3 "> */}
                     <Header/>
-
+                    <div className="card  text-white" >
+                      <img src={dataVisualization} className="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
+                      <div className="card-img-overlay">
+                          <h1 className="card-title text-center font-weight-bold" style={{"font-size":"49px"}} >Visualization</h1>
+                          
+                      </div>
+                    </div> 
                     <div class="container my-5">
                         <div class="">
 
