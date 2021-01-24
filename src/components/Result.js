@@ -11,7 +11,7 @@ import BarChart from './BarChart'
 import PieChart from './PieChart'
 import LineChart from './LineChart'
 import BarChartSecond from './BarChartSecond'
-import predict from '../assets/images/predict.jpeg';
+import result from '../assets/images/result.jpg';
 import Stepper3 from '../components/Stepper3'
 
 export default class Result extends Component {
@@ -25,9 +25,9 @@ export default class Result extends Component {
             <Header/>
 
             <div class="card  ">
-                        <img src={predict} class="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
+                        <img src={result} class="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
                         <div class="card-img-overlay">
-                            <h1 className="card-title text-center font-weight-bold" style={{"font-size":"49px"}} >Your Result!</h1>
+                            <h1 className="card-title text-center font-weight-bold text-white" style={{"font-size":"49px"}} >Your Result!</h1>
                            
                         </div>
                         </div>
@@ -41,7 +41,7 @@ export default class Result extends Component {
 
                             </Col>
               <Col md="12" >
-                          <Card body inverse  style={{ height:'200px',backgroundColor:'white', paddingTop: '5px' }}>
+                          <Card className="my-3"body inverse  style={{ height:'200px',backgroundColor:'white', paddingTop: '5px' }}>
                               <CardText><p>jdlkakelknlkef</p></CardText>
                               <CardTitle tag="h6" style={{"color":"black"}}>I am at the begining of the semester
                               he begining of the sehe begining of the sehe begining of the 

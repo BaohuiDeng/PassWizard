@@ -66,37 +66,37 @@ export default class Performance extends Component {
 
       
 
-          <Row className="justify-content-sm-center mt-5 ">
+          <Row className="justify-content-sm-center my-5 ">
             <div>
-              <h1 className="mb-3" data-tip="You can choose three options below to predict your result!" >WHICH STATAGE ARE YOU AT?</h1>
+              <h1 className="my-3" data-tip="You can choose three options below to predict your result!" >WHICH STATAGE ARE YOU AT?</h1>
               <ReactTooltip className='extraClass' effect="solid" width="180px" height="100px" />
             </div>
-            <div className="container">
+            <div className="container my-3">
             <HorizontalLinearStepper />
             </div>
           </Row>
-            <Row className="justify-content-sm-center mt-3 ">
+            <Row className="justify-content-sm-center my-4 ">
               <Col md="4" >
                       <Link to="/FirstPrediction">
-                          <Card body inverse id="DatasetBox" style={{ height:'200px',textAlign:'center',backgroundColor:'white', paddingTop: '40px' }}>
+                          <Card body inverse className="border-info" id="DatasetBox" style={{ height:'200px',textAlign:'center',backgroundColor:'white', paddingTop: '40px' }}>
                               <CardText><img src={firststep} alt="Performance" style={{'border': 'none','height': '90px'}}></img></CardText>
-                              <CardTitle tag="h6" style={{"color":"#ffba39"}}>I am at the <b>begining</b> of the semester.</CardTitle>
+                              <CardTitle tag="h6" style={{color:"#34666F"}}>I am at the <b>begining</b> of the semester.</CardTitle>
                           </Card>
                       </Link>
                   </Col> 
                   <Col md="4">
                       <Link to="/SecondPrediction">
-                          <Card body inverse  id="VisualizationBox" style={{ height:'200px',backgroundColor:'white' ,textAlign:'center', paddingTop: '40px'}}>
+                          <Card body inverse className="border-info" id="VisualizationBox" style={{ height:'200px',backgroundColor:'white' ,textAlign:'center', paddingTop: '40px'}}>
                               <CardText><img src={secondstep} alt="Performance" style={{'border': 'none','height': '90px'}}></img></CardText>
-                              <CardTitle tag="h6" style={{"color":"#0d6bd6"}}>I have done <b>one</b> exam.</CardTitle>
+                              <CardTitle tag="h6" style={{"color":"#4454b4"}}>I have done <b>one</b> exam.</CardTitle>
                           </Card>
                       </Link>
                   </Col> 
                   <Col md="4">
                       <Link to="/ThirdPrediction">
-                          <Card body inverse  id="PerformanceBox" style={{ height:'200px',backgroundColor:'white', textAlign:'center', paddingTop: '40px'}}>
+                          <Card body inverse className="border-info" id="PerformanceBox" style={{ height:'200px',backgroundColor:'white', textAlign:'center', paddingTop: '40px'}}>
                               <CardText><img src={thirdstep} alt="Performance" style={{'border': 'none','height': '90px'}}></img></CardText>
-                              <CardTitle tag="h6" style={{"color":"#24a809"}}>I have done <b>two</b> exams</CardTitle>
+                              <CardTitle tag="h6" style={{"color":"#c7be4c"}}>I have done <b>two</b> exams</CardTitle>
                           </Card>
                       </Link>
                   </Col> 

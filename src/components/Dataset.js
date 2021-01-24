@@ -45,7 +45,7 @@ export default class Dataset extends Component {
                             {/* <div class="row"> */}
                     <div class="container my-5">
                         <div class="card border-info">
-                        <div class="card-header font-weight-bold h5" style={{"color":"#34666F"}}>
+                        <div class="card-header font-weight-bold h5" style={{"color":"#34666F","background-color":"#B2C0C1"}}>
                         <PermDataSettingIcon></PermDataSettingIcon>Multivariate dataset                    </div>
                     <div class="card-body">
                         <p class="card-text">
@@ -58,23 +58,23 @@ export default class Dataset extends Component {
                 </div>
                 <div class="container mt-5">
                     <div class="card border-info">
-                    <div class="card-header font-weight-bold h5"style={{"color":"#34666F"}} >
+                    <div class="card-header font-weight-bold h5"style={{"color":"#34666F","background-color":"#B2C0C1"}} >
                    <AssessmentIcon></AssessmentIcon> Attributes of dataset                    </div>
                     <div class="card-body">
  
                         <p class="card-text">
-                        <li><strong>Gender</strong>: The student’s gender</li>
-                    <li><strong>Region</strong>: Identifies the geographic region, where the student lived while taking the module-presentation</li>
-                    <li><strong>Highest Education</strong>: Highest student education level on entry to the module presentation</li>
-                    <li><strong>Imd Band</strong>: Specifies the Index of Multiple Depravation band of the place where the student lived during the module-presentation</li>
-                    <li><strong>Age Group</strong>: Band of the student’s age</li>
-                    <li><strong>Number Of Previous Attempts</strong>: The number times the student has attempted this module</li>
-                    <li><strong>Semester</strong>: A status flag indicating that the Semester</li>
-                    <li><strong>First Module</strong>: Code name of the module, which serves as the identifier</li>
-                    <li><strong>Semester </strong>: Code name of the presentation. It consists of the year and “B” for the presentation starting in February and “J” for the presentation starting in October</li>
-                    <li><strong>Second Module</strong>: Code name of the module, which serves as the identifier</li>
-                    <li><strong>Semester </strong>: Code name of the presentation. It consists of the year and “B” for the presentation starting in February and “J” for the presentation starting in October</li>
-                    <li><strong>Final Result</strong>: Student’s final result in the module-presentation</li>                            </p>
+                        <li><strong style={{color:"#34666F"}}>Gender</strong>: The student’s gender</li>
+                    <li><strong style={{color:"#34666F"}}>Region</strong>: Identifies the geographic region, where the student lived while taking the module-presentation</li>
+                    <li><strong style={{color:"#34666F"}}>Highest Education</strong>: Highest student education level on entry to the module presentation</li>
+                    <li><strong style={{color:"#34666F"}}>Imd Band</strong>: Specifies the Index of Multiple Depravation band of the place where the student lived during the module-presentation</li>
+                    <li><strong style={{color:"#34666F"}}>Age Group</strong>: Band of the student’s age</li>
+                    <li><strong style={{color:"#34666F"}}>Number Of Previous Attempts</strong>: The number times the student has attempted this module</li>
+                    <li><strong style={{color:"#34666F"}}>Semester</strong>: A status flag indicating that the Semester</li>
+                    <li><strong style={{color:"#34666F"}}>First Module</strong>: Code name of the module, which serves as the identifier</li>
+                    <li><strong style={{color:"#34666F"}}>Semester </strong>: Code name of the presentation. It consists of the year and “B” for the presentation starting in February and “J” for the presentation starting in October</li>
+                    <li><strong style={{color:"#34666F"}}>Second Module</strong>: Code name of the module, which serves as the identifier</li>
+                    <li><strong style={{color:"#34666F"}}>Semester </strong>: Code name of the presentation. It consists of the year and “B” for the presentation starting in February and “J” for the presentation starting in October</li>
+                    <li><strong style={{color:"#34666F"}}>Final Result</strong>: Student’s final result in the module-presentation</li>                            </p>
                     </div>
                     </div>
                 </div>

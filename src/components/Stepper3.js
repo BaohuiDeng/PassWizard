@@ -17,6 +17,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
   },
+  iconContainer: { // define styles for icon container
+    transform: 'scale(1.4)',
+  }
 }));
 
 function getSteps() {
@@ -100,7 +103,9 @@ export default function HorizontalLinearStepper3() {
         //   }
           return (
             <Step key={label} {...stepProps}>
-              <StepLabel {...labelProps}>{label}</StepLabel>
+              <StepLabel  classes={{ // apply this style
+          iconContainer: classes.iconContainer
+        }}  {...labelProps}>{label}</StepLabel>
             </Step>
           );
         })}

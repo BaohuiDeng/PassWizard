@@ -11,7 +11,8 @@ import twitter from '../assets/images/twitter.png';
 import email2 from '../assets/images/email2.png';
 import phone2 from '../assets/images/phone2.png';
 import rss from '../assets/images/rss.png';
-
+import contact from '../assets/images/contact.jpg';
+import Header from './Header'
 
 
 
@@ -25,37 +26,57 @@ export default class ContactUs extends Component {
     render() {
         return (
                 <div className="container" >
+                    <Header />
+                      <div class="card  ">
+                        <img src={contact} class="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
+                        <div class="card-img-overlay">
+                            <h1 className="card-title text-center font-weight-bold text-black" style={{"font-size":"49px"}} >Start Prediction!</h1>
+                           
+                        </div>
+                        </div>
                     <Row className=" mt-3 ">
-                        <Col md="12" className="text-center ">    
-                        CONTACT US
+                        <Col md="12" className="text-center font-weight-bold mt-5">    
+                       <h3> CONTACT US</h3>
                         </Col>
 
                     </Row>
                     <Row className="justify-content-center mt-3 ">
 
                         <Col md="5" className="justify-content-center ">
-                            <Form className="text-center ">
-                                <FormGroup>
-                                    {/* <Label for="exampleName">Name</Label> */}
-                                    <Input name="Name" id="exampleName" placeholder="Name" />
-                                </FormGroup>
+                        <div className="card jumbotron border-info mt-5 shadow-lg p-3 mb-5  rounded "> 
+                 <form>
+  <div className="form-row">
+    
+   
+  </div>
+  <div className="form-group">
+    <label for="inputAddress"> <i class="fa fa-envelope  text-info mr-1"></i> Email</label>
+    <input type="text" className="form-control" id="inputAddress" placeholder="abc@gmail.com" />
+  </div>
+  <div className="form-group">
+    <label for="inputAddress2"> <i class="fa fa-user text-info mr-1"></i>Name</label>
+    <input type="text" className="form-control" id="inputAddress2" placeholder="your name"/>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1"> <i class="fa fa-comment text-info mr-1"></i>Message</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <hr className="my-4"/>
+                <p className="lead">
+                  {/* <a className="btn btn-primary btn-lg" href="#" role="button">Predict Your Result</a> */}
+                </p>
+                <Button onClick={this.predict} size="large" variant="outlined" color="primary">
+                <span  className="mr-2">Submit</span> 
 
-                                <FormGroup>
-                                    {/* <Label for="exampleEmail">Email</Label> */}
-                                    <Input type="email" name="email" id="exampleEmail" placeholder="your Email" />
-                                </FormGroup>
+</Button>
 
-                                <FormGroup>
-                                    {/* <Label for="exampleText">Message</Label> */}
-                                    <Input type="textarea"name="text" id="exampleText" placeholder="Messsage"  />
-                                </FormGroup>
-                                <Button >Submit</Button>
-                            </Form>
+</form> 
+</div>
 
                         </Col>
                         <Col md="1"></Col>
                         <Col md="5">
-                            <Row className="justify-content-center mt-3 ">
+                            <Row className="justify-content-center mt-5 ">
                                 <Col md="6" className="justify-content-center text-center">
                                     <img src={location} alt="location" style={{'border': 'none','height': '25px'}}/>   
                                 </Col>

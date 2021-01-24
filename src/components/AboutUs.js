@@ -32,7 +32,7 @@ export default class AboutUs extends Component {
             <div class="card  text-white">
                         <img src={teamwork} class="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
                         <div class="card-img-overlay">
-                            <h1 className="card-title text-center font-weight-bold" style={{"font-size":"49px","color":"black"}} >Our Team</h1>
+                            <h1 className="card-title text-center font-weight-bold" style={{"font-size":"49px","color":"white"}} >Our Team</h1>
                            
                         </div>
                         </div> 
@@ -52,27 +52,27 @@ export default class AboutUs extends Component {
                 </div>
 
                        
-            <div class="d-flex container justify-content-center1" style={{"height":"150px"}}>
-                    <div class=" mx-5 mt-3">
-                      <GroupIcon style={{ fontSize: 65 }}></GroupIcon>
+            <div class="d-flex container justify-content-center1" style={{"height":"200px"}}>
+                    <div class=" mx-5 mt-3" style={{"padding-top":"30px"}}>
+                      <GroupIcon  style={{ fontSize: 65,fill: "white" }}></GroupIcon>
                     {/* <img src={aboutus} height="65px"/> */}
-                    <p class="ptitle">WHO WE ARE</p>
+                    <p class="ptitle text-white">WHO WE ARE</p>
                         </div>  
-                    <div class=" mx-5 mt-3">
-                      <LocationCityIcon  className="primary"style={{ fontSize: 65 }}></LocationCityIcon>
+                    <div class=" mx-5 mt-3" style={{"padding-top":"30px"}}>
+                      <LocationCityIcon  style={{  fontSize: 65,fill: "white"  }}></LocationCityIcon>
                     {/* <img src={member} height="65px"/> */}
-                    <p class="ptitle">WHERE WE AT</p>
+                    <p class="ptitle text-white">WHERE WE AT</p>
                         </div>  
-                    <div class="mx-5 mt-3">
-                      <HomeWorkIcon  style={{ fontSize: 65 }}></HomeWorkIcon>
+                    <div class="mx-5 mt-3" style={{"padding-top":"30px"}}>
+                      <HomeWorkIcon   style={{  fontSize: 65,fill: "white"  }}></HomeWorkIcon>
                     {/* <img src={aboutus} height="65px"/> */}
-                    <p class="ptitle">HIRE US</p>
+                    <p class="ptitle text-white">WHAT WE CAN DO</p>
                         </div>  
             </div> 
 
     
 
-  <div class="container mt-4 ">
+  <div class="container mt-5 ">
     <div class="boxes d-flex">
     <div class="card border-info text-center mx-2 col-sm-6">
     <div class="card-body">
@@ -84,7 +84,7 @@ export default class AboutUs extends Component {
          HTML / CSS / Javascript
       </div>
       <div class="feature">
-        Angular / AngularJS
+        Angular
       </div>
         <div class="feature">
         React

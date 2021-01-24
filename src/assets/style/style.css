@@ -56,7 +56,7 @@ code {
 
 .justify-content-center1 {
   justify-content: center !important;
-  background-color: #a3865b;
+  background-color: #313137;
 }
 
 .btn{
@@ -71,6 +71,7 @@ code {
 }
 .jumbotron{
   background-color: #EDF4EA;
+  
 }
 
 .extraClass {
