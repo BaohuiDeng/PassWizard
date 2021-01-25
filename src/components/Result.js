@@ -12,6 +12,8 @@ import PieChart from './PieChart'
 import LineChart from './LineChart'
 import BarChartSecond from './BarChartSecond'
 import result from '../assets/images/result.jpg';
+import resulticon from '../assets/images/resulticon.png';
+
 import Stepper3 from '../components/Stepper3'
 
 export default class Result extends Component {
@@ -35,24 +37,20 @@ export default class Result extends Component {
 
                         <Stepper3/>            </div>
 
-                        <Row className="justify-content-sm-center mt-3 ">
-                            <Col md="12 my-4">
+                        <Row className="mt-3 ">
+                            <Col md="12 my-4 text-center" style={{"color":"green"}}>
                                 <h3>Congrats! your result is:</h3>
 
                             </Col>
-              <Col md="12" >
-                          <Card className="my-3"body inverse  style={{ height:'200px',backgroundColor:'white', paddingTop: '5px' }}>
-                              <CardText><p>jdlkakelknlkef</p></CardText>
-                              <CardTitle tag="h6" style={{"color":"black"}}>I am at the begining of the semester
-                              he begining of the sehe begining of the sehe begining of the 
-                              he begining of the se                              he begining of the sehe begining of the sehe begining of the 
-                              he begining of the sehe begining of the sehe begining of the 
-                              he begining of the sehe begining of the sehe begining of the 
-                              he begining of the sehe begining of the sehe begining of the 
-                              he begining of the sehe begining of the sehe begining of the 
+                            <Col md="12" >
+                            <Card className="my-3 pt-4"body inverse  style={{ height:'200px',backgroundColor:'white', paddingTop: '5px' }}>
+                              <CardText></CardText>
+                              <CardTitle tag="h6" className='text-center' style={{"color":"darkblue", fontWeight: "bold"}}>
+                              <img src={resulticon} classNamw={ 'mr-2'} style={{"width":"90px"}}></img>
+                              {this.props.location.result.msg}
 
-                              he begining of the sesehe begining of the sehe begining of the se
-                              .</CardTitle>
+                            </CardTitle>
+                            {this.props.location.result.msg}
                           </Card>
                   </Col> 
                  
