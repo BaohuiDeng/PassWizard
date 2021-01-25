@@ -14,7 +14,11 @@ export default  class BarChartSecond extends Component {
       {
         allInfo:'',
         GG1:'',
-        BarchartData:''
+        BarchartData:'',
+        pass:'',
+        fail:'',
+        BarchartDataSecond:'',
+        BarchartDataThird:''
 
       }
     }
@@ -31,9 +35,14 @@ export default  class BarChartSecond extends Component {
         // Create a new array based on current state:
         let FirstGradeFemale = [];
         let FirstGradeMale = [];
+        let SecondGradeFemale=[];
+        let SecondGradeMale = [];
+        let ThirdGradeFemale=[];
+        let ThirdGradeMale=[];
+        
         let BarchartData = [];
-        let GC1 = [];
-
+        let BarchartDataSecond=[];
+        
 
 
 
@@ -41,11 +50,29 @@ export default  class BarChartSecond extends Component {
               // console.log(this.state.allInfo[i].GG1)
               // retrieving sex
               if (this.state.allInfo[i].sex == "F") {
-                FirstGradeFemale.push(this.state.allInfo[i].GG1 );
+                //if(this.state.allInfo[i].GC1 == "pass"){
+                FirstGradeFemale.push(this.state.allInfo[i].G1 );
+                SecondGradeFemale.push(this.state.allInfo[i].G2)
+                ThirdGradeFemale.push(this.state.allInfo[i].G3)
+
+                //pass = this.state.allInfo[i].pass.length
+
+                //pass.push(pass)
+               // }
                 
               }
               if (this.state.allInfo[i].sex == "M") {
-                FirstGradeMale.push(this.state.allInfo[i].GG1 );
+                //if(this.state.allInfo[i].GC1 == "fail"){
+                 // fail = this.state.allInfo[i].fail.length
+
+                 // fail.push(fail)
+                  
+                //}
+                FirstGradeMale.push(this.state.allInfo[i].G1 );
+                SecondGradeMale.push(this.state.allInfo[i].G2 );
+                ThirdGradeMale.push(this.state.allInfo[i].G3 );
+
+
                 
               }   
               //GC1.push(this.state.allInfo[i].GC1 );
@@ -56,11 +83,22 @@ export default  class BarChartSecond extends Component {
                 const average = arr => arr.reduce( ( p, c ) => p + c, 0 ) / arr.length;
                 FirstGradeFemale = average( FirstGradeFemale );
                 FirstGradeMale = average( FirstGradeMale );
+                SecondGradeFemale = average(SecondGradeFemale);
+                SecondGradeMale = average( SecondGradeMale );
+                ThirdGradeFemale = average( ThirdGradeFemale );
+                ThirdGradeMale = average( ThirdGradeMale );
 
-                BarchartData.push(FirstGradeFemale,FirstGradeMale);
+
+
+                //count how many time pass
+
+                BarchartData.push(FirstGradeFemale,SecondGradeFemale,ThirdGradeFemale);
+                BarchartDataSecond.push(FirstGradeMale,SecondGradeMale,ThirdGradeMale);
+               // BarchartData.push(pass,fail);
+
 
             // Set state
-          this.setState({ BarchartData:BarchartData});
+          this.setState({ BarchartData:BarchartData, BarchartDataSecond:BarchartDataSecond});
 
           //console.log(this.state.BarchartData)
           console.log(this.state.allInfo["0"].school)
@@ -82,14 +120,20 @@ export default  class BarChartSecond extends Component {
 
          <Bar
         data={{
-          labels: ['Pass','Fail'],
+          labels: ['G1','G2','G3'],
           datasets: [
             {
               label: 'Female',
               data: this.state.BarchartData,
               backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
+             
+             
+              '#ba7d9d',
+              '#ba7d9d',
+              '#ba7d9d',
+
+
+
 
                 // 'rgba(255, 206, 86, 0.2)',
                 // 'rgba(75, 192, 192, 0.2)',
@@ -97,8 +141,8 @@ export default  class BarChartSecond extends Component {
                 // 'rgba(255, 159, 64, 0.2)',
               ],
               borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
+                // 'rgba(255, 99, 132, 1)',
+                // 'rgba(54, 162, 235, 1)',
                 // 'rgba(255, 206, 86, 1)',
                 // 'rgba(75, 192, 192, 1)',
                 // 'rgba(153, 102, 255, 1)',
@@ -106,12 +150,12 @@ export default  class BarChartSecond extends Component {
               ],
               borderWidth: 1,
             },
-            // {
-            //   label: 'Male',
-            //   data: this.state.BarchartData,
-            //   backgroundColor: 'orange',
-            //   borderColor: 'red',
-            // },
+            {
+              label: 'Male',
+              data: this.state.BarchartDataSecond,
+              backgroundColor:  '#489093',
+              borderColor: 'red',
+            },
           ],
         }}
         height={200}
@@ -120,7 +164,7 @@ export default  class BarChartSecond extends Component {
           title:{
           
               display: true,
-              text: 'Grade distribution regarding gender'
+              text: 'Three Exam Average Grade Distribution Regarding Gender'
           
           },
         //   maintainAspectRatio: false,
