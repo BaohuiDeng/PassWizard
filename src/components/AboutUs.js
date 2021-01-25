@@ -29,19 +29,19 @@ export default class AboutUs extends Component {
                     <Row className="justify-content-sm-start mt-3 ">
             <Header/>
            
-            <div class="card  text-white">
-                        <img src={teamwork} class="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
-                        <div class="card-img-overlay">
+            <div className="card  text-white">
+                        <img src={teamwork} className="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
+                        <div className="card-img-overlay">
                             <h1 className="card-title text-center font-weight-bold" style={{"font-size":"49px","color":"white"}} >Our Team</h1>
                            
                         </div>
                         </div> 
 
          
-                <div class="">
-                <div class="card-body my-5">
-                    <h5 class="card-title ">Team Members</h5>
-                    <p class="card-text ">With supporting text be
+                <div className="">
+                <div className="card-body my-5">
+                    <h5 className="card-title ">Team Members</h5>
+                    <p className="card-text ">With supporting text be
                     ng text below as a natural leng text below as a natural le
                     low as a natural lead-in 
                     With supporting text be ng text below as a natural leng text below as a natural le low as a natural lead-in ng text below as a natural le ng text below as a natural leto additional content.
@@ -52,80 +52,80 @@ export default class AboutUs extends Component {
                 </div>
 
                        
-            <div class="d-flex container justify-content-center1" style={{"height":"200px"}}>
-                    <div class=" mx-5 mt-3" style={{"padding-top":"30px"}}>
+            <div className="d-flex container justify-content-center1" style={{"height":"200px"}}>
+                    <div className=" mx-5 mt-3" style={{"padding-top":"30px"}}>
                       <GroupIcon  style={{ fontSize: 65,fill: "white" }}></GroupIcon>
                     {/* <img src={aboutus} height="65px"/> */}
-                    <p class="ptitle text-white">WHO WE ARE</p>
+                    <p className="ptitle text-white">WHO WE ARE</p>
                         </div>  
-                    <div class=" mx-5 mt-3" style={{"padding-top":"30px"}}>
+                    <div className=" mx-5 mt-3" style={{"padding-top":"30px"}}>
                       <LocationCityIcon  style={{  fontSize: 65,fill: "white"  }}></LocationCityIcon>
                     {/* <img src={member} height="65px"/> */}
-                    <p class="ptitle text-white">WHERE WE AT</p>
+                    <p className="ptitle text-white">WHERE WE AT</p>
                         </div>  
-                    <div class="mx-5 mt-3" style={{"padding-top":"30px"}}>
+                    <div className="mx-5 mt-3" style={{"padding-top":"30px"}}>
                       <HomeWorkIcon   style={{  fontSize: 65,fill: "white"  }}></HomeWorkIcon>
                     {/* <img src={aboutus} height="65px"/> */}
-                    <p class="ptitle text-white">WHAT WE CAN DO</p>
+                    <p className="ptitle text-white">WHAT WE CAN DO</p>
                         </div>  
             </div> 
 
     
 
-  <div class="container mt-5 ">
-    <div class="boxes d-flex">
-    <div class="card border-info text-center mx-2 col-sm-6">
-    <div class="card-body">
-      <div class="box ">
-        <img class="icon" src="https://img.icons8.com/plasticine/100/000000/html.png"/>
-      <h3><span class="text-primary">Frontend</span></h3>
+  <div className="container mt-5 ">
+    <div className="boxes d-flex">
+    <div className="card border-info text-center mx-2 col-sm-6">
+    <div className="card-body">
+      <div className="box ">
+        <img className="icon" src="https://img.icons8.com/plasticine/100/000000/html.png"/>
+      <h3><span className="text-primary">Frontend</span></h3>
 
-      <div class="feature">
+      <div className="feature">
          HTML / CSS / Javascript
       </div>
-      <div class="feature">
+      <div className="feature">
         Angular
       </div>
-        <div class="feature">
+        <div className="feature">
         React
       </div>
-        <div class="feature">
+        <div className="feature">
          Bootstrap
       </div>
    
-      <div class="feature">
+      <div className="feature">
          Wordpress
       </div>
-      <div class="feature">
+      <div className="feature">
          Git version control
       </div>
-      <div class="feature">
+      <div className="feature">
         Responsive layout and design
       </div>
   </div>
   </div>
     </div>
-    <div class="card border-info text-center col-sm-6 mx-2">
-    <div class="card-body">
-    <div class="box">
-          <img class="icon" style={{"max-width":"100%","height":"auto"}} src="https://img.icons8.com/bubbles/100/000000/database.png"/>
-        <h3><span class="text-primary ">Backend</span></h3>
-        <div class="feature">
+    <div className="card border-info text-center col-sm-6 mx-2">
+    <div className="card-body">
+    <div className="box">
+          <img className="icon" style={{"max-width":"100%","height":"auto"}} src="https://img.icons8.com/bubbles/100/000000/database.png"/>
+        <h3><span className="text-primary ">Backend</span></h3>
+        <div className="feature">
          Python
         </div>
-          <div class="feature">
+          <div className="feature">
         Flask
         </div>
-          <div class="feature">
+          <div className="feature">
          NodeJS
         </div>
-        <div class="feature">
+        <div className="feature">
      C++
         </div>
-        <div class="feature">
+        <div className="feature">
      MySQL
         </div>
-        <div class="feature">
+        <div className="feature">
        MongoDB
         </div>
       </div>

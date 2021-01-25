@@ -58,12 +58,14 @@ export default  class LineChart extends Component {
         let Health2=''
         let Services2=''
         let Teacher2=''
+        let GC2 =[]
 
         let atHome3=''
         let other3=''
         let Health3=''
         let Services3=''
         let Teacher3=''
+        let GC3 =[]
 
         for (var i = 0; i < this.state.allInfo.length; i++) {
     
@@ -78,33 +80,54 @@ export default  class LineChart extends Component {
                 //}
               }
 
-              if(this.state.allInfo[i].GC1=="pass" && this.state.allInfo[i].Mjob == "other"){     
+              if( this.state.allInfo[i].Mjob == "other"){     
                 //if(this.state.allInfo[i].Mjob == "at_home"){
-                  other = this.state.allInfo[i].Mjob.length
+                 Mjob.push(this.state.allInfo[i].Mjob );
+                 if(this.state.allInfo[i].GC1 =="pass"){
+                   GC1.push(this.state.allInfo[i].GC1)
+                 }
+                other = GC1.length
+                  //atHome = this.state.allInfo[i].Mjob.length
                 //}
               }
+            
                 // if(this.state.allInfo[i].Mjob == "other"){
                 //   other = this.state.allInfo[i].Mjob.length
                 // }
-                if(this.state.allInfo[i].GC1=="pass" && this.state.allInfo[i].Mjob == "health"){     
+                if( this.state.allInfo[i].Mjob == "health"){     
                   //if(this.state.allInfo[i].Mjob == "at_home"){
-                    Health = this.state.allInfo[i].Mjob.length
+                   Mjob.push(this.state.allInfo[i].Mjob );
+                   if(this.state.allInfo[i].GC1 =="pass"){
+                     GC1.push(this.state.allInfo[i].GC1)
+                   }
+                  Health = GC1.length
+                    //atHome = this.state.allInfo[i].Mjob.length
                   //}
                 }
                 // if(this.state.allInfo[i].Mjob == "health"){
                 //   Health = this.state.allInfo[i].Mjob.length
                 // }
-                if(this.state.allInfo[i].GC1=="pass" && this.state.allInfo[i].Mjob == "services"){     
+                if( this.state.allInfo[i].Mjob == "services"){     
                   //if(this.state.allInfo[i].Mjob == "at_home"){
-                    Services = this.state.allInfo[i].Mjob.length
+                   Mjob.push(this.state.allInfo[i].Mjob );
+                   if(this.state.allInfo[i].GC1 =="pass"){
+                     GC1.push(this.state.allInfo[i].GC1)
+                   }
+                   Services = GC1.length
+                    //atHome = this.state.allInfo[i].Mjob.length
                   //}
                 }
                 // if(this.state.allInfo[i].Mjob == "services"){
                 //   Services = this.state.allInfo[i].Mjob.length
                 // }
-                if(this.state.allInfo[i].GC1=="pass" && this.state.allInfo[i].Mjob == "teacher"){     
+                if( this.state.allInfo[i].Mjob == "teacher"){     
                   //if(this.state.allInfo[i].Mjob == "at_home"){
-                    Teacher= this.state.allInfo[i].Mjob.length
+                   Mjob.push(this.state.allInfo[i].Mjob );
+                   if(this.state.allInfo[i].GC1 =="pass"){
+                     GC1.push(this.state.allInfo[i].GC1)
+                   }
+                   Teacher = GC1.length
+                    //atHome = this.state.allInfo[i].Mjob.length
                   //}
                 }
                 // if(this.state.allInfo[i].Mjob == "teacher"){
@@ -112,44 +135,127 @@ export default  class LineChart extends Component {
                 // }
 
               
+                if( this.state.allInfo[i].Mjob == "at_home"){     
+                  //if(this.state.allInfo[i].Mjob == "at_home"){
+                   Mjob.push(this.state.allInfo[i].Mjob );
+                   if(this.state.allInfo[i].GC2 =="pass"){
+                     GC2.push(this.state.allInfo[i].GC2)
+                   }
+                  atHome2 = GC2.length
+                    //atHome = this.state.allInfo[i].Mjob.length
+                  //}
+                }
+                if( this.state.allInfo[i].Mjob == "other"){     
+                  //if(this.state.allInfo[i].Mjob == "at_home"){
+                   Mjob.push(this.state.allInfo[i].Mjob );
+                   if(this.state.allInfo[i].GC2 =="pass"){
+                     GC2.push(this.state.allInfo[i].GC2)
+                   }
+                  other2 = GC2.length
+                    //atHome = this.state.allInfo[i].Mjob.length
+                  //}
+                }
+                if( this.state.allInfo[i].Mjob == "health"){     
+                  //if(this.state.allInfo[i].Mjob == "at_home"){
+                   Mjob.push(this.state.allInfo[i].Mjob );
+                   if(this.state.allInfo[i].GC2 =="pass"){
+                     GC2.push(this.state.allInfo[i].GC2)
+                   }
+                  Health2 = GC2.length
+                    //atHome = this.state.allInfo[i].Mjob.length
+                  //}
+                }
+                if( this.state.allInfo[i].Mjob == "services"){     
+                  //if(this.state.allInfo[i].Mjob == "at_home"){
+                   Mjob.push(this.state.allInfo[i].Mjob );
+                   if(this.state.allInfo[i].GC2 =="pass"){
+                     GC2.push(this.state.allInfo[i].GC2)
+                   }
+                  Services2 = GC2.length
+                    //atHome = this.state.allInfo[i].Mjob.length
+                  //}
+                }
+                if( this.state.allInfo[i].Mjob == "teacher"){     
+                  //if(this.state.allInfo[i].Mjob == "at_home"){
+                   Mjob.push(this.state.allInfo[i].Mjob );
+                   if(this.state.allInfo[i].GC2 =="pass"){
+                     GC2.push(this.state.allInfo[i].GC2)
+                   }
+                  Teacher2 = GC2.length
+                    //atHome = this.state.allInfo[i].Mjob.length
+                  //}
+                }
 
 
-              if(this.state.allInfo[i].GC2=="pass"){     
-                if(this.state.allInfo[i].Mjob == "at_home"){
-                  atHome2 = this.state.allInfo[i].Mjob.length
-                }
-                if(this.state.allInfo[i].Mjob == "other"){
-                  other2 = this.state.allInfo[i].Mjob.length
-                }
-                if(this.state.allInfo[i].Mjob == "health"){
-                  Health2 = this.state.allInfo[i].Mjob.length
-                }
-                if(this.state.allInfo[i].Mjob == "services"){
-                  Services2 = this.state.allInfo[i].Mjob.length
-                }
-                if(this.state.allInfo[i].Mjob == "teacher"){
-                  Teacher2 = this.state.allInfo[i].Mjob.length
-                }
+              // if(this.state.allInfo[i].GC3=="pass"){     
+              //   if(this.state.allInfo[i].Mjob == "at_home"){
+              //     atHome3 = this.state.allInfo[i].Mjob.length
+              //   }
+              //   if(this.state.allInfo[i].Mjob == "other"){
+              //     other3 = this.state.allInfo[i].Mjob.length
+              //   }
+              //   if(this.state.allInfo[i].Mjob == "health"){
+              //     Health3 = this.state.allInfo[i].Mjob.length
+              //   }
+              //   if(this.state.allInfo[i].Mjob == "services"){
+              //     Services3 = this.state.allInfo[i].Mjob.length
+              //   }
+              //   if(this.state.allInfo[i].Mjob == "teacher"){
+              //     Teacher3 = this.state.allInfo[i].Mjob.length
+              //   }
 
+              // }
+
+                  
+              if( this.state.allInfo[i].Mjob == "at_home"){     
+                //if(this.state.allInfo[i].Mjob == "at_home"){
+                 Mjob.push(this.state.allInfo[i].Mjob );
+                 if(this.state.allInfo[i].GC3 =="pass"){
+                   GC3.push(this.state.allInfo[i].GC3)
+                 }
+                atHome3 = GC2.length
+                  //atHome = this.state.allInfo[i].Mjob.length
+                //}
               }
-
-              if(this.state.allInfo[i].GC3=="pass"){     
-                if(this.state.allInfo[i].Mjob == "at_home"){
-                  atHome3 = this.state.allInfo[i].Mjob.length
-                }
-                if(this.state.allInfo[i].Mjob == "other"){
-                  other3 = this.state.allInfo[i].Mjob.length
-                }
-                if(this.state.allInfo[i].Mjob == "health"){
-                  Health3 = this.state.allInfo[i].Mjob.length
-                }
-                if(this.state.allInfo[i].Mjob == "services"){
-                  Services3 = this.state.allInfo[i].Mjob.length
-                }
-                if(this.state.allInfo[i].Mjob == "teacher"){
-                  Teacher3 = this.state.allInfo[i].Mjob.length
-                }
-
+              if( this.state.allInfo[i].Mjob == "other"){     
+                //if(this.state.allInfo[i].Mjob == "at_home"){
+                 Mjob.push(this.state.allInfo[i].Mjob );
+                 if(this.state.allInfo[i].GC3 =="pass"){
+                   GC3.push(this.state.allInfo[i].GC3)
+                 }
+                other3 = GC3.length
+                  //atHome = this.state.allInfo[i].Mjob.length
+                //}
+              }
+              if( this.state.allInfo[i].Mjob == "health"){     
+                //if(this.state.allInfo[i].Mjob == "at_home"){
+                 Mjob.push(this.state.allInfo[i].Mjob );
+                 if(this.state.allInfo[i].GC3 =="pass"){
+                   GC3.push(this.state.allInfo[i].GC3)
+                 }
+                Health3 = GC3.length
+                  //atHome = this.state.allInfo[i].Mjob.length
+                //}
+              }
+              if( this.state.allInfo[i].Mjob == "services"){     
+                //if(this.state.allInfo[i].Mjob == "at_home"){
+                 Mjob.push(this.state.allInfo[i].Mjob );
+                 if(this.state.allInfo[i].GC3 =="pass"){
+                   GC3.push(this.state.allInfo[i].GC3)
+                 }
+                Services3 = GC3.length
+                  //atHome = this.state.allInfo[i].Mjob.length
+                //}
+              }
+              if( this.state.allInfo[i].Mjob == "teacher"){     
+                //if(this.state.allInfo[i].Mjob == "at_home"){
+                 Mjob.push(this.state.allInfo[i].Mjob );
+                 if(this.state.allInfo[i].GC3 =="pass"){
+                   GC3.push(this.state.allInfo[i].GC3)
+                 }
+                Teacher3 = GC3.length
+                  //atHome = this.state.allInfo[i].Mjob.length
+                //}
               }
            
             }
@@ -262,12 +368,12 @@ export default  class LineChart extends Component {
               data: this.state.Barchartdata2,
               backgroundColor: '#ba7d9d',
             },
-            // {
-            //   label: 'G3',
-            //   data: this.state.Barchartdata3,
-            //   backgroundColor: 'yellow',
-            //   borderColor: 'red',
-            // },
+            {
+              label: 'G3',
+              data: this.state.Barchartdata3,
+              backgroundColor:   'rgba(190,91,104)',
+              borderColor: 'red',
+            },
           ],
         }}
         height={200}

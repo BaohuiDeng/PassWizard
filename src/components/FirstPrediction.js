@@ -43,9 +43,9 @@ export default class FirstPrediction extends Component {
           <Container>
             <Header/>
 
-            <div class="card  ">
-                        <img src={predict} class="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
-                        <div class="card-img-overlay">
+            <div className="card  ">
+                        <img src={predict} className="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
+                        <div className="card-img-overlay">
                             <h1 className="card-title text-center font-weight-bold text-white" style={{"font-size":"49px"}} >Start Prediction!</h1>
                            
                         </div>
@@ -109,7 +109,7 @@ export default class FirstPrediction extends Component {
                </div>
             </Col>
             <Col className="mt-5" md="6" >
-            <p class="mb-4">
+            <p className="mb-4">
                         <h2 >The most effective attribute </h2>
                        </p>
               <PieChart/>

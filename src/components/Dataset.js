@@ -28,9 +28,9 @@ export default class Dataset extends Component {
                     <Header/>
                         {/* <img src={datamind} class="img-fluid" alt="Responsive image"></img> */}
           
-                        <div class="card  text-white">
-                        <img src={datamind} class="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
-                        <div class="card-img-overlay">
+                        <div className="card  text-white">
+                        <img src={datamind} className="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
+                        <div className="card-img-overlay">
                             <h1 className="card-title text-center font-weight-bold" style={{"font-size":"49px"}} >Meet Data Visualization</h1>
                            
                         </div>
@@ -39,16 +39,16 @@ export default class Dataset extends Component {
                         {/* <img src={datamind} class="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img> */}
  
                         <div className="container" style={{}}>
-                            <div class="container mt-5 mb-3">
+                            <div className="container mt-5 mb-3">
                             <h3> DataSet Description</h3>
                             </div>
                             {/* <div class="row"> */}
-                    <div class="container my-5">
-                        <div class="card border-info">
-                        <div class="card-header font-weight-bold h5" style={{"color":"#34666F","background-color":"#B2C0C1"}}>
+                    <div className="container my-5">
+                        <div className="card border-info">
+                        <div className="card-header font-weight-bold h5" style={{"color":"#34666F","background-color":"#B2C0C1"}}>
                         <PermDataSettingIcon></PermDataSettingIcon>Multivariate dataset                    </div>
-                    <div class="card-body">
-                        <p class="card-text">
+                    <div className="card-body">
+                        <p className="card-text">
                         <li>There are 46,412 number of records</li>
                 <li>The dataset consists of data about courses, students and their interactions with Virtual Learning Environment(VLE) for seven selected courses (called modules)</li>
                 <li>Presentations of the course start in February and October</li>
@@ -56,13 +56,13 @@ export default class Dataset extends Component {
                         </div>
                     </div>
                 </div>
-                <div class="container mt-5">
-                    <div class="card border-info">
-                    <div class="card-header font-weight-bold h5"style={{"color":"#34666F","background-color":"#B2C0C1"}} >
+                <div className="container mt-5">
+                    <div className="card border-info">
+                    <div className="card-header font-weight-bold h5"style={{"color":"#34666F","background-color":"#B2C0C1"}} >
                    <AssessmentIcon></AssessmentIcon> Attributes of dataset                    </div>
-                    <div class="card-body">
+                    <div className="card-body">
  
-                        <p class="card-text">
+                        <p className="card-text">
                         <li><strong style={{color:"#34666F"}}>Gender</strong>: The student’s gender</li>
                     <li><strong style={{color:"#34666F"}}>Region</strong>: Identifies the geographic region, where the student lived while taking the module-presentation</li>
                     <li><strong style={{color:"#34666F"}}>Highest Education</strong>: Highest student education level on entry to the module presentation</li>
@@ -88,7 +88,7 @@ export default class Dataset extends Component {
                        
                     </div>
                 </div> */}
-                <div class="mt-4">
+                <div className="mt-4">
                  <Link to="/Visualization" style={{ textDecoration: 'none' }}>
                           <Card body inverse id="DatasetBox"  style={{ height:'200px',textAlign:'center',backgroundColor:'white', paddingTop: '40px' }}>
                               <CardText><img src={dataViz} alt="Performance" style={{'border': 'none','height': '100px'}}></img></CardText>
