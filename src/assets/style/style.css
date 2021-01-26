@@ -84,3 +84,14 @@ code {
  opacity: 1 !important;
   
  }
+
+ .fa-github:hover{
+   color:#489093 !important
+ }
+
+ .fa-linkedin:hover{
+  color:rgba(190,91,104) !important
+} 
+.fa-xing:hover{
+  color:aqua !important
+}

@@ -56,20 +56,20 @@ export default class Header extends Component {
       </li>
       <li class="nav-item me-3 me-lg-1">
         <a class="nav-link" href="#">
-          <span>        <i class="fa fa-github " aria-hidden="true" style={{"font-size":"25px"}}></i>
+          <span>        <i class="fa fa-github " aria-hidden="true" style={{"font-size":"25px","color":"#ba7d9d"}}></i>
 </span>
         </a>
       </li>
       <li class="nav-item  me-3 me-lg-1">
       <a class="nav-link" href="#">
-          <span>        <i class="fa fa-linkedin " aria-hidden="true" style={{"font-size":"25px"}}></i>
+          <span>        <i class="fa fa-linkedin " aria-hidden="true" style={{"font-size":"25px","color":"#a0b9ba"}}></i>
 </span>
         </a>
       </li>
       <li class="nav-item  me-3 me-lg-1">
       <a class="nav-link" href="#">
           <span> 
-            <i class="fa fa-xing " aria-hidden="true" style={{"font-size":"25px"}}></i>
+            <i class="fa fa-xing " aria-hidden="true" style={{"font-size":"25px","color":"rgba(233,216,141)"}}></i>
 </span>
         </a>
       </li>

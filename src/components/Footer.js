@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import {Link, withRouter ,Switch} from 'react-router-dom';
+
 export default class Footer extends Component {
     render() {
         return (
@@ -25,7 +27,10 @@ export default class Footer extends Component {
             <a href="https://flaskpro-advwebtech.herokuapp.com/" class="text-white">Our Last Project</a>
           </li>
           <li>
+          <Link to="/aboutus">
+
             <a href="#!" className="text-white">About Us</a>
+          </Link>
           </li>
           <li>
             <a href="#!" className="text-white">Careers</a>
@@ -69,14 +74,10 @@ export default class Footer extends Component {
 
   <div className="text-center p-3" style={{"background-color": "rgba(0, 0, 0, 0.2)"}}>
     © 2021 Copyright:
-    <a className="text-white" href="https://mdbootstrap.com/">LAPro</a>
+    <a className="text-white" >LAPro</a>
   </div>
 </footer>
-            {/* <footer className="page-footer font-small  ">
-              <div className="footer-copyright text-center  py-3">© 2021 Copyright:
-                  <a href="" style={{color: '#5c7d92'}}> LAPro </a>
-              </div>
-              </footer> */}
+           
           </div>
 
         )
