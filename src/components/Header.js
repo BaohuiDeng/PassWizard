@@ -23,7 +23,6 @@ export default class Header extends Component {
       </li>
 
       <li class="nav-item me-3 me-lg-1">
-   
       </li>
 
       <li class="nav-item me-3 me-lg-1">
@@ -47,29 +46,30 @@ export default class Header extends Component {
           height="30"
           alt=""
           loading="lazy"
-          style={{"margin-top": "2px;"}}
+          style={{"margin-top": "0px;"}}
         />
+             <a class="nav-link" href="https://flaskpro-advwebtech.herokuapp.com/">
+
           <strong class="d-none d-sm-block ms-1">
-            
-            Last Project</strong>
+            Last Project</strong></a>
         </a>
       </li>
       <li class="nav-item me-3 me-lg-1">
         <a class="nav-link" href="#">
-          <span>        <i class="fa fa-github " aria-hidden="true" style={{"font-size":"25px","color":"#ba7d9d"}}></i>
+          <span>        <i class="fa fa-github  mt-2" aria-hidden="true" style={{"font-size":"25px","color":"#ba7d9d"}}></i>
 </span>
         </a>
       </li>
       <li class="nav-item  me-3 me-lg-1">
       <a class="nav-link" href="#">
-          <span>        <i class="fa fa-linkedin " aria-hidden="true" style={{"font-size":"25px","color":"#a0b9ba"}}></i>
+          <span>        <i class="fa fa-linkedin mt-2 " aria-hidden="true" style={{"font-size":"25px","color":"#a0b9ba"}}></i>
 </span>
         </a>
       </li>
       <li class="nav-item  me-3 me-lg-1">
       <a class="nav-link" href="#">
           <span> 
-            <i class="fa fa-xing " aria-hidden="true" style={{"font-size":"25px","color":"rgba(233,216,141)"}}></i>
+            <i class="fa fa-xing mt-2" aria-hidden="true" style={{"font-size":"25px","color":"rgba(233,216,141)"}}></i>
 </span>
         </a>
       </li>

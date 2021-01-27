@@ -31,7 +31,7 @@ export default class Dataset extends Component {
                         <div className="card  text-white">
                         <img src={datamind} className="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
                         <div className="card-img-overlay">
-                            <h1 className="card-title text-center font-weight-bold" style={{"font-size":"49px"}} >Meet Data Visualization</h1>
+                            <h1 className="card-title text-center font-weight-bold" style={{"font-size":"49px"}} >Meet Our Dataset</h1>
                            
                         </div>
                         </div>
@@ -49,7 +49,7 @@ export default class Dataset extends Component {
                         <PermDataSettingIcon></PermDataSettingIcon>Multivariate dataset                    </div>
                     <div className="card-body">
                         <p className="card-text">
-                        <li>There are 46,412 number of records</li>
+                        <li>There are 649 number of records</li>
                 <li>The dataset consists of data about courses, students and their interactions with Virtual Learning Environment(VLE) for seven selected courses (called modules)</li>
                 <li>Presentations of the course start in February and October</li>
                 <li>All tables are stored in the csv format</li>                        </p>

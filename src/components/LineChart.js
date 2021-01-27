@@ -364,12 +364,12 @@ export default  class LineChart extends Component {
               borderWidth: 1,
             },
             {
-              label: 'G2',
+              label: 'Pass On G2',
               data: this.state.Barchartdata2,
               backgroundColor: '#ba7d9d',
             },
             {
-              label: 'G3',
+              label: 'Pass On G3',
               data: this.state.Barchartdata3,
               backgroundColor:   'rgba(190,91,104)',
               borderColor: 'red',
@@ -382,7 +382,7 @@ export default  class LineChart extends Component {
           {
             title: {
               display: true,
-              text: 'Number of Pass of G1 Regarding Mother Job'
+              text: 'Number of Students Pass On The Exam Regarding Mother Job'
           },
         //   maintainAspectRatio: false,
           scales: {

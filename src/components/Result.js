@@ -46,11 +46,11 @@ export default class Result extends Component {
                             <Card className="my-3 pt-4"body inverse  style={{ height:'200px',backgroundColor:'white', paddingTop: '5px' }}>
                               <CardText></CardText>
                               <CardTitle tag="h6" className='text-center' style={{"color":"darkblue", fontWeight: "bold"}}>
-                              <img src={resulticon} classNamw={ 'mr-2'} style={{"width":"90px"}}></img>
+                              <img src={resulticon} className={ 'mr-2'} style={{"width":"90px"}}></img>
                               {this.props.location.result.msg}
 
                             </CardTitle>
-                            {this.props.location.result.msg}
+                            {/* {this.props.location.result.msg} */}
                           </Card>
                   </Col> 
                  

@@ -24,23 +24,7 @@ import dataVisualization from '../assets/images/dataVisualization.jpg'
 
 
 export default class Visualization extends Component {
-   
-//     constructor(props) {
-
-//         super(props)
-//         this.state = {
-//             modalIsOpen:false,
-
-//         }
-//         this.toggleModal.bind(this)
-//     }
-
-//     toggleModal(){
-//         this.setState({
-//         modalIsOpen:!this.state.modalIsOpen,
-    
-//   })
-//   }
+ 
     render() {
         return (
                 <div className="container">
@@ -53,12 +37,12 @@ export default class Visualization extends Component {
                           
                       </div>
                     </div> 
-                    <div class="container my-5">
+                    <div class="container my-4">
                         <div class="">
 
                             <div class="card-body">
                                 <p class="card-text">
-                                    <h3 >You can find some charts here. Let's have a look for better perspective</h3>
+                                    <h3 ><strong>You can find some charts here. Let's have a look for better perspective</strong></h3>
                                 </p>
                             </div>
                         </div>
@@ -72,7 +56,8 @@ export default class Visualization extends Component {
                         
                                 <div class="card-body">
                                     <div >
-                                        <BarChart/>
+                                    <LineChart />
+
                                     </div>                    
                                 </div>
                             </div>
@@ -105,7 +90,8 @@ export default class Visualization extends Component {
                     
                                 <div class="card-body">
                                     <div>
-                                        <LineChart />
+                                    <BarChart/>
+
                                     </div>
                                 </div>
                             </div>
