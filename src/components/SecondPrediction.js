@@ -96,11 +96,14 @@ export default class SecondPrediction extends Component {
             <div class="card  ">
                         <img src={predict} class="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
                         <div class="card-img-overlay">
-                            <h1 className="card-title text-center font-weight-bold text-white" style={{"font-size":"49px"}} >Start Prediction!</h1>  
+                            <h1 className="card-title text-center font-weight-bold text-white" style={{"font-size":"49px"}} >Start Predict your Second Grade!</h1>  
                         </div>
                         </div>
                         <div className="container mt-4">
             <HorizontalLinearStepper1  />
+            </div>
+            <div className="container mt-5 pt-4" style={{ borderBottom:"solid 3px #19738A ","height":"70px"}}>
+              <h5 className=" text-center" style={{"top":"40%" , "color": "#19738A "}}  >The most effective Attributes</h5>
             </div>
             <Row className="justify-content-sm-center mt-3 ">
               <Col className="mt-5" md="6">
@@ -144,8 +147,8 @@ export default class SecondPrediction extends Component {
                 <PieChartSecond/>
             </Col>
             </Row>
-          <div className="container mt-5" style={{"background-color":"grey","height":"150px"}}>
-            <h3 className=" text-center" style={{"top":"40%"}}  >Fill in the form to get your result!</h3>
+          <div className="container mt-5 pt-4" style={{ borderBottom :"solid 3px #19738A ","height":"70px"}}>
+            <h5 className=" text-center" style={{"top":"40%", "color": "#19738A "}}  >Now try to predict your result</h5>
             </div>
             <Row className="justify-content-sm-center mt-3 ">
             <Col md="6" >
@@ -168,9 +171,9 @@ export default class SecondPrediction extends Component {
           type="number"
           name="number"
           min="0"
-          max="93"
+          max="32"
           id="absences"
-          placeholder="0~93"
+          placeholder="0~32"
           onChange={e => {this.setState({'absences': e.target.value})}}
         />
     </div>
