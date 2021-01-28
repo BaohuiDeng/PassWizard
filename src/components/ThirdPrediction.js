@@ -78,7 +78,7 @@ export default class SecondPrediction extends Component {
             <div class="card ">
                         <img src={predict} class="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
                         <div class="card-img-overlay">
-                            <h1 className="card-title text-center font-weight-bold text-white" style={{"font-size":"49px"}} >Start Prediction!</h1>
+                            <h1 className="card-title text-center font-weight-bold text-white" style={{"font-size":"49px"}} >Start Predict your Final Grade!</h1>
                            
                         </div>
                         </div>
