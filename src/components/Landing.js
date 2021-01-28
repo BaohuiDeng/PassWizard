@@ -13,6 +13,8 @@ import colorfulmembers from '../assets/images/MMembers.png';
 import colorfuldata from '../assets/images/colorfuldataset.png';
 import colorfulperformance from '../assets/images/colorfulperformance.png';
 import colorfulpiechart from '../assets/images/colorfulpiechart.png';
+import introimg from '../assets/images/bgslogan.png';
+
 
 import data from '../assets/images/data.png';
 // import barchart from '../assets/images/Barchart.png';
@@ -87,7 +89,7 @@ export default class Landing extends Component {
                                 </Card>
                             </a>
                         </Col> 
-                        <Col md="3">
+                        <Col md="3" style={{'z-index':' 0'}}>
                             <Link to="/AboutUs">
                                 <Card body inverse  id="AboutUsBox"  style={{ height:'200px',textAlign:'center',backgroundColor:'white' , paddingTop: '40px'}}>
                                 <CardText><img src={colorfulmembers} alt="AboutUsBox" style={{'border': 'none','height': '60px'}} onMouseOver={e => (e.currentTarget.src =members )} onMouseOut={e => (e.currentTarget.src =colorfulmembers )}/></CardText>
@@ -110,6 +112,9 @@ export default class Landing extends Component {
                                 </Card>
                             </Link>
                         </Col> 
+                        <Col md="8" >
+                        <img src={introimg} alt="img" style={{'border': 'none'  , marginLeft:'250px', marginTop:'130px' ,'opacity':' 0.9'}}/>
+                        </Col>
                     </Row>  
 
 
