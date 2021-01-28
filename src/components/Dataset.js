@@ -14,7 +14,7 @@ import barchart from '../assets/images/Barchart.png';
 import data from '../assets/images/data.png';
 import performance from '../assets/images/performance.png';
 import AssessmentIcon from '@material-ui/icons/Assessment';
-
+import Visualization from './Visualization'
 
 
 
@@ -89,12 +89,13 @@ export default class Dataset extends Component {
                     </div>
                 </div> */}
                 <div className="mt-4">
-                 <Link to="/Visualization" style={{ textDecoration: 'none' }}>
+                    <Visualization/>
+                 {/* <Link to="/Visualization" style={{ textDecoration: 'none' }}>
                           <Card body inverse id="DatasetBox"  style={{ height:'200px',textAlign:'center',backgroundColor:'white', paddingTop: '40px' }}>
                               <CardText><img src={dataViz} alt="Performance" style={{'border': 'none','height': '100px'}}></img></CardText>
                               <CardTitle tag="h5"  style={{"color":"#ffba39","font-weight":"bold"}}>Click <b>to</b> see the visualization! </CardTitle>
                           </Card>
-                      </Link>
+                      </Link> */}
                       </div>
 
                 </div>

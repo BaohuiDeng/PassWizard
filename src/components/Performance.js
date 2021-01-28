@@ -33,6 +33,10 @@ export default class Performance extends Component {
                     </div> 
                       <div  className="container" style={{"background-color":"#f5f5f1"}}>
                     <div className="container mt-5"  >
+                    <div>
+              <h1 className="my-5 text-center" data-tip="You can choose three options below to predict your result!" >WHICH STATAGE ARE YOU AT?</h1>
+              <ReactTooltip className='extraClass' effect="solid" width="180px" height="100px" />
+            </div>
                     <p align="justify">Online education has become very popular and plays a positive impact on learning. Organizations have to consider many factors to make the learning process effective. If these are identified correctly, better results can be obtained. Virtual Learning Environment (VLE) provided by Open University has several factors which effect the student's performance. The purpose of this project is to identify the features that affect the student performance. If these are identified correctly, better results can be obtained. Both students and faculties can be well informed about the progress based on the analysis which provides an opportunity to excel.</p>
 
                     </div>
@@ -67,10 +71,7 @@ export default class Performance extends Component {
       
 
           <Row className="justify-content-sm-center my-5 ">
-            <div>
-              <h1 className="my-3" data-tip="You can choose three options below to predict your result!" >WHICH STATAGE ARE YOU AT?</h1>
-              <ReactTooltip className='extraClass' effect="solid" width="180px" height="100px" />
-            </div>
+          
             <div className="container my-3">
             <HorizontalLinearStepper />
             </div>

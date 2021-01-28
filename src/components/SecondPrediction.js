@@ -3,18 +3,27 @@ import { Row,Col,Container,Input} from 'reactstrap';
 import Button from '@material-ui/core/Button';
 import Header from '../components/Header';
 import Footer from './Footer';
-import PieChart from './PieChart';
+import PieChartSecond from './PieChartSecond';
 import predict from '../assets/images/predict.jpeg';
 import AddToQueueIcon from '@material-ui/icons/AddToQueue';
 import HorizontalLinearStepper1 from './Stepper2';
 import axios from 'axios';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Slider from '@material-ui/core/Slider';
+import BubbleChartIcon from '@material-ui/icons/BubbleChart';
 
+const useStyles = makeStyles({
+  root: {
+    width: 300,
+  },
+});
 
-
-
+function valuetext(value) {
+  return `${value}°C`;
+}
 
 export default class SecondPrediction extends Component {
-
 
 
   constructor(props) {
@@ -28,13 +37,20 @@ export default class SecondPrediction extends Component {
       MotherEducational:'0',
       FatherEducational:'0',
       FirstGrade:'0',
-      predictResult:''      
+      predictResult:''    ,
+      examFailures:'',
+      examHigher:'',
+      examFirstGrade:''  
     };
 
     // This binding is necessary to make `this` work in the callback
     this.predict = this.predict.bind(this);
+    this.seeChart = this.seeChart.bind(this)
   }
 
+  seeChart(){
+    console.log("failure",this.state.examFailures,"higher",this.state.examHigher,"first grade",this.state.examFirstGrade)
+  }
 
   predict(e) {
 
@@ -69,14 +85,6 @@ export default class SecondPrediction extends Component {
         alert('Error retrieving data!!');
     })       
 
-
-
-    // console.log(
-
-    //   this.state
-    // )
-
-
   }
 
     render() {
@@ -88,22 +96,62 @@ export default class SecondPrediction extends Component {
             <div class="card  ">
                         <img src={predict} class="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
                         <div class="card-img-overlay">
-                            <h1 className="card-title text-center font-weight-bold text-white" style={{"font-size":"49px"}} >Start Prediction!</h1>
-                           
+                            <h1 className="card-title text-center font-weight-bold text-white" style={{"font-size":"49px"}} >Start Prediction!</h1>  
                         </div>
                         </div>
                         <div className="container mt-4">
             <HorizontalLinearStepper1  />
             </div>
+            <Row className="justify-content-sm-center mt-3 ">
+              <Col className="mt-5" md="6">
 
-            <h3 className="mt-5">Fill in the form to get your result!</h3>
+              <form className="border-info border p-3">
+  <div class="form-group">
+    <label for="customRange1" class="form-label my-3">Your first exam grade:</label><br/>
 
+      <Slider
+        defaultValue={5}
+        getAriaValueText={valuetext}
+        aria-labelledby="discrete-slider"
+        valueLabelDisplay="auto"
+        step={1}
+        marks
+        min={0}
+        max={20}
+      />
+  </div>
+  <div className="form-group my-3">
+      <label>Number of exam failures:</label>
+      <Input type="select" name="select" id="failures" onChange={e => {this.setState({'examFailures': e.target.value})}}>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">else</option>
+      </Input>
+    </div>
+  <div className="form-check my-4">
+    <input type="checkbox" className="form-check-input " id="exampleCheck1" onChange={e => {this.setState({'examHigher': e.target.value})}}/>
+    <label className="form-check-label" for="exampleCheck1">Are you willing to take higher education?</label>
+  </div>
+  <Button onClick={this.seeChart} size="large" variant="outlined" color="primary">
+                <span  className="mr-2">See the chart</span> <BubbleChartIcon></BubbleChartIcon>
+                </Button>
+                </form>
+              </Col>
+
+            <Col className="mt-2" md="6" >
+                <PieChartSecond/>
+            </Col>
+            </Row>
+          <div className="container mt-5" style={{"background-color":"grey","height":"150px"}}>
+            <h3 className=" text-center" style={{"top":"40%"}}  >Fill in the form to get your result!</h3>
+            </div>
             <Row className="justify-content-sm-center mt-3 ">
             <Col md="6" >
 
-            <div className="card jumbotron border-info mt-5  shadow-lg p-3 mb-5  rounded "> 
+            <div className="card  border-info mt-5   p-3 mb-5   "> 
                  <form>
- 
   <div className="form-row">
     <div className="form-group col-md-12">
       <label>Do you want to take higher education:</label>
@@ -201,12 +249,12 @@ export default class SecondPrediction extends Component {
 
 </form> 
                </div>
-            </Col>
-            <Col className="mt-5" md="6" >
-              <p class="mb-4">The most effective attribute</p>
-                <PieChart/>
+
             </Col>
             </Row>
+
+         
+
 
                
             <Footer/>

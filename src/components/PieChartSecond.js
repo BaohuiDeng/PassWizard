@@ -4,17 +4,18 @@ import axios from 'axios';
 
 
 
-export default  class PieChart extends Component {
+export default  class PieChartSecond extends Component {
   constructor() {
     super()
     this.state = 
       {
+        firstExamGrade:'',
         allInfo:'',
         GG1:'',
-        absences:'',
-        examFailure:'',
-        montherEdu:'',
-        fatherEdu:'',
+        // absences:'',
+        // examFailure:'',
+        // montherEdu:'',
+        // fatherEdu:'',
         absences2:'',
         examFailure2:'',
         montherEdu2:'',
@@ -23,7 +24,9 @@ export default  class PieChart extends Component {
         examFailure3:'',
         montherEdu3:'',
         fatherEdu3:'',
-        Barchartdata:'',
+        numberOfPass:'',
+        higher2:'',
+        // Barchartdata:'',
         BarchartdataSecond:'',
         BarchartdataThird:''
       }
@@ -39,89 +42,79 @@ export default  class PieChart extends Component {
          console.log(this.state.allInfo["0"].school)
 
         // Create a new array based on current state:
-        let absences= [];
-        let examFailure = [];
-        let montherEdu = [];
-        let fatherEdu =[];
+        // let absences= [];
+        // let examFailure = [];
+        // let montherEdu = [];
+        // let fatherEdu =[];
         let absences2= [];
         let examFailure2 = [];
         let montherEdu2 = [];
         let fatherEdu2 =[];
-        let absences3= [];
-        let examFailure3 = [];
-        let montherEdu3 = [];
-        let fatherEdu3 =[];
+        // let absences3= [];
+        // let examFailure3 = [];
+        // let montherEdu3 = [];
+        // let fatherEdu3 =[];
+        let firstExamGrade =[]
+        let  numberOfPass=[];
+        let GC1 = [];
+        let higher1=[]
+        let higher2=[]
 
-        for (var i = 0; i < this.state.allInfo.length; i++) {
-              // console.log(this.state.allInfo[i].GG1)
-              // retrieving sex
-              if(this.state.allInfo[i].GC1 == "pass"){
-              absences.push(this.state.allInfo[i].absences );
-              // retriving first Grade
-              examFailure.push(this.state.allInfo[i].failures );             
-              montherEdu.push(this.state.allInfo[i].Medu );
-              fatherEdu.push(this.state.allInfo[i].Fedu);
-             // gradeFirst.push(this.state.allInfo[i].G1);
-
-            }
+        
+         for (var i = 0; i < this.state.allInfo.length; i++) {
+           
             if(this.state.allInfo[i].GC2 == "pass"){
               absences2.push(this.state.allInfo[i].absences );
               // retriving first Grade
               examFailure2.push(this.state.allInfo[i].failures );             
               montherEdu2.push(this.state.allInfo[i].Medu );
               fatherEdu2.push(this.state.allInfo[i].Fedu);
-             // gradeFirst.push(this.state.allInfo[i].G1);
+              firstExamGrade.push(this.state.allInfo[i].G1);
+              GC1.push(this.state.allInfo[i].GC1)
+              numberOfPass = GC1.length
+              if(this.state.allInfo[i].higher=="yes"){
+                higher1.push(this.state.allInfo[i].higher);
+                higher2 = higher1.length
+
+              }
 
             }
-            // if(this.state.allInfo[i].GC3 == "pass"){
-            //   absences3.push(this.state.allInfo[i].absences3 );
-            //   // retriving first Grade
-            //   examFailure3.push(this.state.allInfo[i].failures3 );             
-            //   montherEdu3.push(this.state.allInfo[i].Medu3 );
-            //   fatherEdu3.push(this.state.allInfo[i].Fedu3);
-            //  // gradeFirst.push(this.state.allInfo[i].G1);
-
-            // }
+         
 
           }
             // make average
             const average = arr => arr.reduce( ( p, c ) => p + c, 0 ) / arr.length;
     
-            absences = average(  absences );
-            examFailure = average( examFailure);
-            montherEdu = average( montherEdu);
-            fatherEdu = average( fatherEdu );
+              // absences = average(  absences );
+              // examFailure = average( examFailure);
+              // montherEdu = average( montherEdu);
+              // fatherEdu = average( fatherEdu );
             absences2 = average(  absences2 );
             examFailure2 = average( examFailure2);
             montherEdu2 = average( montherEdu2);
             fatherEdu2 = average( fatherEdu2 );
-            const BarchartdataArray=[];
+            firstExamGrade = average(firstExamGrade)
+           // const BarchartdataArray=[];
             const BarchartdataArraySecond=[];
 
-            BarchartdataArray.push( absences,examFailure,montherEdu,fatherEdu );
-            BarchartdataArraySecond.push( absences2,examFailure2,montherEdu2,fatherEdu2)
+           // BarchartdataArray.push( absences,examFailure,montherEdu,fatherEdu );
+            BarchartdataArraySecond.push(    
+               examFailure2,firstExamGrade,higher2
+               )
             // Set state
-          this.setState({      
-          absences:absences,
-          examFailure:examFailure,
-          montherEdu:montherEdu,
-          fatherEdu:fatherEdu,
-          Barchartdata:BarchartdataArray,
-          absences2:absences2,
+          this.setState({  
+        
           examFailure2:examFailure2,
-          montherEdu2:montherEdu2,
-          fatherEdu2:fatherEdu2,
+         
+          firstExamGrade:firstExamGrade,    
+     
+          higher2:higher2,
           BarchartdataSecond:BarchartdataArraySecond,
 
       });
 
-          // console.log(this.state.Barchartdata)
-
-
       })
-    //   .catch(()=>{
-    //     alert('Error retrieving data!!');
-    // })
+   
     }
 
 
@@ -130,16 +123,18 @@ render()
     return (<div> 
          <Pie
         data={{
-          labels: ['School Absences', 'Exam Failure', 'Mother Education', 'Father Education'],
+          labels: ['Exam Failure','First Grade','higher'],
           datasets: [
             {
               label: 'G1',
-              data: this.state.Barchartdata,
+              data: this.state.BarchartdataSecond,
               backgroundColor: [
                 '#be5168',
                 '#3e8e9e',
                 '#e2975d',
-                '#e26552',
+               
+
+
                
                
               ],
@@ -172,7 +167,7 @@ render()
         options={{
           title:{
             display:true,
-            text:'The Most Effective Attributes On Grade 1'
+            text:'The Most Effective Attributes On Grade 2'
           },
         //   maintainAspectRatio: false,
           scales: {

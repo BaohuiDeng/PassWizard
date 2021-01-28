@@ -332,7 +332,7 @@ export default  class LineChart extends Component {
           labels: ['At Home', 'Health', 'Other', 'Services', 'Teacher'],
           datasets: [
             {
-              label: 'Pass on G1',
+              label: 'First Exam',
               data: this.state.Barchartdata,
               backgroundColor: [
                  '#a0b9ba',
@@ -364,12 +364,12 @@ export default  class LineChart extends Component {
               borderWidth: 1,
             },
             {
-              label: 'Pass On G2',
+              label: 'Second Exam',
               data: this.state.Barchartdata2,
               backgroundColor: '#ba7d9d',
             },
             {
-              label: 'Pass On G3',
+              label: 'Third Exam',
               data: this.state.Barchartdata3,
               backgroundColor:   'rgba(190,91,104)',
               borderColor: 'red',
@@ -382,7 +382,7 @@ export default  class LineChart extends Component {
           {
             title: {
               display: true,
-              text: 'Number of Students Pass On The Exam Regarding Mother Job'
+              text: 'Number of Students Pass On These Three Exams Regarding Mother Job'
           },
         //   maintainAspectRatio: false,
           scales: {
