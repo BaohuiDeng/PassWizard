@@ -127,7 +127,7 @@ render()
           datasets: [
             {
               label: 'G1',
-              data: this.state.BarchartdataSecond,
+              data: [70,20,10],
               backgroundColor: [
                 '#be5168',
                 '#3e8e9e',

@@ -12,6 +12,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
 import BubbleChartIcon from '@material-ui/icons/BubbleChart';
+import {Pie} from 'react-chartjs-2'
+import update from 'react-addons-update';
+
+
 
 const useStyles = makeStyles({
   root: {
@@ -38,19 +42,51 @@ export default class SecondPrediction extends Component {
       FatherEducational:'0',
       FirstGrade:'0',
       predictResult:''    ,
+      examFirstGrade:''  ,
       examFailures:'',
       examHigher:'',
-      examFirstGrade:''  
+      data:[20, 15, 10],
     };
 
     // This binding is necessary to make `this` work in the callback
     this.predict = this.predict.bind(this);
-    this.seeChart = this.seeChart.bind(this)
+    this.handleChange = this.handleChange.bind(this);
+    this.update = this.update.bind(this)
+    this.getValue = this.getValue.bind(this)
+
+  }
+  update(){
+    this.setState(update(this.state, {
+        data: {
+            [0]: {
+                $set: this.state.examFirstGrade
+            },
+            [1]:{
+                $set:this.state.examFailures
+            },
+            [2]:{
+                $set:this.state.examHigher
+            }
+        }
+    }));
+
+
+    console.log(this.state.failures)
+}
+
+  handleChange(e,newValue){
+    this.setState({
+      examFirstGrade:newValue
+    })
+  }
+  getValue(e){
+    this.setState({
+      examHigher:e.target.value
+    })
+    console.log(e.target.value)
   }
 
-  seeChart(){
-    console.log("failure",this.state.examFailures,"higher",this.state.examHigher,"first grade",this.state.examFirstGrade)
-  }
+ 
 
   predict(e) {
 
@@ -113,7 +149,7 @@ export default class SecondPrediction extends Component {
     <label for="customRange1" class="form-label my-3">Your first exam grade:</label><br/>
 
       <Slider
-        defaultValue={5}
+        defaultValue={15}
         getAriaValueText={valuetext}
         aria-labelledby="discrete-slider"
         valueLabelDisplay="auto"
@@ -121,30 +157,90 @@ export default class SecondPrediction extends Component {
         marks
         min={0}
         max={20}
+        onChange={this.handleChange}
       />
   </div>
   <div className="form-group my-3">
       <label>Number of exam failures:</label>
-      <Input type="select" name="select" id="failures" onChange={e => {this.setState({'examFailures': e.target.value})}}>
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">else</option>
-      </Input>
+      <Input
+          type="number"
+          name="examFailures"
+          min="0"
+          max="20"
+          id="FirstGrade"
+          placeholder="0~20"
+          onChange={e => {this.setState({'examFailures': e.target.value})}}
+        />   
     </div>
   <div className="form-check my-4">
-    <input type="checkbox" className="form-check-input " id="exampleCheck1" onChange={e => {this.setState({'examHigher': e.target.value})}}/>
+    <input type="checkbox" className="form-check-input " value="20" id="exampleCheck1" onChange={this.getValue }/>
     <label className="form-check-label" for="exampleCheck1">Are you willing to take higher education?</label>
   </div>
-  <Button onClick={this.seeChart} size="large" variant="outlined" color="primary">
-                <span  className="mr-2">See the chart</span> <BubbleChartIcon></BubbleChartIcon>
+  <Button onClick={this.update} size="large" variant="outlined" color="primary">
+                <span  className="mr-2">Update the chart</span> <BubbleChartIcon></BubbleChartIcon>
                 </Button>
                 </form>
               </Col>
 
             <Col className="mt-2" md="6" >
-                <PieChartSecond/>
+
+
+
+            <Pie
+        data={{
+            labels: ['First Grade', 'Exam Failures', 'Higher Education'],
+            datasets: [
+            {
+                label: 'The Most Effective Attributes On Grade 2',
+                data: this.state.data,
+              backgroundColor: [
+                '#be5168',
+                '#3e8e9e',
+                '#e2975d',
+              ],
+           
+              borderWidth: 1,
+            },
+          
+            // {
+            //   label: 'G2',
+            //   data: this.state.BarchartdataSecond,
+            //   backgroundColor: [
+            //     '#3e8e9e', 
+            //     '#e9d88f',
+            //     '#447c6a',
+            //     '#525144',
+                
+           
+          ],
+        }}
+        height={200}
+        width={300}
+        options={{
+          title:{
+            display:true,
+            text:'The Most Effective Attributes On Grade 2'
+          },
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  beginAtZero: true,
+                },
+              },
+            ],
+          },
+          legend: {
+            labels: {
+              fontSize: 15,
+            },
+          },
+        }}
+
+      />
+              
+              
+                {/* <PieChartSecond/> */}
             </Col>
             </Row>
           <div className="container mt-5 pt-4" style={{ borderBottom :"solid 3px #19738A ","height":"70px"}}>
