@@ -85,13 +85,15 @@ export default class SecondPrediction extends Component {
                         <div className="container mt-4">
             <HorizontalLinearStepper1  />
             </div>
-
-            <h3 className="mt-5">Fill in the form to get your result!</h3>
+            <div className="container mt-5 pt-4" style={{ borderBottom :"solid 3px #19738A ","height":"70px"}}>
+            <h5 className=" text-center" style={{"top":"40%", "color": "#19738A "}}  >Now try to predict your result</h5>
+            </div>
+            <h3 className="mt-5 text-center">Fill in the form to get your result!</h3>
 
             <Row className="justify-content-sm-center mt-3 ">
             <Col md="6" >
 
-            <div className="card jumbotron border-info mt-5  shadow-lg p-3 mb-5  rounded "> 
+            <div className="card  border-info mt-5  shadow-lg p-3 mb-5  rounded "> 
                  <form>
 
   <div className="form-row">
@@ -137,10 +139,10 @@ export default class SecondPrediction extends Component {
 </form> 
                </div>
             </Col>
-            <Col className="mt-5" md="6" >
+            {/* <Col className="mt-5" md="6" >
               <p class="mb-4">The most effective attribute </p>
                 <PieChart/>
-            </Col>
+            </Col> */}
             </Row>
 
                

@@ -105,7 +105,9 @@ export default class FirstPrediction extends Component {
                         <div className="container mt-4">
             <HorizontalLinearStepper1  />
             </div>
-
+            <div className="container mt-5 pt-4" style={{ borderBottom :"solid 3px #19738A ","height":"70px"}}>
+            <h5 className=" text-center" style={{"top":"40%", "color": "#19738A "}}  >Now try to predict your result</h5>
+            </div>
             <h3 className="mt-5">Fill in the form to get your result!</h3>
 
             <Row className="justify-content-sm-center mt-3 ">

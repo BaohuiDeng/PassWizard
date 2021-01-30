@@ -57,7 +57,19 @@ const menu = [
     {
       icon: '',
       label: 'Prediction' ,
-      to: '/Performance',
+      content:[
+        {
+          icon: '',
+          label: 'Decision Tree1',
+          to: '/DecisionTreeg2',
+        },
+        {
+          icon: '',
+          label: 'Decision Tree2',
+          to: '/DecisionTreeg3',
+        },
+
+      ]
     },
     {
       icon: '',

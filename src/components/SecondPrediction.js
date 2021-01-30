@@ -3,7 +3,6 @@ import { Row,Col,Container,Input} from 'reactstrap';
 import Button from '@material-ui/core/Button';
 import Header from '../components/Header';
 import Footer from './Footer';
-import PieChartSecond from './PieChartSecond';
 import predict from '../assets/images/predict.jpeg';
 import AddToQueueIcon from '@material-ui/icons/AddToQueue';
 import HorizontalLinearStepper1 from './Stepper2';
