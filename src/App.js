@@ -22,6 +22,10 @@ import ThirdPrediction from './components/ThirdPrediction';
 import AssessmentIcon from '@material-ui/icons/Assessment';
 import Result from './components/Result'
 
+import DecisionTreePF from './components/DecisionTreePF';
+import DecisionTreeG2 from './components/DecisionTreeG2';
+import DecisionTreeG3 from './components/DecisionTreeG3';
+
 
 const menu = [
     {
@@ -92,6 +96,10 @@ function App() {
                       <Route exact path="/SecondPrediction" component = {SecondPrediction} />
                       <Route exact path="/ThirdPrediction" component = {ThirdPrediction} />
                       <Route exact path="/PredictionResult" component = {Result} />
+
+                      <Route exact path="/DecisionTreePF" component = {DecisionTreePF} />
+                      <Route exact path="/DecisionTreeG2" component = {DecisionTreeG2} />
+                      <Route exact path="/DecisionTreeG3" component = {DecisionTreeG3} />
 
                       <Route   component= {NotFound} />
                     </Switch>
