@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 import { Row,Col,Container,Input} from 'reactstrap';
 import Button from '@material-ui/core/Button';
 import Header from './Header';
-import Result from './Result';
 import Footer from './Footer';
-import PieChart from './PieChart';
 import predict from '../assets/images/predict.jpeg';
 import AddToQueueIcon from '@material-ui/icons/AddToQueue';
 import HorizontalLinearStepper1 from './Stepper2';
 import axios from 'axios';
-
+import Slider from '@material-ui/core/Slider';
+import {Pie} from 'react-chartjs-2';
 
 
 export default class FirstPrediction extends Component {
@@ -26,7 +25,12 @@ export default class FirstPrediction extends Component {
       WeekendAlcohol:'0',
       MotherEducational:'0',
       FatherEducational:'0',
-      predictResult:''
+      predictResult:'',
+      absencesVis:''  ,
+      examFailuresVis:'',
+      motherEducationVis:'',
+      fatherEducationVis:'',
+      data:[32, 20, 4 , 4]
       
         
     };
@@ -48,7 +52,7 @@ export default class FirstPrediction extends Component {
       "school": this.state.school,
       "absences": this.state.numberOfabsences,
       "Fedu": this.state.FatherEducational,
-      "Medu": this.state.MotherEducational
+      "Medu": this.state.MotherEducational,
     };
     axios.post(`http://20.82.112.97:5000/predict/por/pf`, data)
     .then(res => {
@@ -96,19 +100,206 @@ export default class FirstPrediction extends Component {
             <Header/>
 
             <div class="card  ">
-                        <img src={predict} class="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
-                        <div class="card-img-overlay">
-                            <h1 className="card-title text-center font-weight-bold text-white" style={{"font-size":"49px"}} >Start Predict all of your Grades!</h1>
-                           
-                        </div>
-                        </div>
-                        <div className="container mt-4">
-            <HorizontalLinearStepper1  />
+              <img src={predict} class="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
+              <div class="card-img-overlay">
+                  <h1 className="card-title text-center font-weight-bold text-white" style={{"font-size":"49px"}} >Start Predict all of your Grades!</h1>
+                  
+              </div>
             </div>
+            <div className="container mt-4">
+              <HorizontalLinearStepper1  />
+            </div>
+
+            <div className="container mt-5 pt-4" style={{ borderBottom:"solid 3px #19738A ","height":"70px"}}>
+                <h5 className=" text-center" style={{"top":"40%" , "color": "#19738A "}}  >The most effective Attributes</h5>
+              </div>
+
+            <Row className="justify-content-sm-center mt-3">
+              <Col className="mt-5 pt-3" md="6">
+
+                <form className="p-3 pr-5">
+                  <div class="form-group pt-4">
+                    <label for="customRange1" class="form-label my-3">Number of previous absences:</label><br/>
+
+                      <Slider
+                        defaultValue={32}
+                        // getAriaValueText={valuetext}
+                        aria-labelledby="discrete-slider"
+                        valueLabelDisplay="auto"
+                        step={1}
+                        marks
+                        min={0}
+                        max={32}
+                        onChange={(event, newValue) => {
+                          this.setState(state => {
+                            const data = state.data.map((item, j) => {
+                              if (j === 0) {
+                                return newValue;
+                              }else{
+                                return item;
+                              }
+                            });
+                      
+                            return {
+                              data,
+                            };
+                          })
+                          
+                        }} 
+                      />
+                  </div>
+                  <div class="form-group pt-4">
+                    <label for="customRange1" class="form-label my-3">Number of previous exam failures:</label><br/>
+
+                      <Slider
+                        defaultValue={20}
+                        // getAriaValueText={valuetext}
+                        aria-labelledby="discrete-slider"
+                        valueLabelDisplay="auto"
+                        step={1}
+                        marks
+                        min={0}
+                        max={20}
+                        onChange={(event, newValue) => {
+                          this.setState(state => {
+                            const data = state.data.map((item, j) => {
+                              if (j === 0) {
+                                return item;
+                              } else if(j === 1) {
+                                return newValue;
+                              }else{
+                                return item;
+                              }
+                            });
+                      
+                            return {
+                              data,
+                            };
+                          })
+                          
+                        }} 
+                      />
+                  </div>
+                  <div class="form-group pt-4">
+                    <label for="customRange1" class="form-label my-3">Mother educational background:</label><br/>
+
+                    <Input type="select" name="select" id="MotherEducationalbg" 
+                    onChange={
+                      e => {this.setState(
+                        state => {
+                          const data = state.data.map((item, j) => {
+                            if (j === 0) {
+                              return item;
+                            } else if(j === 2) {
+                              return e.target.value;
+                            }else{
+                              return item;
+                            }
+                          });
+                    
+                          return {
+                            data,
+                          };
+                        }
+                      )}
+                    }>
+                      <option value="0">none</option>
+                      <option value="1">primary education (4th grade)</option>
+                      <option value="2">5th to 9th grade</option>
+                      <option value="3">secondary education</option>
+                      <option value="4" selected="selected">higher education</option>
+                    </Input>
+                  </div>
+                  <div class="form-group pt-4">
+                    <label for="customRange1" class="form-label my-3">Father educational background:</label><br/>
+
+                    <Input type="select" name="select" id="FatherEducationalbg" 
+                    onChange={
+                      e => {this.setState(
+                        state => {
+                          const data = state.data.map((item, j) => {
+                            if (j === 0) {
+                              return item;
+                            } else if(j === 3) {
+                              return e.target.value;
+                            }else{
+                              return item;
+                            }
+                          });
+                    
+                          return {
+                            data,
+                          };
+                        }
+                      )}
+                    }>
+                      <option value="0">none</option>
+                      <option value="1">primary education (4th grade)</option>
+                      <option value="2">5th to 9th grade</option>
+                      <option value="3">secondary education</option>
+                      <option value="4" selected="selected">higher education</option>
+                    </Input>
+                  </div>
+                </form>
+              </Col>
+
+
+              <Col md="6" style={{ marginTop:"150px"}}>
+                  <Pie
+                    data={{
+
+                        labels: ['Absences', 'Failures','Mother Education', 'Father Education'],
+                        datasets: [
+                        {
+                            label: 'The Most Effective Attributes On Grade 1 and Grade 2',
+                            data: this.state.data,
+                          backgroundColor: [
+                            '#3e8e9e',
+                            '#be5168',
+                            '#e2975d',
+                            '#789aeb'
+                          ],
+                      
+                          borderWidth: 1,
+                        }               
+                      
+                      ],
+                    }}
+                    height={200}
+                    width={300}
+                    options={{
+                      title:{
+                        display:true,
+                        text:'The Most Effective Attributes On Grade 1 and Grade 2'
+                      },
+                      scales: {
+                        yAxes: [
+                          {
+                            ticks: {
+                              beginAtZero: true,
+                            },
+                          },
+                        ],
+                      },
+                      legend: {
+                        labels: {
+                          fontSize: 15,
+                        },
+                      },
+                    }}
+                  />
+                                   
+            </Col>
+          </Row>
+
+
+
+
+
+
             <div className="container mt-5 pt-4" style={{ borderBottom :"solid 3px #19738A ","height":"70px"}}>
             <h5 className=" text-center" style={{"top":"40%", "color": "#19738A "}}  >Now try to predict your result</h5>
             </div>
-            <h3 className="mt-5">Fill in the form to get your result!</h3>
 
             <Row className="justify-content-sm-center mt-3 ">
             <Col md="6" >
@@ -217,20 +408,14 @@ export default class FirstPrediction extends Component {
 
 
   <hr className="my-4"/>
-                <p className="lead">
-                  {/* <a className="btn btn-primary btn-lg" href="#" role="button">Predict Your Result</a> */}
-                </p>
+
                 <Button onClick={this.predict} size="large" variant="outlined" color="primary">
                 <span  className="mr-2">Predict Your Result</span> <AddToQueueIcon></AddToQueueIcon>
 
-</Button>
+              </Button>     
 
 </form> 
                </div>
-            </Col>
-            <Col className="mt-5" md="6" >
-              <p class="mb-4">The most effective attribute</p>
-                <PieChart/>
             </Col>
             </Row>
 
