@@ -99,7 +99,7 @@ export default class SecondPrediction extends Component {
                     <label for="customRange1" class="form-label my-3">Your first exam grade:</label><br/>
 
                       <Slider
-                        defaultValue={15}
+                        defaultValue={20}
                         // getAriaValueText={valuetext}
                         aria-labelledby="discrete-slider"
                         valueLabelDisplay="auto"
@@ -129,7 +129,7 @@ export default class SecondPrediction extends Component {
                     <label for="customRange1" class="form-label my-3">Your second exam grade:</label><br/>
 
                       <Slider
-                        defaultValue={15}
+                        defaultValue={20}
                         // getAriaValueText={valuetext}
                         aria-labelledby="discrete-slider"
                         valueLabelDisplay="auto"
