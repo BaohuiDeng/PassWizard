@@ -3,13 +3,12 @@ import { Row,Col,Container,Input} from 'reactstrap';
 import Button from '@material-ui/core/Button';
 import Header from '../components/Header';
 import Footer from './Footer';
-import PieChart from './PieChart'
 import predict from '../assets/images/predict.jpeg';
 import AddToQueueIcon from '@material-ui/icons/AddToQueue';
 import HorizontalLinearStepper1 from './Stepper2';
 import axios from 'axios';
-
-
+import Slider from '@material-ui/core/Slider';
+import {Pie} from 'react-chartjs-2';
 
 
 
@@ -23,7 +22,10 @@ export default class SecondPrediction extends Component {
 
       FirstGrade:'0',
       SecondGrade:'0',
-      predictResult:''      
+      predictResult:'',
+      examFirstGrade:'',
+      examSecondGrade:'',
+      data:[20, 30]    
     };
 
     // This binding is necessary to make `this` work in the callback
@@ -76,15 +78,135 @@ export default class SecondPrediction extends Component {
             <Header/>
 
             <div class="card ">
-                        <img src={predict} class="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
-                        <div class="card-img-overlay">
-                            <h1 className="card-title text-center font-weight-bold text-white" style={{"font-size":"49px"}} >Start Predict your Final Grade!</h1>
-                           
-                        </div>
-                        </div>
-                        <div className="container mt-4">
-            <HorizontalLinearStepper1  />
+              <img src={predict} class="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
+              <div class="card-img-overlay">
+                  <h1 className="card-title text-center font-weight-bold text-white" style={{"font-size":"49px"}} >Start Predict your Final Grade!</h1>
+                  
+              </div>
             </div>
+            <div className="container mt-4">
+              <HorizontalLinearStepper1  />
+            </div>
+            <div className="container mt-5 pt-4" style={{ borderBottom:"solid 3px #19738A ","height":"70px"}}>
+                <h5 className=" text-center" style={{"top":"40%" , "color": "#19738A "}}  >The most effective Attributes</h5>
+              </div>
+
+            <Row className="justify-content-sm-center mt-3">
+              <Col className="mt-5 pt-3" md="6">
+
+                <form className="p-3 pr-5">
+                  <div class="form-group pt-4">
+                    <label for="customRange1" class="form-label my-3">Your first exam grade:</label><br/>
+
+                      <Slider
+                        defaultValue={15}
+                        // getAriaValueText={valuetext}
+                        aria-labelledby="discrete-slider"
+                        valueLabelDisplay="auto"
+                        step={1}
+                        marks
+                        min={0}
+                        max={20}
+                        onChange={(event, newValue) => {
+                          this.setState(state => {
+                            const data = state.data.map((item, j) => {
+                              if (j === 0) {
+                                return newValue;
+                              } else if(j === 1) {
+                                return item;
+                              }
+                            });
+                      
+                            return {
+                              data,
+                            };
+                          })
+                          
+                        }} 
+                      />
+                  </div>
+                  <div class="form-group pt-4">
+                    <label for="customRange1" class="form-label my-3">Your second exam grade:</label><br/>
+
+                      <Slider
+                        defaultValue={15}
+                        // getAriaValueText={valuetext}
+                        aria-labelledby="discrete-slider"
+                        valueLabelDisplay="auto"
+                        step={1}
+                        marks
+                        min={0}
+                        max={20}
+                        onChange={(event, newValue) => {
+                          this.setState(state => {
+                            const data = state.data.map((item, j) => {
+                              if (j === 0) {
+                                return item;
+                              } else if(j === 1) {
+                                return newValue;
+                              }
+                            });
+                      
+                            return {
+                              data,
+                            };
+                          })
+                          
+                        }} 
+                      />
+                  </div>
+                </form>
+              </Col>
+
+
+              <Col className="mt-2" md="6" >
+                  <Pie
+                    data={{
+                        labels: ['First Grade', 'Second Grade'],
+                        datasets: [
+                        {
+                            label: 'The Most Effective Attributes On Grade 3',
+                            data: this.state.data,
+                          backgroundColor: [
+                            '#be5168',
+                            '#3e8e9e',
+                          ],
+                      
+                          borderWidth: 1,
+                        }               
+                      
+                      ],
+                    }}
+                    height={200}
+                    width={300}
+                    options={{
+                      title:{
+                        display:true,
+                        text:'The Most Effective Attributes On Grade 3'
+                      },
+                      scales: {
+                        yAxes: [
+                          {
+                            ticks: {
+                              beginAtZero: true,
+                            },
+                          },
+                        ],
+                      },
+                      legend: {
+                        labels: {
+                          fontSize: 15,
+                        },
+                      },
+                    }}
+                  />
+                                   
+            </Col>
+          </Row>
+
+
+
+
             <div className="container mt-5 pt-4" style={{ borderBottom :"solid 3px #19738A ","height":"70px"}}>
             <h5 className=" text-center" style={{"top":"40%", "color": "#19738A "}}  >Now try to predict your result</h5>
             </div>
