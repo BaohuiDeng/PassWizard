@@ -1,12 +1,11 @@
-import React,{ Component } from 'react';
+import React from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
-import { Row,Col,Card,Container,Nav,NavLink} from 'reactstrap';
+import { Row,Col,Container} from 'reactstrap';
 
-import {Link, withRouter ,Switch} from 'react-router-dom';
+import {Switch} from 'react-router-dom';
 
 import MetisMenu from 'react-metismenu';
 
-import Header from './components/Header';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import Dataset from './components/Dataset';
@@ -19,7 +18,6 @@ import logo from './assets/images/whitelogo.png';
 import FirstPrediction from './components/FirstPrediction';
 import SecondPrediction from './components/SecondPrediction';
 import ThirdPrediction from './components/ThirdPrediction';
-import AssessmentIcon from '@material-ui/icons/Assessment';
 import Result from './components/Result'
 
 import DecisionTreePF from './components/DecisionTreePF';
@@ -58,6 +56,11 @@ const menu = [
       icon: '',
       label: 'Prediction' ,
       content:[
+        {
+          icon: '',
+          label: 'Performance',
+          to: '/Performance',
+        },
         {
           icon: '',
           label: 'Decision Tree1',
