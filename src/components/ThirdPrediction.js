@@ -25,7 +25,7 @@ export default class SecondPrediction extends Component {
       predictResult:'',
       examFirstGrade:'',
       examSecondGrade:'',
-      data:[20, 30]    
+      data:[20, 20]    
     };
 
     // This binding is necessary to make `this` work in the callback
