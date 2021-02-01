@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row,Col,Container,Input} from 'reactstrap';
+import { Row,Col,Container,Input,CustomInput} from 'reactstrap';
 import Button from '@material-ui/core/Button';
 import Header from '../components/Header';
 import Footer from './Footer';
@@ -7,24 +7,9 @@ import predict from '../assets/images/predict.jpeg';
 import AddToQueueIcon from '@material-ui/icons/AddToQueue';
 import HorizontalLinearStepper1 from './Stepper2';
 import axios from 'axios';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
-import BubbleChartIcon from '@material-ui/icons/BubbleChart';
-import {Pie} from 'react-chartjs-2'
-import update from 'react-addons-update';
+import {Pie} from 'react-chartjs-2';
 
-
-
-const useStyles = makeStyles({
-  root: {
-    width: 300,
-  },
-});
-
-function valuetext(value) {
-  return `${value}°C`;
-}
 
 export default class SecondPrediction extends Component {
 
@@ -44,48 +29,13 @@ export default class SecondPrediction extends Component {
       examFirstGrade:''  ,
       examFailures:'',
       examHigher:'',
-      data:[20, 15, 10],
+      data:[20, 15, 0],
     };
 
     // This binding is necessary to make `this` work in the callback
     this.predict = this.predict.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.update = this.update.bind(this)
-    this.getValue = this.getValue.bind(this)
 
   }
-  update(){
-    this.setState(update(this.state, {
-        data: {
-            [0]: {
-                $set: this.state.examFirstGrade
-            },
-            [1]:{
-                $set:this.state.examFailures
-            },
-            [2]:{
-                $set:this.state.examHigher
-            }
-        }
-    }));
-
-
-    console.log(this.state.failures)
-}
-
-  handleChange(e,newValue){
-    this.setState({
-      examFirstGrade:newValue
-    })
-  }
-  getValue(e){
-    this.setState({
-      examHigher:e.target.value
-    })
-    console.log(e.target.value)
-  }
-
- 
 
   predict(e) {
 
@@ -122,126 +72,194 @@ export default class SecondPrediction extends Component {
 
   }
 
+
+
     render() {
+
         return (
+
+
 
           <Container>
             <Header/>
 
-            <div class="card  ">
-                        <img src={predict} class="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
-                        <div class="card-img-overlay">
-                            <h1 className="card-title text-center font-weight-bold text-white" style={{"font-size":"49px"}} >Start Predict your Second Grade!</h1>  
-                        </div>
-                        </div>
-                        <div className="container mt-4">
-            <HorizontalLinearStepper1  />
-            </div>
-            <div className="container mt-5 pt-4" style={{ borderBottom:"solid 3px #19738A ","height":"70px"}}>
-              <h5 className=" text-center" style={{"top":"40%" , "color": "#19738A "}}  >The most effective Attributes</h5>
-            </div>
-            <Row className="justify-content-sm-center mt-3 ">
+              <div class="card  ">
+                <img src={predict} class="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
+                  <div class="card-img-overlay">
+                    <h1 className="card-title text-center font-weight-bold text-white" style={{"font-size":"49px"}} >Start Predict your Second Grade!</h1>  
+                  </div>
+              </div>
+              <div className="container mt-4">
+                <HorizontalLinearStepper1  />
+              </div>
+
+
+              <div className="container mt-5 pt-4" style={{ borderBottom:"solid 3px #19738A ","height":"70px"}}>
+                <h5 className=" text-center" style={{"top":"40%" , "color": "#19738A "}}  >The most effective Attributes</h5>
+              </div>
+              <Row className="justify-content-sm-center mt-3 ">
               <Col className="mt-5" md="6">
 
-              <form className="border-info border p-3">
-  <div class="form-group">
-    <label for="customRange1" class="form-label my-3">Your first exam grade:</label><br/>
+                <form className="p-3 pr-5">
+                  <div class="form-group pt-4 ">
+                    <label for="customRange1" class="form-label my-3">Your first exam grade:</label><br/>
 
-      <Slider
-        defaultValue={15}
-        getAriaValueText={valuetext}
-        aria-labelledby="discrete-slider"
-        valueLabelDisplay="auto"
-        step={1}
-        marks
-        min={0}
-        max={20}
-        onChange={this.handleChange}
-      />
-  </div>
-  <div className="form-group my-3">
-      <label>Number of exam failures:</label>
-      <Input
-          type="number"
-          name="examFailures"
-          min="0"
-          max="20"
-          id="FirstGrade"
-          placeholder="0~20"
-          onChange={e => {this.setState({'examFailures': e.target.value})}}
-        />   
-    </div>
-  <div className="form-check my-4">
-    <input type="checkbox" className="form-check-input " value="20" id="exampleCheck1" onChange={this.getValue }/>
-    <label className="form-check-label" for="exampleCheck1">Are you willing to take higher education?</label>
-  </div>
-  <Button onClick={this.update} size="large" variant="outlined" color="primary">
-                <span  className="mr-2">Update the chart</span> <BubbleChartIcon></BubbleChartIcon>
-                </Button>
+                      <Slider
+                        defaultValue={15}
+                        // getAriaValueText={valuetext}
+                        aria-labelledby="discrete-slider"
+                        valueLabelDisplay="auto"
+                        step={1}
+                        marks
+                        min={0}
+                        max={20}
+                        onChange={(event, newValue) => {
+                          this.setState(state => {
+                            const data = state.data.map((item, j) => {
+                              if (j === 0) {
+                                return newValue;
+                              } else if(j === 1) {
+                                return item;
+                              }else{
+                                return item;
+                              }
+                            });
+                      
+                            return {
+                              data,
+                            };
+                          })
+                          
+                        }} 
+                      />
+                  </div>
+                  <div className="form-group my-3">
+                      <label>Number of exam failures:</label>
+                      <Input
+                          type="number"
+                          name="examFailures"
+                          min="0"
+                          max="20"
+                          id="FirstGrade"
+                          placeholder="0~20"
+                          onChange={e => {
+                            this.setState(state => {
+                              const data = state.data.map((item, j) => {
+                                if (j === 0) {
+                                  return item;
+                                } else if(j === 1) {
+                                  return e.target.value;
+                                }else{
+                                  return item;
+                                }
+                              });
+                        
+                              return {
+                                data,
+                              };
+                            })
+                            
+                          }} 
+                        />   
+                    </div>
+                  <div className="form-check my-5 pl-0">
+                    
+                  <CustomInput type="switch" id="exampleCustomSwitch" name="customSwitch" label="Are you willing to take higher education?"
+                  
+                  onChange={e => {
+                    if (e.target.checked){
+
+                      this.setState(state => {
+                        const data = state.data.map((item, j) => {
+                          if (j === 0) {
+                            return item;
+                          } else if(j === 1) {
+                            return item;
+                          }else{
+                            return 10;
+                          }
+                        });
+                  
+                        return {
+                          data,
+                        };
+                      })
+                      
+                      }else{
+                        this.setState(state => {
+                          const data = state.data.map((item, j) => {
+                            if (j === 0) {
+                              return item;
+                            } else if(j === 1) {
+                              return item;
+                            }else{
+                              return 0;
+                            }
+                          });
+                    
+                          return {
+                            data,
+                          };
+                        })
+                      }
+                    } 
+                    }
+                    
+                  />    
+
+                  </div>
+
                 </form>
               </Col>
 
-            <Col className="mt-2" md="6" >
 
-
-
-            <Pie
-        data={{
-            labels: ['First Grade', 'Exam Failures', 'Higher Education'],
-            datasets: [
-            {
-                label: 'The Most Effective Attributes On Grade 2',
-                data: this.state.data,
-              backgroundColor: [
-                '#be5168',
-                '#3e8e9e',
-                '#e2975d',
-              ],
-           
-              borderWidth: 1,
-            },
-          
-            // {
-            //   label: 'G2',
-            //   data: this.state.BarchartdataSecond,
-            //   backgroundColor: [
-            //     '#3e8e9e', 
-            //     '#e9d88f',
-            //     '#447c6a',
-            //     '#525144',
-                
-           
-          ],
-        }}
-        height={200}
-        width={300}
-        options={{
-          title:{
-            display:true,
-            text:'The Most Effective Attributes On Grade 2'
-          },
-          scales: {
-            yAxes: [
-              {
-                ticks: {
-                  beginAtZero: true,
-                },
-              },
-            ],
-          },
-          legend: {
-            labels: {
-              fontSize: 15,
-            },
-          },
-        }}
-
-      />
-              
-              
-                {/* <PieChartSecond/> */}
+              <Col className="mt-2" md="6" >
+                  <Pie
+                    data={{
+                        labels: ['First Grade', 'Exam Failures', 'Higher Education'],
+                        datasets: [
+                        {
+                            label: 'The Most Effective Attributes On Grade 2',
+                            data: this.state.data,
+                          backgroundColor: [
+                            '#be5168',
+                            '#3e8e9e',
+                            '#e2975d',
+                          ],
+                      
+                          borderWidth: 1,
+                        }               
+                      
+                      ],
+                    }}
+                    height={200}
+                    width={300}
+                    options={{
+                      title:{
+                        display:true,
+                        text:'The Most Effective Attributes On Grade 2'
+                      },
+                      scales: {
+                        yAxes: [
+                          {
+                            ticks: {
+                              beginAtZero: true,
+                            },
+                          },
+                        ],
+                      },
+                      legend: {
+                        labels: {
+                          fontSize: 15,
+                        },
+                      },
+                    }}
+                  />
+                                   
             </Col>
-            </Row>
+          </Row>
+
+
           <div className="container mt-5 pt-4" style={{ borderBottom :"solid 3px #19738A ","height":"70px"}}>
             <h5 className=" text-center" style={{"top":"40%", "color": "#19738A "}}  >Now try to predict your result</h5>
             </div>
