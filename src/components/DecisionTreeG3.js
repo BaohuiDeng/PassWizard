@@ -97,10 +97,10 @@ export default function StyledNodesTree() {
          
       </div>
       </div>
-      <div className="my-5" id="treeWrapper" style={{width: '1200px', height: '600px'}}>
+      <div className="mt-5" id="treeWrapper" style={{width: '1100px', height: '800px'}}>
       <h2 className="mb-5 text-center">Fail/ Medium/ High final exam</h2>
-        <Tree height={700}
-	      width={900}
+        <Tree 
+          translate={{ x: 50, y: 300 }}
           data={G3}
           rootNodeClassName="node__root"
           branchNodeClassName="node__branch"
