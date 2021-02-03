@@ -91,23 +91,27 @@ export default function StyledNodesTree() {
     return (
       <div className="container">
         <Header/>
-      <div className="card  text-white">
-      <img src={datamind} className="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
-      <div className="card-img-overlay">
-          <h1 className="card-title text-center font-weight-bold" style={{"font-size":"49px"}} >Meet Our Dataset</h1>
-         
-      </div>
-      </div>
-      <div className="my-5" id="treeWrapper" style={{width: '1200px', height: '600px'}}>
-        <h2 className="mb-5 text-center">Fail/ Medium/ High 2nd exam</h2>
-        <Tree
-          data={G2}
-          rootNodeClassName="node__root"
-          branchNodeClassName="node__branch"
-          leafNodeClassName="node__leaf"
-        />
-      </div>
-      <Footer/>
+        <div className="card  text-white mb-5">
+          <img src={datamind} className="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
+          <div className="card-img-overlay" style={{position:"absolte"}}>
+              <h1 className="card-title text-center font-weight-bold" style={{"font-size":"49px"}} >Meet Our Dataset</h1>
+          
+          </div>
+        </div>
+
+        <div className=" mt-5 text-center h2">Fail/ Medium/ High 2nd exam</div>
+
+
+        <div id="treeWrapper" style={{width: '1100px', height: '700px'}}>
+          <Tree
+            data={G2}
+            translate={{ x: 50, y: 300 }}
+            rootNodeClassName="node__root , mt-5"
+            branchNodeClassName="node__branch"
+            leafNodeClassName="node__leaf"
+          />
+        </div>
+        <Footer/>
       </div>
     );
   }
