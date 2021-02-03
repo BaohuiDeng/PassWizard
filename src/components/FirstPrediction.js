@@ -304,7 +304,7 @@ export default class FirstPrediction extends Component {
             <Row className="justify-content-sm-center mt-3 ">
             <Col md="6" >
 
-            <div className="card jumbotron border-info mt-5  shadow-lg p-3 mb-5  rounded "> 
+            <div className="card  border-info mt-5   p-3 mb-5 "> 
                  <form>
   <div className="form-row">
     <div className="form-group col-md-12">
