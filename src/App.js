@@ -47,22 +47,6 @@ const menu = [
         },
         {
           icon: '',
-          label: 'Visualizaion',
-          to: '/Visualization',
-        },
-      ],
-    },
-    {
-      icon: '',
-      label: 'Prediction' ,
-      content:[
-        {
-          icon: '',
-          label: 'Performance',
-          to: '/Performance',
-        },
-        {
-          icon: '',
           label: 'Decision Tree1',
           to: '/DecisionTreeg2',
         },
@@ -71,9 +55,20 @@ const menu = [
           label: 'Decision Tree2',
           to: '/DecisionTreeg3',
         },
-
-      ]
+        
+        {
+          icon: '',
+          label: 'Decision Tree3',
+          to: '/DecisionTreePF',
+        }
+      ],
     },
+    {
+      icon: '',
+      label: 'Prediction',
+      to: '/Performance',
+    },
+    ,
     {
       icon: '',
       label: 'Social Computing Group',
