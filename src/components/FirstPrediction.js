@@ -5,6 +5,7 @@ import Header from './Header';
 import Footer from './Footer';
 import predict from '../assets/images/predict.jpeg';
 import AddToQueueIcon from '@material-ui/icons/AddToQueue';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import HorizontalLinearStepper1 from './Stepper2';
 import axios from 'axios';
 import Slider from '@material-ui/core/Slider';
@@ -106,13 +107,20 @@ export default class FirstPrediction extends Component {
                   
               </div>
             </div>
+
+              <Button className={'mt-3'} onClick={
+                  e => {e.preventDefault(); this.props.history.push({pathname: '/Performance'});}} size="large" variant="outlined" color="primary">
+                <ArrowBackIcon></ArrowBackIcon><span  className="mr-2">&nbsp;back to Predictions</span> 
+
+              </Button> 
+
             <div className="container mt-4">
               <HorizontalLinearStepper1  />
             </div>
 
             <div className="container mt-5 pt-4" style={{ borderBottom:"solid 3px #19738A ","height":"70px"}}>
-                <h5 className=" text-center" style={{"top":"40%" , "color": "#19738A "}}  >The most effective Attributes</h5>
-              </div>
+              <h5 className=" text-center" style={{"top":"40%" , "color": "#19738A "}}  >The most effective Attributes</h5>
+            </div>
 
             <Row className="justify-content-sm-center mt-3">
               <Col className="mt-5 pt-3" md="6">
@@ -409,10 +417,10 @@ export default class FirstPrediction extends Component {
 
   <hr className="my-4"/>
 
-                <Button onClick={this.predict} size="large" variant="outlined" color="primary">
+              <Button onClick={this.predict} size="large" variant="outlined" color="primary">
                 <span  className="mr-2">Predict Your Result</span> <AddToQueueIcon></AddToQueueIcon>
 
-              </Button>     
+              </Button>   
 
 </form> 
                </div>
