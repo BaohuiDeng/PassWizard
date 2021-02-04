@@ -16,7 +16,7 @@ export default class DecisionTreeMainPage extends Component {
           secondTree:false,
           ThirdTree:false,
 
-          firstTreeBox:'#3e8e9e',
+          firstTreeBox:'#545F63  ',
           secondTreeBox:'#91A3AA',
           ThirdTreeBox:'#91A3AA',
 
@@ -42,21 +42,21 @@ export default class DecisionTreeMainPage extends Component {
         <Row className="justify-content-sm-start mt-1" >
           <Col md="2" >
             <Card body inverse  id="firsttree" style={{ height:'200px',textAlign:'center', backgroundColor:this.state.firstTreeBox , marginBottom:'25px'}} 
-            onClick={e => {e.preventDefault(); this.setState({firstTree:true,secondTree:false,ThirdTree:false,firstTreeBox:'#3e8e9e',secondTreeBox:'#91A3AA',ThirdTreeBox:'#91A3AA'})}}>
+            onClick={e => {e.preventDefault(); this.setState({firstTree:true,secondTree:false,ThirdTree:false,firstTreeBox:'#545F63 ',secondTreeBox:'#91A3AA',ThirdTreeBox:'#91A3AA'})}}>
                 <CardText></CardText>
-                <CardTitle tag="h6" style={{"color":"white", paddingTop:'50%'}}>First Tree</CardTitle>
+                <CardTitle tag="h6" style={{"color":"white", paddingTop:'50%'}}>First Exam</CardTitle>
                 {/* <Button>Button</Button> */}
             </Card>
             <Card body inverse  id="secondtree" style={{ height:'200px',textAlign:'center',backgroundColor:this.state.secondTreeBox, marginBottom:'25px'}}
-            onClick={e => {e.preventDefault(); this.setState({firstTree:false,secondTree:true,ThirdTree:false,firstTreeBox:'#91A3AA',secondTreeBox:'#e2975d',ThirdTreeBox:'#91A3AA'})}}>
+            onClick={e => {e.preventDefault(); this.setState({firstTree:false,secondTree:true,ThirdTree:false,firstTreeBox:'#91A3AA',secondTreeBox:'#545F63 ',ThirdTreeBox:'#91A3AA'})}}>
                 <CardText></CardText>
-                <CardTitle tag="h6" style={{"color":"white", paddingTop:'50%'}}>Second Tree</CardTitle>
+                <CardTitle tag="h6" style={{"color":"white", paddingTop:'50%'}}>Second Exam</CardTitle>
                 {/* <Button>Button</Button> */}
             </Card>
             <Card body inverse   id="thirdtree"  style={{ height:'200px',textAlign:'center',backgroundColor:this.state.ThirdTreeBox}}
-            onClick={e => {e.preventDefault(); this.setState({firstTree:false,secondTree:false,ThirdTree:true,firstTreeBox:'#91A3AA',secondTreeBox:'#91A3AA',ThirdTreeBox:'rgba(190,91,104)'})}}>
+            onClick={e => {e.preventDefault(); this.setState({firstTree:false,secondTree:false,ThirdTree:true,firstTreeBox:'#91A3AA',secondTreeBox:'#91A3AA',ThirdTreeBox:'#545F63 '})}}>
                 <CardText></CardText>
-                <CardTitle tag="h6" style={{"color":"white", paddingTop:'50%'}}>Third Tree</CardTitle>
+                <CardTitle tag="h6" style={{"color":"white", paddingTop:'50%'}}>Final Exam</CardTitle>
                 {/* <Button>Button</Button> */}
             </Card>
           </Col>
