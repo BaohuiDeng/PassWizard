@@ -212,30 +212,31 @@ const pf3 = {
 //     </div>
 //   );
 // }
-export default function StyledNodesTree() {
+export default function ThirdTree() {
     return (
-      <div id="treeWrapper" style={{ width: '50em', height: '20em' }}>
-        <h4>Pass/ Fail 1st exam</h4>
+      <div id="treeWrapper" style={{width: '100%', height: '650px', border:'solid 1px grey'}} >
         <Tree
           data={pf1}
+          translate={{ x: 80, y: 250 }}
           rootNodeClassName="node__root"
           branchNodeClassName="node__branch"
           leafNodeClassName="node__leaf"
         />
-        <h4>Pass/ Fail 2nd exam</h4>
-        <Tree
+
+        {/* <h4>Pass/ Fail 2nd exam</h4> */}
+        {/* <Tree
           data={pf2}
           rootNodeClassName="node__root"
           branchNodeClassName="node__branch"
           leafNodeClassName="node__leaf"
-        />
-        <h4>Pass/ Fail final exam</h4>
-        <Tree
+        /> */}
+        {/* <h4>Pass/ Fail final exam</h4> */}
+        {/* <Tree
           data={pf3}
           rootNodeClassName="node__root"
           branchNodeClassName="node__branch"
           leafNodeClassName="node__leaf"
-        />
+        /> */}
       </div>
     );
   }
