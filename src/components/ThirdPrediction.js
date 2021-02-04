@@ -5,6 +5,8 @@ import Header from '../components/Header';
 import Footer from './Footer';
 import predict from '../assets/images/predict.jpeg';
 import AddToQueueIcon from '@material-ui/icons/AddToQueue';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+
 import HorizontalLinearStepper1 from './Stepper2';
 import axios from 'axios';
 import Slider from '@material-ui/core/Slider';
@@ -84,6 +86,11 @@ export default class SecondPrediction extends Component {
                   
               </div>
             </div>
+            <Button className={'mt-3'} onClick={
+                  e => {e.preventDefault(); this.props.history.push({pathname: '/Performance'});}} size="large" variant="outlined" color="primary">
+                <ArrowBackIcon></ArrowBackIcon><span  className="mr-2">&nbsp;back to Predictions</span> 
+
+              </Button> 
             <div className="container mt-4">
               <HorizontalLinearStepper1  />
             </div>
