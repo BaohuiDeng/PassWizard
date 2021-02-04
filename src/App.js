@@ -20,9 +20,8 @@ import SecondPrediction from './components/SecondPrediction';
 import ThirdPrediction from './components/ThirdPrediction';
 import Result from './components/Result'
 
-import DecisionTreePF from './components/DecisionTreePF';
-import DecisionTreeG2 from './components/DecisionTreeG2';
-import DecisionTreeG3 from './components/DecisionTreeG3';
+import DecisionTreeMainPage from './components/DecisionTreeMainPage';
+
 
 
 const menu = [
@@ -47,19 +46,8 @@ const menu = [
         },
         {
           icon: '',
-          label: 'Decision Tree1',
-          to: '/DecisionTreeg2',
-        },
-        {
-          icon: '',
-          label: 'Decision Tree2',
-          to: '/DecisionTreeg3',
-        },
-        
-        {
-          icon: '',
-          label: 'Decision Tree3',
-          to: '/DecisionTreePF',
+          label: 'Decision Tree',
+          to: '/DecisionTreeMainPage',
         }
       ],
     },
@@ -107,9 +95,8 @@ function App() {
                       <Route exact path="/ThirdPrediction" component = {ThirdPrediction} />
                       <Route exact path="/PredictionResult" component = {Result} />
 
-                      <Route exact path="/DecisionTreePF" component = {DecisionTreePF} />
-                      <Route exact path="/DecisionTreeG2" component = {DecisionTreeG2} />
-                      <Route exact path="/DecisionTreeG3" component = {DecisionTreeG3} />
+                      <Route exact path="/DecisionTreeMainPage" component = {DecisionTreeMainPage} />                  
+
 
                       <Route   component= {NotFound} />
                     </Switch>
