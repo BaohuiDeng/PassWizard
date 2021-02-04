@@ -1,6 +1,9 @@
 body {
-  /* background-color:  #f8f0ea; */
-  /* background-image: url('../images/background.jpeg'); */
+  /* background-color:  #d8d8d8; */
+  /* background-image: url('../images/bgimg.png');
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-position: right; */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     ;
@@ -41,6 +44,23 @@ code {
 #ContactUsBox:hover {
   background: #EBCDC3!important;
 }
+
+#firsttree:hover {
+  background: #3e8e9e !important;
+  cursor: pointer;
+}
+
+#secondtree:hover {
+  background: #e2975d!important;
+  cursor: pointer;
+
+}
+
+#thirdtree:hover {
+  background: rgba(190,91,104)!important;
+  cursor: pointer;
+}
+
 .metismenu{
   background-color: rgb(43, 43, 43) !important
   ;
