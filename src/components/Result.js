@@ -21,7 +21,7 @@ export default class Result extends Component {
             <Header/>
 
             <div class="card  ">
-                        <img src={result} class="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
+                        <img src={result} class="img-fluid" alt="Responsive image" style={{"height":"300px","width":"100%"}}></img>
                         <div class="card-img-overlay">
                             <h1 className="card-title text-center font-weight-bold text-white" style={{"font-size":"49px"}} >Your Result!</h1>
                            

@@ -1,20 +1,12 @@
 import React, { Component } from 'react'
 import Footer from './Footer'
-import { Row,Card, CardTitle, CardText,Col } from 'reactstrap';
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import { Row } from 'reactstrap';
 import Header from './/Header';
-import member from '../assets/images/MMembers.png';
 import teamwork from '../assets/images/aboutus.jpg';
 import GroupIcon from '@material-ui/icons/Group';
-import {Link, withRouter ,Switch} from 'react-router-dom';
 import HomeWorkIcon from '@material-ui/icons/HomeWork';
 import LocationCityIcon from '@material-ui/icons/LocationCity';
-import globe from '../assets/images/globe.png';
-import email from '../assets/images/email.png';
-import members from '../assets/images/members.png';
-import barchart from '../assets/images/Barchart.png';
-import data from '../assets/images/data.png';
-import performance from '../assets/images/performance.png';
+
 
 
 
@@ -30,7 +22,7 @@ export default class AboutUs extends Component {
             <Header/>
            
             <div className="card  text-white">
-                        <img src={teamwork} className="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
+                        <img src={teamwork} className="img-fluid" alt="Responsive image" style={{"height":"300px","width":"100%"}}></img>
                         <div className="card-img-overlay">
                             <h1 className="card-title text-center font-weight-bold" style={{"font-size":"49px","color":"white"}} >Our Team</h1>
                            

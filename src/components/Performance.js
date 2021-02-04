@@ -25,7 +25,7 @@ export default class Performance extends Component {
                 <Header/>
 
                     <div className="card  text-white" >
-                      <img src={machinelearning} className="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
+                      <img src={machinelearning} className="img-fluid" alt="Responsive image" style={{"height":"300px","width":"100%"}}></img>
                       <div className="card-img-overlay">
                           <h1 className="card-title text-center font-weight-bold" style={{"font-size":"49px"}} >Machine Learning</h1>
                           
