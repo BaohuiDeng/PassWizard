@@ -1,18 +1,12 @@
 import React, { Component } from 'react';
 import { Row,Container,Card, CardTitle, CardText,Col} from 'reactstrap';
-import ReactDOM from 'react-dom';
 import Button from '@material-ui/core/Button';
-import Icon from '@material-ui/core/Icon';
-import { makeStyles } from '@material-ui/core/styles';
-import SendIcon from '@material-ui/icons/Send';
 import Header from '../components/Header';
 import Footer from './Footer';
-import BarChart from './BarChart'
-import PieChart from './PieChart'
-import LineChart from './LineChart'
-import BarChartSecond from './BarChartSecond'
 import result from '../assets/images/result.jpg';
 import resulticon from '../assets/images/resulticon.png';
+import CachedIcon from '@material-ui/icons/Cached';
+
 
 import Stepper3 from '../components/Stepper3'
 
@@ -119,10 +113,18 @@ export default class Result extends Component {
                                 </Col>
                               
                             </CardTitle>
+
                             {/* {this.props.location.result.msg1} */}
+                            
                           </Card>
+                          <Button className={'mt-6'} onClick={
+                                e => {e.preventDefault(); this.props.history.push({pathname: '/Performance'});}} size="large" variant="outlined" color="primary">
+                              <CachedIcon></CachedIcon><span  className="mr-2">&nbsp;Predict again</span> 
+
+                          </Button> 
+
                   </Col> 
-                 
+
                
                
               </Row>
