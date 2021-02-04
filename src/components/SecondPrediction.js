@@ -5,6 +5,8 @@ import Header from '../components/Header';
 import Footer from './Footer';
 import predict from '../assets/images/predict.jpeg';
 import AddToQueueIcon from '@material-ui/icons/AddToQueue';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+
 import HorizontalLinearStepper1 from './Stepper2';
 import axios from 'axios';
 import Slider from '@material-ui/core/Slider';
@@ -89,6 +91,12 @@ export default class SecondPrediction extends Component {
                     <h1 className="card-title text-center font-weight-bold text-white" style={{"font-size":"49px"}} >Start Predict your Second Grade!</h1>  
                   </div>
               </div>
+              <Button className={'mt-3'} onClick={
+                  e => {e.preventDefault(); this.props.history.push({pathname: '/Performance'});}} size="large" variant="outlined" color="primary">
+                <ArrowBackIcon></ArrowBackIcon><span  className="mr-2">&nbsp;back to Predictions</span> 
+
+              </Button> 
+
               <div className="container mt-4">
                 <HorizontalLinearStepper1  />
               </div>
@@ -266,7 +274,7 @@ export default class SecondPrediction extends Component {
             <Row className="justify-content-sm-center mt-3 ">
             <Col md="6" >
 
-            <div className="card  border-info mt-5   p-3 mb-5   "> 
+            <div className="card  border-info mt-5   p-3 mb-5"> 
                  <form>
   <div className="form-row">
     <div className="form-group col-md-12">
