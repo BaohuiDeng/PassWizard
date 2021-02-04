@@ -57,10 +57,10 @@ export default class Landing extends Component {
                             </Link>
                         </Col> 
                         <Col md="3">
-                            <Link to="/Visualization">
+                            <Link to="/DecisionTreeMainPage">
                                 <Card body inverse  id="VisualizationBox" style={{ height:'200px',backgroundColor:'white' ,textAlign:'center', paddingTop: '40px'}}>
-                                    <CardText><img src={colorfulpiechart} alt="Visualization" style={{'border': 'none','height': '60px'}} onMouseOver={e => (e.currentTarget.src =piechart )} onMouseOut={e => (e.currentTarget.src =colorfulpiechart )}/></CardText>
-                                    <CardTitle tag="h6" style={{"color":"#6A7D8E"}}>Visualization</CardTitle>
+                                    <CardText><img src={colorfulpiechart} alt="Decision Tree" style={{'border': 'none','height': '60px'}} onMouseOver={e => (e.currentTarget.src =piechart )} onMouseOut={e => (e.currentTarget.src =colorfulpiechart )}/></CardText>
+                                    <CardTitle tag="h6" style={{"color":"#6A7D8E"}}>Decision Tree</CardTitle>
                                     {/* <Button color="secondary">Button</Button> */}
                                 </Card>
                             </Link>
