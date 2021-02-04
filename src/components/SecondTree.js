@@ -1,9 +1,5 @@
 import React, { Component } from 'react'
-import Header from './/Header';
-import Footer from './Footer'
-// import { Row,Col,Form,FormGroup,Label,Input,Button} from 'reactstrap';
-// import {BrowserRouter as Router, Route} from 'react-router-dom'
-import datamind from '../assets/images/DataMind.jpeg';
+
 
 import Tree from 'react-d3-tree';
 // import './custom-tree.css';
@@ -85,30 +81,20 @@ const G3 = {
 //     </div>
 //   );
 // }
-export default function StyledNodesTree() {
+export default function SecondTree() {
     return (
 
-      <div className="container">
-        <Header/>
-      <div className="card  text-white">
-      <img src={datamind} className="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
-      <div className="card-img-overlay">
-          <h1 className="card-title text-center font-weight-bold" style={{"font-size":"49px"}} >Meet Our Dataset</h1>
-         
-      </div>
-      </div>
-      <div className="mt-5" id="treeWrapper" style={{width: '1100px', height: '800px'}}>
-      <h2 className="mb-5 text-center">Fail/ Medium/ High final exam</h2>
+
+      <div id="treeWrapper" style={{width: '100%', height: '650px', border:'solid 1px grey'}} >
+
         <Tree 
-          translate={{ x: 50, y: 300 }}
+          translate={{ x: 80, y: 250 }}
           data={G3}
           rootNodeClassName="node__root"
           branchNodeClassName="node__branch"
           leafNodeClassName="node__leaf"
         />
-              <Footer/>
+      </div>
 
-      </div>
-      </div>
     );
   }
