@@ -14,9 +14,9 @@ export default class Footer extends Component {
       <div className="col-lg-6 col-md-12 mb-4 mb-md-0">
         <h5 className="text-uppercase">LAPro Team</h5>
 
-        <p>
-   We make your website <span style={{"font-size":"30px"}}>stand out</span>. 
-      </p> <p> Clean, creative, effective web design.</p>
+        {/* <p>
+  We are a team from <span style={{"font-size":"30px"}}>Duisburg-Essen university</span>. 
+      </p> <p> Clean, creative, effective web design.</p> */}
       </div>
 
       <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
@@ -33,13 +33,14 @@ export default class Footer extends Component {
           </Link>
           </li>
           <li>
-            <a href="#!" className="text-white">Careers</a>
+          <Link to="/ContactUs">
+
+            <a href="#!" className="text-white">Contact Us</a>
+          </Link>
           </li>
+
           <li>
-            <a href="#!" className="text-white">Capabilities</a>
-          </li>
-          <li>
-            <a href="#!" className="text-white">The Social Computing Group</a>
+            <a href="https://www.uni-due.de/soco/" className="text-white">The Social Computing Group</a>
           </li>
         </ul>
       </div>
@@ -56,16 +57,16 @@ export default class Footer extends Component {
 
         <ul className="list-unstyled">
           <li>
-            <a href="#!" className="text-white">Baohui</a>
+            <a href="#!" className="text-white">Baohui Deng</a>
           </li>
           <li>
-            <a href="#!" className="text-white">Tannaz</a>
+            <a href="#!" className="text-white">Tannaz Vahidi</a>
           </li>
           <li>
-            <a href="#!" className="text-white">Amr</a>
+            <a href="#!" className="text-white">Amr Shakhshir</a>
           </li>
           <li>
-            <a href="#!" className="text-white">Hesam</a>
+            <a href="#!" className="text-white">Hesamoddin Heidarzadeh</a>
           </li>
         </ul>
       </div>

@@ -30,7 +30,7 @@ export default class ContactUs extends Component {
                       <div className="card  ">
                         <img src={contact} className="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
                         <div className="card-img-overlay">
-                            <h1 className="card-title text-center font-weight-bold text-black" style={{"font-size":"49px"}} >Start Prediction!</h1>
+                            <h1 className="card-title text-center font-weight-bold text-black" style={{"font-size":"49px"}} ></h1>
                            
                         </div>
                         </div>
