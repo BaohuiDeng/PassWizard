@@ -46,18 +46,18 @@ code {
 }
 
 #firsttree:hover {
-  background: #3e8e9e !important;
+  background: #545F63  !important;
   cursor: pointer;
 }
 
 #secondtree:hover {
-  background: #e2975d!important;
+  background: #545F63 !important;
   cursor: pointer;
 
 }
 
 #thirdtree:hover {
-  background: rgba(190,91,104)!important;
+  background: #545F63 !important;
   cursor: pointer;
 }
 
