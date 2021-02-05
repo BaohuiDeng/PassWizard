@@ -26,9 +26,7 @@ import DecisionTreeMainPage from './components/DecisionTreeMainPage';
 
 const menu = [
     {
-      icon: '',
-      label: <img src={logo} alt="Logo" style={{'border': 'none','height': '100px', 'paddingTop': '20px','paddingBottom': '20px'}}/>,
-      to: '#',
+      label: <img src={logo} alt="Logo" style={{'border': 'none','height': '100px', 'paddingTop': '20px','paddingBottom': '20px'}}/>
     },
     {
       icon: '',
@@ -80,7 +78,7 @@ function App() {
                       activeLinkFromLocation
                       />
                   </Col>
-                  <Col   >
+                  <Col md="10"  >
 
                     <Switch>
                       <Route exact path="/" component = {Landing} />
