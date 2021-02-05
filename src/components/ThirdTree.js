@@ -221,6 +221,7 @@ export default function ThirdTree() {
           rootNodeClassName="node__root"
           branchNodeClassName="node__branch"
           leafNodeClassName="node__leaf"
+          zoom='0.7'
         />
 
         {/* <h4>Pass/ Fail 2nd exam</h4> */}

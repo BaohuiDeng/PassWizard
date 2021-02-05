@@ -49,10 +49,14 @@ export default class Dataset extends Component {
                         <PermDataSettingIcon></PermDataSettingIcon>Multivariate dataset                    </div>
                     <div className="card-body">
                         <p className="card-text">
-                        <li>There are 649 number of records</li>
-                <li>The dataset consists of data about courses, students and their interactions with Virtual Learning Environment(VLE) for seven selected courses (called modules)</li>
-                <li>Presentations of the course start in February and October</li>
-                <li>All tables are stored in the csv format</li>                        </p>
+                        <li>Represents students' performance in Portuguese course.</li>
+                <li>Number of students: 649</li>
+                <li>Number of attributes: 30</li>
+                <li>[Include student grades, demographic, social and school related features]</li> 
+                <li>Target attributes: 3</li>   
+                <li>[Show students' grades in first, second, and final period exams (G1, G2, G3) respectively]</li>
+                <li>For more information on dataset please visit <a href="https://archive.ics.uci.edu/ml/datasets/student+performance#">this</a> page.</li>                         
+                </p>
                         </div>
                     </div>
                 </div>
@@ -63,18 +67,27 @@ export default class Dataset extends Component {
                     <div className="card-body">
  
                         <p className="card-text">
-                        <li><strong style={{color:"#34666F"}}>Gender</strong>: The student’s gender</li>
-                    <li><strong style={{color:"#34666F"}}>Region</strong>: Identifies the geographic region, where the student lived while taking the module-presentation</li>
-                    <li><strong style={{color:"#34666F"}}>Highest Education</strong>: Highest student education level on entry to the module presentation</li>
-                    <li><strong style={{color:"#34666F"}}>Imd Band</strong>: Specifies the Index of Multiple Depravation band of the place where the student lived during the module-presentation</li>
-                    <li><strong style={{color:"#34666F"}}>Age Group</strong>: Band of the student’s age</li>
-                    <li><strong style={{color:"#34666F"}}>Number Of Previous Attempts</strong>: The number times the student has attempted this module</li>
-                    <li><strong style={{color:"#34666F"}}>Semester</strong>: A status flag indicating that the Semester</li>
-                    <li><strong style={{color:"#34666F"}}>First Module</strong>: Code name of the module, which serves as the identifier</li>
-                    <li><strong style={{color:"#34666F"}}>Semester </strong>: Code name of the presentation. It consists of the year and “B” for the presentation starting in February and “J” for the presentation starting in October</li>
-                    <li><strong style={{color:"#34666F"}}>Second Module</strong>: Code name of the module, which serves as the identifier</li>
-                    <li><strong style={{color:"#34666F"}}>Semester </strong>: Code name of the presentation. It consists of the year and “B” for the presentation starting in February and “J” for the presentation starting in October</li>
-                    <li><strong style={{color:"#34666F"}}>Final Result</strong>: Student’s final result in the module-presentation</li>                            </p>
+                            <li> There 33 attributes in total [30 features + 3 target]. Below you can find a set of the most important ones:</li>
+                        <li><strong style={{color:"#34666F"}}>School</strong>: student's school ('GP' - Gabriel Pereira or 'MS' - Mousinho da Silveira)</li>
+                    <li><strong style={{color:"#34666F"}}>Sex</strong>: student's sex (female or male)</li>
+                    <li><strong style={{color:"#34666F"}}>Medu</strong>: mother's education (none, primary education (4th grade), 5th to 9th grade, secondary education or higher education)</li>
+                    <li><strong style={{color:"#34666F"}}>Fedu</strong>: father's education (none, primary education (4th grade), 5th to 9th grade, secondary education or higher education)</li>
+                    <li><strong style={{color:"#34666F"}}>Mjob</strong>: mother's job ('teacher', 'health' care related, civil 'services' (e.g. administrative or police), 'at_home' or 'other')</li>
+                    <li><strong style={{color:"#34666F"}}>Traveltime</strong>: home to school travel time (1 - more than 15 min., 15 to 30 min., 30 min. to 1 hour, or less than 1 hour)</li>
+                    <li><strong style={{color:"#34666F"}}>Studytime</strong>: weekly study time (less than 2 hours, 2 to 5 hours, 5 to 10 hours, or more than 10 hours)</li>
+                    <li><strong style={{color:"#34666F"}}>Failures</strong>: number of past class failures (1, 2, 3, or more than three)</li>
+                    <li><strong style={{color:"#34666F"}}>Higher </strong>: wants to take higher education (yes or no)</li>
+                    <li><strong style={{color:"#34666F"}}>Freetime</strong>: free time after school (very low, low, neutral, high, very high)</li>
+                    <li><strong style={{color:"#34666F"}}>Dalc </strong>: workday alcohol consumption (very low, low, neutral, high, very high)</li>
+                    <li><strong style={{color:"#34666F"}}>Walc</strong>: weekend alcohol consumption (very low, low, neutral, high, very high)</li>   
+                    <li><strong style={{color:"#34666F"}}>Absences</strong>: number of school absences (0 ~ 32)</li>   
+                    <li><strong style={{color:"#34666F"}}>G1</strong>: first period grade (from 0 to 20)</li>   
+                    <li><strong style={{color:"#34666F"}}>G2</strong>: second period grade (from 0 to 20)</li>   
+                    <li><strong style={{color:"#34666F"}}>G3</strong>: final grade (0 to 20)</li>   
+                    <li>For more information on other attributes please visit <a href="https://archive.ics.uci.edu/ml/datasets/student+performance">this</a> page.</li>                         
+
+
+                     </p>
                     </div>
                     </div>
                 </div>

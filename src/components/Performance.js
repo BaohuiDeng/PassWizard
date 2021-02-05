@@ -70,28 +70,41 @@ export default class Performance extends Component {
               <h1 className="my-5 text-center" data-tip="You can choose three options above to predict your result!" >WHICH STATAGE ARE YOU AT?</h1>
               <ReactTooltip className='extraClass' effect="solid" width="180px" height="100px" />
             </div>
-                    <p align="justify">Online education has become very popular and plays a positive impact on learning. Organizations have to consider many factors to make the learning process effective. If these are identified correctly, better results can be obtained. Virtual Learning Environment (VLE) provided by Open University has several factors which effect the student's performance. The purpose of this project is to identify the features that affect the student performance. If these are identified correctly, better results can be obtained. Both students and faculties can be well informed about the progress based on the analysis which provides an opportunity to excel.</p>
+                    <p align="justify">
+                    To get your exam's status predicted, you have three choices:
+                    <li><strong style={{color:"#34666F"}}>1 :</strong> At the beginning of a semester (you haven't been examined yet):<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Output: weather you will pass or fail at each exam (G1, G2, G3).</li>
+                    <li> <strong style={{color:"#34666F"}}>2 :</strong>After completing the first exam (G1):<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Output: your result at second exam (G2): fail, medium [10 to less than 15], high [15 to 20].</li>
+                    <li> <strong style={{color:"#34666F"}}>3 :</strong>After completing the second exam (G2):<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Output: your result at final exam (G3): fail, medium [10 to less than 15], high [15 to 20].</li>
+
+                    </p>
 
                     </div>
                       <div   className="d-flex mb-3">
                     <div className="col-sm-6" >
                       <div className="card border-info" style={{"background-color":"#f5f5f1"}}>
                         <div className="card-body">
-                          <h5 className="card-title font-weight-bold" style={{"color":"#34666F"}}>Data Preprocessing</h5>
+                          <h5 className="card-title font-weight-bold" style={{"color":"#34666F"}}>Workflow</h5>
                           <p className="card-text justify">
-                        The feature engineering part of our analysis consists of merging and feature selection. We used the dataset to train different machine learning algorithms from Scikit-learn. Comparing the different models, we have identified the best suitable model.
-                          It is important to merge all the table and pre-process it. All the missing values are removed. After the data pre-processing, the tables are merged to form a main table which is used for our predictive modelling. </p>
+                          In order to get results as accurate as possible, several techniques and algorithms have been applied such as deriving new attributes, selecting most effective features based on different algorithms of feature selection, and clustering some ordinal values into groups. The resulted dataset has been used by to train different machine learning algorithms by Scikit-learn. By changing train/ test ratio and comparing the different models, the model with the highest accuracy value has been chosen to be used in this application.
+                         </p>
                         
                         </div>
                       </div>
                     </div>
 
-                    <div className="col-sm-6 mt-2 mb-2">
+                    <div className="col-sm-6 mt-1 mb-2">
                       <div className="card border-info" style={{"background-color":"#f5f5f1"}}>
                         <div className="card-body">
-                          <h5 className="card-title font-weight-bold" style={{"color":"#34666F"}}>Predictive Models</h5>
+                          <h5 className="card-title font-weight-bold" style={{"color":"#34666F"}}>Results</h5>
                           <p className="card-text justify">
-                          Analysis has been performed on the merged table and different models are implemented to compare and identify the best suited for the dataset. The data is splitted in 80% training and 20% testing. The prediction is done among the four classes - Distinction, Pass, Fail and Withdrawn.                              </p>
+                          As a result, the used algorithm for prediction models is support vector classification (SVC).
+The used ratio for train/test data is 80/20 respectively.
+The accuracy value is based on precision value, that is, the fraction of relevant instances among the retrieved instances.
+For more understanding of features effects, please try the interactive decision tree here and be aware that the accuracy in decision tree models is less than the accuracy in SVC models that are mainly used in this application
+                           </p>
                         </div>
                       </div>         
                     </div>

@@ -15,6 +15,10 @@ export default class DecisionTreeMainPage extends Component {
           firstTree:true,
           secondTree:false,
           ThirdTree:false,
+          
+          firstTxt:true,
+          secondTxt:false,
+          ThirdTxt:false,
 
           firstTreeBox:'#545F63  ',
           secondTreeBox:'#91A3AA',
@@ -23,7 +27,7 @@ export default class DecisionTreeMainPage extends Component {
     
         };
       }
-
+          
 
 
     render() {
@@ -42,21 +46,28 @@ export default class DecisionTreeMainPage extends Component {
         <Row className="justify-content-sm-start mt-1" >
           <Col md="2" >
             <Card body inverse  id="firsttree" style={{ height:'200px',textAlign:'center', backgroundColor:this.state.firstTreeBox , marginBottom:'25px'}} 
-            onClick={e => {e.preventDefault(); this.setState({firstTree:true,secondTree:false,ThirdTree:false,firstTreeBox:'#545F63 ',secondTreeBox:'#91A3AA',ThirdTreeBox:'#91A3AA'})}}>
+            onClick={e => {e.preventDefault(); this.setState({firstTree:true,secondTree:false,ThirdTree:false,firstTreeBox:'#545F63 ',secondTreeBox:'#91A3AA',ThirdTreeBox:'#91A3AA',firstTxt:true,secondTxt:false,ThirdTxt:false})}}>
                 <CardText></CardText>
-                <CardTitle tag="h6" style={{"color":"white", paddingTop:'50%'}}>First Exam</CardTitle>
+                <CardTitle tag="h6" style={{"color":"white", paddingTop:'50%' , fontSize:"13pt"}}>
+                First Exam
+                  
+                </CardTitle>
                 {/* <Button>Button</Button> */}
             </Card>
             <Card body inverse  id="secondtree" style={{ height:'200px',textAlign:'center',backgroundColor:this.state.secondTreeBox, marginBottom:'25px'}}
-            onClick={e => {e.preventDefault(); this.setState({firstTree:false,secondTree:true,ThirdTree:false,firstTreeBox:'#91A3AA',secondTreeBox:'#545F63 ',ThirdTreeBox:'#91A3AA'})}}>
+            onClick={e => {e.preventDefault(); this.setState({firstTree:false,secondTree:true,ThirdTree:false,firstTreeBox:'#91A3AA',secondTreeBox:'#545F63 ',ThirdTreeBox:'#91A3AA',firstTxt:false,secondTxt:true,ThirdTxt:false})}}>
                 <CardText></CardText>
-                <CardTitle tag="h6" style={{"color":"white", paddingTop:'50%'}}>Second Exam</CardTitle>
+                <CardTitle tag="h6" style={{"color":"white", paddingTop:'50%' , fontSize:"13pt"}}>
+                  Second Exam 
+                </CardTitle>
                 {/* <Button>Button</Button> */}
             </Card>
             <Card body inverse   id="thirdtree"  style={{ height:'200px',textAlign:'center',backgroundColor:this.state.ThirdTreeBox}}
-            onClick={e => {e.preventDefault(); this.setState({firstTree:false,secondTree:false,ThirdTree:true,firstTreeBox:'#91A3AA',secondTreeBox:'#91A3AA',ThirdTreeBox:'#545F63 '})}}>
+            onClick={e => {e.preventDefault(); this.setState({firstTree:false,secondTree:false,ThirdTree:true,firstTreeBox:'#91A3AA',secondTreeBox:'#91A3AA',ThirdTreeBox:'#545F63 ',firstTxt:false,secondTxt:false,ThirdTxt:true})}}>
                 <CardText></CardText>
-                <CardTitle tag="h6" style={{"color":"white", paddingTop:'50%'}}>Final Exam</CardTitle>
+                <CardTitle tag="h6" style={{"color":"white", paddingTop:'50%' , fontSize:"13pt"}}>
+                  Final Exam 
+                </CardTitle>
                 {/* <Button>Button</Button> */}
             </Card>
           </Col>
@@ -73,44 +84,70 @@ export default class DecisionTreeMainPage extends Component {
                 this.state.ThirdTree &&
                 <ThirdTree/>
             }
-
-
+          </Col>
+        </Row>
+        <Row className="justify-content-sm-center">
+          <Col md="8" className="" >
+          {
+                  this.state.firstTxt &&
+                  <p>Accuracy ~ 83.08%  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Precision: [fail pass] ~ [68.00% 86.67%]  </p>
+                  
+              }
+              {
+                  this.state.secondTxt &&
+                  <p>Accuracy ~ 84.62%  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Precision: [fail medium high] ~ [78.13% 87.8% 81.25%]  </p>
+              }              
+              {
+                this.state.ThirdTxt &&
+                <p>Accuracy ~ 84.62%  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Precision: [fail medium high] ~ [66.67% 87.64% 94.12%]  </p>
+            }
+                    
           </Col>
         </Row>
         <Row className="justify-content-sm-start mt-3">
                   
                   <Col md="3" >
                       
-                          <Card body inverse  style={{ height:'100px',textAlign:'center',backgroundColor:'#3e8e9e'}}>
+                          <Card body inverse  style={{ height:'130px',textAlign:'center',backgroundColor:'#3e8e9e'}}>
                               <CardText></CardText>
-                              <CardTitle tag="h6" style={{"color":"white"}}>text</CardTitle>
+                              <CardTitle tag="h6" style={{"color":"white"}}>
+                              <strong style={{color:"white"}}>G1 :</strong> First Grade <br/>
+                              <strong style={{color:"white"}}> G2 :</strong> Second Grade                                
+                                </CardTitle>
                               {/* <Button>Button</Button> */}
                           </Card>
                   </Col> 
                   <Col md="3"  >
-                          <Card body inverse  style={{ height:'100px',backgroundColor:'#e2975d' ,textAlign:'center'}}>
+                          <Card body inverse  style={{ height:'130px',backgroundColor:'#e2975d' ,textAlign:'center'}}>
                               <CardText></CardText>
-                              <CardTitle tag="h6" style={{"color":"white"}}>text</CardTitle>
+                              <CardTitle tag="h6" style={{"color":"white"}}>
+                              <strong style={{color:"white"}}> failures :</strong> number of failures
+                              </CardTitle>
                               {/* <Button color="secondary">Button</Button> */}
                           </Card>
                   </Col> 
                   <Col md="3" >
-                          <Card body inverse  style={{ height:'100px',backgroundColor:'rgba(190,91,104)', textAlign:'center'}}>
+                          <Card body inverse  style={{ height:'130px',backgroundColor:'rgba(190,91,104)', textAlign:'center'}}>
                               <CardText></CardText>
-                              <CardTitle tag="h6" style={{"color":"white"}}>text</CardTitle>
+                              <CardTitle tag="h6" style={{"color":"white"}}>
+                              <strong style={{color:"white"}}> higherEdu : </strong>does the student want Higher Education (Yes/No)
+                              </CardTitle>
 
                               {/* <Button color="secondary">Button</Button> */}
                           </Card>
                   </Col> 
                   <Col md="3">
-                          <Card body inverse style={{ height:'100px',backgroundColor:'#75678C', textAlign:'center'}}>
+                          <Card body inverse style={{ height:'130px',backgroundColor:'#75678C', textAlign:'center'}}>
                               <CardText></CardText>
-                              <CardTitle tag="h6" style={{"color":"white"}}>text</CardTitle>
+                              <CardTitle tag="h6" style={{"color":"white"}}>
+                              <strong style={{color:"white"}}>school :</strong> the School Name (GP/MS)
+                              </CardTitle>
 
                               {/* <Button color="secondary">Button</Button> */}
                           </Card>
                   </Col> 
               </Row> 
+              <br/><br/>
         
         <Footer/>
       </div>
