@@ -12,17 +12,17 @@ export default class DecisionTreeMainPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          firstTree:true,
+          firstTree:false,
           secondTree:false,
-          ThirdTree:false,
+          ThirdTree:true,
           
-          firstTxt:true,
+          firstTxt:false,
           secondTxt:false,
-          ThirdTxt:false,
+          ThirdTxt:true,
 
-          firstTreeBox:'#545F63  ',
+          firstTreeBox:'#91A3AA',
           secondTreeBox:'#91A3AA',
-          ThirdTreeBox:'#91A3AA',
+          ThirdTreeBox:'#545F63',
 
     
         };
@@ -91,16 +91,16 @@ export default class DecisionTreeMainPage extends Component {
         <Row className="justify-content-sm-center">
           <Col md="8" className="" >
           {
-                  this.state.firstTxt &&
+                  this.state.ThirdTxt &&
                   <p>Accuracy ~ 83.08%  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Precision: [fail pass] ~ [68.00% 86.67%]  </p>
                   
               }
               {
-                  this.state.secondTxt &&
+                  this.state.firstTxt &&
                   <p>Accuracy ~ 84.62%  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Precision: [fail medium high] ~ [78.13% 87.8% 81.25%]  </p>
               }              
               {
-                this.state.ThirdTxt &&
+                this.state.secondTxt &&
                 <p>Accuracy ~ 84.62%  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Precision: [fail medium high] ~ [66.67% 87.64% 94.12%]  </p>
             }
                     
