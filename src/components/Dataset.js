@@ -31,7 +31,7 @@ export default class Dataset extends Component {
                         <div className="card  text-white">
                         <img src={datamind} className="img-fluid" alt="Responsive image" style={{"height":"300px","width":"100%"}}></img>
                         <div className="card-img-overlay">
-                            <h1 className="card-title text-center font-weight-bold" style={{"font-size":"49px"}} >Meet Our Dataset</h1>
+                            <h1 className="card-title text-center font-weight-bold" style={{"fontSize":"49px"}} >Meet Our Dataset</h1>
                            
                         </div>
                         </div>
@@ -45,7 +45,7 @@ export default class Dataset extends Component {
                             {/* <div class="row"> */}
                     <div className="container my-5">
                         <div className="card border-info">
-                        <div className="card-header font-weight-bold h5" style={{"color":"#34666F","background-color":"#B2C0C1"}}>
+                        <div className="card-header font-weight-bold h5" style={{"color":"#34666F","backgroundColor":"#B2C0C1"}}>
                         <PermDataSettingIcon></PermDataSettingIcon>Multivariate dataset                    </div>
                     <div className="card-body">
                         <p className="card-text">
@@ -62,7 +62,7 @@ export default class Dataset extends Component {
                 </div>
                 <div className="container mt-5">
                     <div className="card border-info">
-                    <div className="card-header font-weight-bold h5"style={{"color":"#34666F","background-color":"#B2C0C1"}} >
+                    <div className="card-header font-weight-bold h5"style={{"color":"#34666F","backgroundColor":"#B2C0C1"}} >
                    <AssessmentIcon></AssessmentIcon> Attributes of dataset                    </div>
                     <div className="card-body">
  
@@ -92,15 +92,7 @@ export default class Dataset extends Component {
                     </div>
                 </div>
              
-                {/* <div class="container my-5" style={{"background-color":"#a5826a"}} >
-
-                    <div class="card-body" >
-                        <a href="/Visualization" type="button" class="text-decoration-none">
-                            <h3 class="font-weight-bold" style={{"color":"white"}}>Click here to see the visualization!</h3>
-                            </a>
-                       
-                    </div>
-                </div> */}
+                
                 <div className="mt-4">
                     <Visualization/>
                  <Link to="/Performance" style={{ textDecoration: 'none' }}>

@@ -100,10 +100,10 @@ export default class FirstPrediction extends Component {
           
             <Header/>
 
-            <div class="card  ">
-              <img src={predict} class="img-fluid" alt="Responsive image" style={{"height":"300px","width":"100%"}}></img>
-              <div class="card-img-overlay">
-                  <h1 className="card-title text-center font-weight-bold text-white" style={{"font-size":"49px"}} >Start Predict all of your Grades!</h1>
+            <div className="card  ">
+              <img src={predict} className="img-fluid" alt="Responsive image" style={{"height":"300px","width":"100%"}}></img>
+              <div className="card-img-overlay">
+                  <h1 className="card-title text-center font-weight-bold text-white" style={{"fontSize":"49px"}} >Start Predict all of your Grades!</h1>
                   
               </div>
             </div>
@@ -126,8 +126,8 @@ export default class FirstPrediction extends Component {
               <Col className="mt-5 pt-3" md="6">
 
                 <form className="p-3 pr-5">
-                  <div class="form-group pt-4">
-                    <label for="customRange1" class="form-label my-3">Number of previous absences:</label><br/>
+                  <div className="form-group pt-4">
+                    <label for="customRange1" className="form-label my-3">Number of previous absences:</label><br/>
 
                       <Slider
                         defaultValue={32}
@@ -156,8 +156,8 @@ export default class FirstPrediction extends Component {
                         }} 
                       />
                   </div>
-                  <div class="form-group pt-4">
-                    <label for="customRange1" class="form-label my-3">Number of previous exam failures:</label><br/>
+                  <div className="form-group pt-4">
+                    <label for="customRange1" className="form-label my-3">Number of previous exam failures:</label><br/>
 
                       <Slider
                         defaultValue={20}
@@ -188,8 +188,8 @@ export default class FirstPrediction extends Component {
                         }} 
                       />
                   </div>
-                  <div class="form-group pt-4">
-                    <label for="customRange1" class="form-label my-3">Mother educational background:</label><br/>
+                  <div className="form-group pt-4">
+                    <label for="customRange1" className="form-label my-3">Mother educational background:</label><br/>
 
                     <Input type="select" name="select" id="MotherEducationalbg" 
                     onChange={
@@ -218,8 +218,8 @@ export default class FirstPrediction extends Component {
                       <option value="4" selected="selected">higher education</option>
                     </Input>
                   </div>
-                  <div class="form-group pt-4">
-                    <label for="customRange1" class="form-label my-3">Father educational background:</label><br/>
+                  <div className="form-group pt-4">
+                    <label for="customRange1" className="form-label my-3">Father educational background:</label><br/>
 
                     <Input type="select" name="select" id="FatherEducationalbg" 
                     onChange={

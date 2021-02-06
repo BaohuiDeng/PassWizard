@@ -30,11 +30,11 @@ export default class Visualization extends Component {
                 <div className="container">
                     {/* <Row className="justify-content-sm-start mt-3 "> */}
                    
-                    <div class="container my-4">
-                        <div class="">
+                    <div className="container my-4">
+                        <div className="">
 
-                            <div class="card-body">
-                                <p class="card-text">
+                            <div className="card-body">
+                                <p className="card-text">
                                     <h3 ><strong>You can find some charts here. Let's have a look for better perspective</strong></h3>
                                 </p>
                             </div>
@@ -43,11 +43,11 @@ export default class Visualization extends Component {
 
   
 
-                    <div class="row">
-                        <div class="col-sm-6 mt-4">
-                            <div class="card">
+                    <div className="row">
+                        <div className="col-sm-6 mt-4">
+                            <div className="card">
                         
-                                <div class="card-body">
+                                <div className="card-body">
                                     <div >
                                     <LineChart />
 
@@ -55,10 +55,10 @@ export default class Visualization extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6 mt-4">
-                            <div class="card">
+                        <div className="col-sm-6 mt-4">
+                            <div className="card">
                         
-                                <div class="card-body">
+                                <div className="card-body">
                                     <div>
                                         <BarChartSecond/>
                                     </div>                   
@@ -67,21 +67,21 @@ export default class Visualization extends Component {
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-sm-6 mt-4">
-                            <div class="card">
+                    <div className="row">
+                        <div className="col-sm-6 mt-4">
+                            <div className="card">
                     
-                                <div class="card-body">
+                                <div className="card-body">
                                     <div>
                                         <PieChart />
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6 mt-4">
-                            <div class="card">
+                        <div className="col-sm-6 mt-4">
+                            <div className="card">
                     
-                                <div class="card-body">
+                                <div className="card-body">
                                     <div>
                                     <BarChart/>
 

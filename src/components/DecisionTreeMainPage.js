@@ -39,7 +39,7 @@ export default class DecisionTreeMainPage extends Component {
         <div className="card  text-white mb-5">
           <img src={datamind} className="img-fluid" alt="Responsive image" style={{"height":"300px","width":"100%"}}></img>
           <div className="card-img-overlay" style={{position:"absolte"}}>
-              <h1 className="card-title text-center font-weight-bold" style={{"font-size":"49px"}} >Decision Tree</h1>
+              <h1 className="card-title text-center font-weight-bold" style={{"fontSize":"49px"}} >Decision Tree</h1>
           
           </div>
         </div>

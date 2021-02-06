@@ -30,7 +30,7 @@ export default class ContactUs extends Component {
                       <div className="card  ">
                         <img src={contact} className="img-fluid" alt="Responsive image" style={{"height":"450px","width":"100%"}}></img>
                         <div className="card-img-overlay">
-                            <h1 className="card-title text-center font-weight-bold text-black" style={{"font-size":"49px"}} ></h1>
+                            <h1 className="card-title text-center font-weight-bold text-black" style={{"fontSize":"49px"}} ></h1>
                            
                         </div>
                         </div>
@@ -58,7 +58,7 @@ export default class ContactUs extends Component {
                     <label for="inputAddress2"> <i className="fa fa-user text-info mr-1"></i>Name</label>
                     <input type="text" className="form-control" id="inputAddress2" placeholder="your name"/>
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     <label for="exampleFormControlTextarea1"> <i className="fa fa-comment text-info mr-1"></i>Message</label>
                     <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>

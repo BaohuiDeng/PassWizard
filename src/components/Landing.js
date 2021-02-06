@@ -89,7 +89,7 @@ export default class Landing extends Component {
                                 </Card>
                             </a>
                         </Col> 
-                        <Col md="3" style={{'z-index':' 0'}}>
+                        <Col md="3" style={{'zIndex':' 0'}}>
                             <Link to="/AboutUs">
                                 <Card body inverse  id="AboutUsBox"  style={{ height:'200px',textAlign:'center',backgroundColor:'white' , paddingTop: '40px'}}>
                                 <CardText><img src={colorfulmembers} alt="AboutUsBox" style={{'border': 'none','height': '60px'}} onMouseOver={e => (e.currentTarget.src =members )} onMouseOut={e => (e.currentTarget.src =colorfulmembers )}/></CardText>

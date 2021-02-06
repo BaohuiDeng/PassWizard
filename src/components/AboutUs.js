@@ -24,7 +24,7 @@ export default class AboutUs extends Component {
             <div className="card  text-white">
                         <img src={teamwork} className="img-fluid" alt="Responsive image" style={{"height":"300px","width":"100%"}}></img>
                         <div className="card-img-overlay">
-                            <h1 className="card-title text-center font-weight-bold" style={{"font-size":"49px","color":"white"}} >Our Team</h1>
+                            <h1 className="card-title text-center font-weight-bold" style={{"fontSize":"49px","color":"white"}} >Our Team</h1>
                            
                         </div>
                         </div> 

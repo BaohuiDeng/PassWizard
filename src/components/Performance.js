@@ -27,7 +27,7 @@ export default class Performance extends Component {
                     <div className="card  text-white" >
                       <img src={machinelearning} className="img-fluid" alt="Responsive image" style={{"height":"300px","width":"100%"}}></img>
                       <div className="card-img-overlay">
-                          <h1 className="card-title text-center font-weight-bold" style={{"font-size":"49px"}} >Machine Learning</h1>
+                          <h1 className="card-title text-center font-weight-bold" style={{"fontSize":"49px"}} >Machine Learning</h1>
                           
                       </div>
                     </div> 
@@ -64,7 +64,7 @@ export default class Performance extends Component {
             </Row>
 
 
-                      <div  className="container mt-5" style={{"background-color":"#f5f5f1"}}>
+                      <div  className="container mt-5" style={{"backgroundColor":"#f5f5f1"}}>
                     <div className="container mt-5"  >
                     <div>
               <h1 className="my-5 text-center" data-tip="You can choose three options above to predict your result!" >WHICH STATAGE ARE YOU AT?</h1>
@@ -84,7 +84,7 @@ export default class Performance extends Component {
                     </div>
                       <div   className="d-flex mb-3">
                     <div className="col-sm-6" >
-                      <div className="card border-info" style={{"background-color":"#f5f5f1"}}>
+                      <div className="card border-info" style={{"backgroundColor":"#f5f5f1"}}>
                         <div className="card-body">
                           <h5 className="card-title font-weight-bold" style={{"color":"#34666F"}}>Workflow</h5>
                           <p className="card-text justify">
@@ -96,7 +96,7 @@ export default class Performance extends Component {
                     </div>
 
                     <div className="col-sm-6 mt-1 mb-2">
-                      <div className="card border-info" style={{"background-color":"#f5f5f1"}}>
+                      <div className="card border-info" style={{"backgroundColor":"#f5f5f1"}}>
                         <div className="card-body">
                           <h5 className="card-title font-weight-bold" style={{"color":"#34666F"}}>Results</h5>
                           <p className="card-text justify">

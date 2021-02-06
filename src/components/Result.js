@@ -20,10 +20,10 @@ export default class Result extends Component {
           <Container>
             <Header/>
 
-            <div class="card  ">
-                        <img src={result} class="img-fluid" alt="Responsive image" style={{"height":"300px","width":"100%"}}></img>
-                        <div class="card-img-overlay">
-                            <h1 className="card-title text-center font-weight-bold text-white" style={{"font-size":"49px"}} >Your Result!</h1>
+            <div className="card  ">
+                        <img src={result} className="img-fluid" alt="Responsive image" style={{"height":"300px","width":"100%"}}></img>
+                        <div className="card-img-overlay">
+                            <h1 className="card-title text-center font-weight-bold text-white" style={{"fontSize":"49px"}} >Your Result!</h1>
                            
                         </div>
                         </div>

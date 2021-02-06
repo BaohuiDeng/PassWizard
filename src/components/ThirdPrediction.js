@@ -79,10 +79,10 @@ export default class SecondPrediction extends Component {
           <Container>
             <Header/>
 
-            <div class="card ">
-              <img src={predict} class="img-fluid" alt="Responsive image" style={{"height":"300px","width":"100%"}}></img>
-              <div class="card-img-overlay">
-                  <h1 className="card-title text-center font-weight-bold text-white" style={{"font-size":"49px"}} >Start Predict your Final Grade!</h1>
+            <div className="card ">
+              <img src={predict} className="img-fluid" alt="Responsive image" style={{"height":"300px","width":"100%"}}></img>
+              <div className="card-img-overlay">
+                  <h1 className="card-title text-center font-weight-bold text-white" style={{"fontSize":"49px"}} >Start Predict your Final Grade!</h1>
                   
               </div>
             </div>
@@ -102,8 +102,8 @@ export default class SecondPrediction extends Component {
               <Col className="mt-5 pt-3" md="6">
 
                 <form className="p-3 pr-5">
-                  <div class="form-group pt-4">
-                    <label for="customRange1" class="form-label my-3">Your first exam grade:</label><br/>
+                  <div className="form-group pt-4">
+                    <label for="customRange1" className="form-label my-3">Your first exam grade:</label><br/>
 
                       <Slider
                         defaultValue={20}
@@ -132,8 +132,8 @@ export default class SecondPrediction extends Component {
                         }} 
                       />
                   </div>
-                  <div class="form-group pt-4">
-                    <label for="customRange1" class="form-label my-3">Your second exam grade:</label><br/>
+                  <div className="form-group pt-4">
+                    <label for="customRange1" className="form-label my-3">Your second exam grade:</label><br/>
 
                       <Slider
                         defaultValue={20}
@@ -257,7 +257,6 @@ export default class SecondPrediction extends Component {
 
   <hr className="my-4"/>
                 <p className="lead">
-                  {/* <a className="btn btn-primary btn-lg" href="#" role="button">Predict Your Result</a> */}
                 </p>
                 <Button onClick={this.predict} size="large" variant="outlined" color="primary">
                 <span  className="mr-2">Predict Your Result</span> <AddToQueueIcon></AddToQueueIcon>
