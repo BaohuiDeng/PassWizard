@@ -70,7 +70,10 @@ export default class Performance extends Component {
               <h1 className="my-5 text-center" data-tip="You can choose three options above to predict your result!" >WHICH STATAGE ARE YOU AT?</h1>
               <ReactTooltip className='extraClass' effect="solid" width="180px" height="100px" />
             </div>
-                    <p align="justify">
+            <div className="col-sm-12 " style={{marginLeft:"-15px"}} >
+                      <div className="" style={{"backgroundColor":"#f5f5f1"}}>
+                        <div className="card-body">
+                          <p align="justify ">
                     To get your exam's status predicted, you have three choices:
                     <li><strong style={{color:"#34666F"}}>1 :</strong> At the beginning of a semester (you haven't been examined yet):<br/>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Output: weather you will pass or fail at each exam (G1, G2, G3).</li>
@@ -80,6 +83,12 @@ export default class Performance extends Component {
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Output: your result at final exam (G3): fail, medium [10 to less than 15], high [15 to 20].</li>
 
                     </p>
+                        
+                        </div>
+                      </div>
+                    </div>
+                
+                
 
                     </div>
                       <div   className="d-flex mb-3">
@@ -99,7 +108,7 @@ export default class Performance extends Component {
                       <div className="card border-info" style={{"backgroundColor":"#f5f5f1"}}>
                         <div className="card-body">
                           <h5 className="card-title font-weight-bold" style={{"color":"#34666F"}}>Results</h5>
-                          <p className="card-text justify">
+                          <p className="card-text justify ">
                           As a result, the used algorithm for prediction models is support vector classification (SVC).
 The used ratio for train/test data is 80/20 respectively.
 The accuracy value is based on precision value, that is, the fraction of relevant instances among the retrieved instances.
