@@ -178,7 +178,7 @@ render()
         options={{
           title:{
             display:true,
-            text:'The Most Effective Attributes On Grade 1'
+            text:'Some effective Attributes on Grade1'
           },
         //   maintainAspectRatio: false,
           scales: {
