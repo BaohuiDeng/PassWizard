@@ -114,7 +114,13 @@ export default class DecisionTreeMainPage extends Component {
                               <CardText></CardText>
                               <CardTitle tag="h6" style={{"color":"white"}}>
                               <strong style={{color:"white"}}>G1 :</strong> First Grade <br/>
-                              <strong style={{color:"white"}}> G2 :</strong> Second Grade                                
+                              <strong style={{color:"white"}}> G2 :</strong> Second Grade  <br/>
+                              <p style={{fontSize:"10pt"}} >
+                                (fail:less than 10 
+                                / medium:10~14
+                                / high:15~20)
+                              </p>
+                                                
                                 </CardTitle>
                               {/* <Button>Button</Button> */}
                           </Card>

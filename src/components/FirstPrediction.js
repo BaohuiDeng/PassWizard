@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row,Col,Container,Input} from 'reactstrap';
+import { Row,Col,Container,Input,CustomInput} from 'reactstrap';
 import Button from '@material-ui/core/Button';
 import Header from './Header';
 import Footer from './Footer';
@@ -31,7 +31,7 @@ export default class FirstPrediction extends Component {
       examFailuresVis:'',
       motherEducationVis:'',
       fatherEducationVis:'',
-      data:[32, 20, 4 , 4]
+      data:[32, 0, 4 , 4]
       
         
     };
@@ -127,7 +127,7 @@ export default class FirstPrediction extends Component {
 
                 <form className="p-3 pr-5">
                   <div className="form-group pt-4">
-                    <label for="customRange1" className="form-label my-3">Number of previous absences:</label><br/>
+                    <label for="customRange1" className="form-label my-3">Number of previous exam failures:</label><br/>
 
                       <Slider
                         defaultValue={32}
@@ -143,38 +143,8 @@ export default class FirstPrediction extends Component {
                             const data = state.data.map((item, j) => {
                               if (j === 0) {
                                 return newValue;
-                              }else{
-                                return item;
-                              }
-                            });
-                      
-                            return {
-                              data,
-                            };
-                          })
-                          
-                        }} 
-                      />
-                  </div>
-                  <div className="form-group pt-4">
-                    <label for="customRange1" className="form-label my-3">Number of previous exam failures:</label><br/>
-
-                      <Slider
-                        defaultValue={20}
-                        // getAriaValueText={valuetext}
-                        aria-labelledby="discrete-slider"
-                        valueLabelDisplay="auto"
-                        step={1}
-                        marks
-                        min={0}
-                        max={20}
-                        onChange={(event, newValue) => {
-                          this.setState(state => {
-                            const data = state.data.map((item, j) => {
-                              if (j === 0) {
-                                return item;
                               } else if(j === 1) {
-                                return newValue;
+                                return item;
                               }else{
                                 return item;
                               }
@@ -248,6 +218,46 @@ export default class FirstPrediction extends Component {
                       <option value="4" selected="selected">higher education</option>
                     </Input>
                   </div>
+                  <div className="form-group pt-4">
+                  <CustomInput type="switch" id="exampleCustomSwitch" name="customSwitch" label="Are you willing to take higher education?"
+                  
+                  onChange={e => {
+                    if (e.target.checked){
+
+                      this.setState(state => {
+                        const data = state.data.map((item, j) => {
+                          if(j === 1) {
+                            return 10;
+                          }else{
+                            return item;
+                          }
+                        });
+                  
+                        return {
+                          data,
+                        };
+                      })
+                      
+                      }else{
+                        this.setState(state => {
+                          const data = state.data.map((item, j) => {
+                            if(j === 1) {
+                              return 0;
+                            }else{
+                              return item;
+                            }
+                          });
+                    
+                          return {
+                            data,
+                          };
+                        })
+                      }
+                    } 
+                    }
+                    
+                  />    
+                  </div>
                 </form>
               </Col>
 
@@ -256,7 +266,7 @@ export default class FirstPrediction extends Component {
                   <Pie
                     data={{
 
-                        labels: ['Absences', 'Failures','Mother Education', 'Father Education'],
+                        labels: [ 'Failures','higher education','Mother Education', 'Father Education'],
                         datasets: [
                         {
                             label: 'The Most Effective Attributes On Grade 1 and Grade 2',
