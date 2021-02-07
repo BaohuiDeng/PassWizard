@@ -326,7 +326,7 @@ export default class FirstPrediction extends Component {
   <div className="form-row">
     <div className="form-group col-md-12">
       <label>Do you want to take higher education:</label>
-      <Input type="select" name="select" id="higher" onChange={e => {this.setState({'school': e.target.value})}}>
+      <Input type="select" name="select" id="higher" onChange={e => {this.setState({'higher': e.target.value})}}>
             <option value="0">Yes</option>
             <option value="1">No</option>
       </Input>
