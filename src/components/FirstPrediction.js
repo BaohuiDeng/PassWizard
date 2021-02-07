@@ -158,7 +158,7 @@ export default class FirstPrediction extends Component {
                         }} 
                       />
                   </div>
-                  <div className="form-group pt-4">
+                  <div className="form-group pt-1">
                     <label for="customRange1" className="form-label my-3">Mother educational background:</label><br/>
 
                     <Input type="select" name="select" id="MotherEducationalbg" 
@@ -188,7 +188,7 @@ export default class FirstPrediction extends Component {
                       <option value="4" selected="selected">higher education</option>
                     </Input>
                   </div>
-                  <div className="form-group pt-4">
+                  <div className="form-group pt-1">
                     <label for="customRange1" className="form-label my-3">Father educational background:</label><br/>
 
                     <Input type="select" name="select" id="FatherEducationalbg" 
