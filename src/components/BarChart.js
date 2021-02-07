@@ -153,7 +153,7 @@ export default  class BarChart extends Component {
             {
               label: 'Second Grade',
               data:  this.state.BarchartdataSecond,
-              backgroundColor: ' rgba(233,216,141)',
+              backgroundColor:   '#e2975d',
               
               //borderColor: 'red',
             },
