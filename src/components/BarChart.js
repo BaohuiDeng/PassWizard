@@ -83,6 +83,7 @@ export default  class BarChart extends Component {
             studyt2 = average( studyt2 );
             freet2 = average( freet2 );
             absencesAmount2 = average( absencesAmount2 );
+          
             const BarchartdataArray=[];
             const BarchartdataArraySecond=[];
             BarchartdataArraySecond.push( travelt2 , studyt2 ,freet2,absencesAmount2  );
@@ -125,8 +126,8 @@ export default  class BarChart extends Component {
           labels: ['Traveltime', 'Studytime', 'Freetime', 'Absences'],
           datasets: [
             {
-              label: 'First Grade',
-              data: this.state.Barchartdata,
+              label: 'Second Exam',
+              data:this.state.BarchartdataSecond,
               backgroundColor: [
                
                  'rgba(190,91,104)',
@@ -149,15 +150,15 @@ export default  class BarChart extends Component {
               ],
               borderWidth: 1,
             },
-            {
-              label: 'Second Grade',
-              data:  this.state.BarchartdataSecond,
-              backgroundColor:                                 '#e2975d',
+            // {
+            //   // label: 'Second Grade',
+            //   // data:  this.state.BarchartdataSecond,
+            //   // backgroundColor:                                 '#e2975d',
               
               
               
-              //borderColor: 'red',
-            },
+            //   //borderColor: 'red',
+            // },
           ],
         }}
         height={200}
