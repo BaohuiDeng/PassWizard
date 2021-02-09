@@ -22,23 +22,23 @@ code {
 
 
 #AboutUsBox:hover {
-  background: #34666F !important;
+  background: #c9dbdf !important;
 }
 
 #socoBox:hover {
-  background: #E8B298 !important;
+  background: #c5c8dd !important;
 }
 
 #DatasetBox:hover {
-  background:#BEB2A7 !important;
+  background:#dfb3ab !important;
 }
 
 #VisualizationBox:hover {
-  background: #C8C5AC !important;
+  background: #dbd9df !important;
 }
 
 #PerformanceBox:hover {
-  background: #ABADB4 !important;
+  background: #f1deca !important;
 }
 
 #ContactUsBox:hover {
@@ -73,6 +73,8 @@ code {
   background: rgba(252, 128, 45, 0.973)!important
 
 }
+
+
 
 .justify-content-center1 {
   justify-content: center !important;
