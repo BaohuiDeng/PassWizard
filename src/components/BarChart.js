@@ -164,7 +164,7 @@ export default  class BarChart extends Component {
         options={{
           title:{
             display:true,
-            text:'Attributes Distribution On First And Second Grade'
+            text:'Attributes Distribution for students who passed Second Exam'
           },
         //   maintainAspectRatio: false,
           scales: {
