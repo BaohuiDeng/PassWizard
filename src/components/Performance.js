@@ -41,7 +41,7 @@ export default class Performance extends Component {
                     <Link to="/FirstPrediction">
                         <Card body inverse id="ContactUsBox" style={{border: '1px solid #cacaca' , width: '100%' ,height:'200px',textAlign:'center',backgroundColor:'white', paddingTop: '40px' }}>
                             <CardText><img src={firststep} alt="Performance" style={{'border': 'none','height': '80px'}}></img></CardText>
-                            <CardTitle tag="h6" style={{color:"#34666F"}}>I am at the <b>begining</b> of the semester.</CardTitle>
+                            <CardTitle tag="h6" style={{color:"#7c5042"}}>I am at the <b>begining</b> of the semester.</CardTitle>
                         </Card>
                     </Link>
                 </Col> 
@@ -57,7 +57,7 @@ export default class Performance extends Component {
                     <Link to="/ThirdPrediction">
                         <Card body inverse id="AboutUsBox" style={{border: '1px solid #cacaca' ,width: '100%', height:'200px',backgroundColor:'white', textAlign:'center', paddingTop: '40px'}}>
                             <CardText><img src={thirdstep} alt="Performance" style={{'border': 'none','height': '80px'}}></img></CardText>
-                            <CardTitle tag="h6" style={{"color":"#c7be4c"}}>I have done <b>two</b> exams</CardTitle>
+                            <CardTitle tag="h6" style={{"color":"#53633a"}}>I have done <b>two</b> exams</CardTitle>
                         </Card>
                     </Link>
                 </Col> 
