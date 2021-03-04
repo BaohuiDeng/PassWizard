@@ -41,7 +41,7 @@ export default  class LineChart extends Component {
         const data = res.data;
         this.setState({allInfo:data})
         
-         console.log(this.state.allInfo["0"].school)
+        //  console.log(this.state.allInfo["0"].school)
 
         // Create a new array based on current state:
         
