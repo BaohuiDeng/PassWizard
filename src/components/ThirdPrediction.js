@@ -12,7 +12,7 @@ import axios from 'axios';
 import Slider from '@material-ui/core/Slider';
 import {Pie} from 'react-chartjs-2';
 
-
+import { UrlContext } from '../contexts/urlContext';
 
 export default class SecondPrediction extends Component {
 
@@ -27,7 +27,8 @@ export default class SecondPrediction extends Component {
       predictResult:'',
       examFirstGrade:'',
       examSecondGrade:'',
-      data:[20, 20]    
+      data:[20, 20],
+      'serverUrl': UrlContext._currentValue,
     };
 
     // This binding is necessary to make `this` work in the callback
@@ -42,7 +43,7 @@ export default class SecondPrediction extends Component {
           "G1": this.state.FirstGrade,
           "G2": this.state.SecondGrade
       };
-    axios.post(`http://20.82.112.97:5000/predict/por/G3`, data)
+    axios.post(this.state.serverUrl +'predict/por/G3', data)
     .then(res => {
       const result = res.data;
       // console.log(result)

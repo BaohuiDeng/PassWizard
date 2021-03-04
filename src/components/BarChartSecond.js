@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import {Bar} from 'react-chartjs-2';
 import axios from 'axios';
-
-
-
-
+import { UrlContext } from '../contexts/urlContext';
 
 export default  class BarChartSecond extends Component {
 
@@ -18,14 +15,15 @@ export default  class BarChartSecond extends Component {
         pass:'',
         fail:'',
         BarchartDataSecond:'',
-        BarchartDataThird:''
+        BarchartDataThird:'',
+        'serverUrl': UrlContext._currentValue,
 
       }
     }
 
     componentDidMount() {
 
-      axios.get(`http://20.82.112.97:5000/alldata`)
+      axios.get(this.state.serverUrl + 'alldata')
       .then(res => {
         const data = res.data;
         this.setState({allInfo:data})

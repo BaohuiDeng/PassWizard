@@ -10,7 +10,7 @@ import HorizontalLinearStepper1 from './Stepper2';
 import axios from 'axios';
 import Slider from '@material-ui/core/Slider';
 import {Pie} from 'react-chartjs-2';
-
+import { UrlContext } from '../contexts/urlContext';
 
 export default class FirstPrediction extends Component {
 
@@ -31,7 +31,8 @@ export default class FirstPrediction extends Component {
       examFailuresVis:'',
       motherEducationVis:'',
       fatherEducationVis:'',
-      data:[32, 0, 4 , 4]
+      data:[32, 0, 4 , 4],
+      'serverUrl': UrlContext._currentValue,
       
         
     };
@@ -55,7 +56,7 @@ export default class FirstPrediction extends Component {
       "Fedu": this.state.FatherEducational,
       "Medu": this.state.MotherEducational,
     };
-    axios.post(`http://20.82.112.97:5000/predict/por/pf`, data)
+    axios.post(this.state.serverUrl + 'predict/por/pf', data)
     .then(res => {
       const result = res.data;
       console.log(result)

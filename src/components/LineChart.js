@@ -1,7 +1,7 @@
 import {Bar} from 'react-chartjs-2'
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import { UrlContext } from '../contexts/urlContext';
 
 export default  class LineChart extends Component {
   constructor() {
@@ -31,11 +31,12 @@ export default  class LineChart extends Component {
       Teacher3:'',
      Barchartdata3:'',
 
+     'serverUrl': UrlContext._currentValue,
       }
     }
     componentDidMount() {
 
-      axios.get(`http://20.82.112.97:5000/alldata`)
+      axios.get(this.state.serverUrl +'alldata')
       .then(res => {
         const data = res.data;
         this.setState({allInfo:data})

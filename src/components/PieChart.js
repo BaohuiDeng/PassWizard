@@ -1,8 +1,7 @@
 import {Pie} from 'react-chartjs-2'
 import React, { Component } from 'react';
 import axios from 'axios';
-
-
+import { UrlContext } from '../contexts/urlContext';
 
 export default  class PieChart extends Component {
   constructor() {
@@ -25,13 +24,14 @@ export default  class PieChart extends Component {
         fatherEdu3:'',
         Barchartdata:'',
         BarchartdataSecond:'',
-        BarchartdataThird:''
+        BarchartdataThird:'',
+        'serverUrl': UrlContext._currentValue,
       }
     }
 
     componentDidMount() {
 
-      axios.get(`http://20.82.112.97:5000/alldata`)
+      axios.get(this.state.serverUrl +'alldata')
       .then(res => {
         const data = res.data;
         this.setState({allInfo:data})
